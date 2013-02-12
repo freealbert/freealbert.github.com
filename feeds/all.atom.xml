@@ -1,0 +1,1012 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>freealbert's blog</title><link href="http://freealbert.github.com/" rel="alternate"></link><link href="http://freealbert.github.com/feeds/all.atom.xml" rel="self"></link><id>http://freealbert.github.com/</id><updated>2013-02-01T00:00:00+08:00</updated><entry><title>一月读书记录，2013</title><link href="http://freealbert.github.com/yue-du-shu-ji-lu-2013.html" rel="alternate"></link><updated>2013-02-01T00:00:00+08:00</updated><author><name>freealbert</name></author><id>tag:freealbert.github.com,2013-02-01:yue-du-shu-ji-lu-2013.html</id><summary type="html">&lt;p&gt;整个一月份，我只读完了三本书。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;《西游日记》 今何在&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;以西游为框架，今何在写的是一个让读者一路笑过去的悲剧，被扼杀的抗争，被压抑的自由，被抹去的记忆和存在。&lt;/p&gt;
+&lt;p&gt;在时而笑，时而悲的反复后，作者用戏谑的笔法，荒诞的故事呈现给我们的的的确确是一个真正的西游。虽然是网络文学，今何在的作品却绝不同于起点上的小白文，这从十来万字便敢出版一本书就可以看出，也不同于新概念作文选上那些矫揉造作的文字。作者时不时有些类似于禅宗的当头棒喝似的言语，令人不得好好沉思一番。
+总而言之，今何在是个神棍。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;《我的征途是星辰大海》 今何在&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;还是今何在这个神棍的书，该书以中日甲午战争为框架，时间却放在了未来，而人物却是三国那些耳熟能详的名字。
+主人公陆逊陆伯言毫无疑问是个天才，但整个故事，或者说百年前的历史告诉我们，大厦指将倾之时，个人即使再天才，也难以拯救一个国家。
+联想到明年又是甲午年，庞大帝国是否仍旧会重蹈悲剧，作为中华儿女还是很担忧的。
+正本书，我最欣赏后记中的一句话，特地摘录如下：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;不论我是否去记录，在往昔与未来的无限岁月中，仍会有人奋起，有人沉沦，有人成为英雄，有人扮演小丑，有人挺身而出，有人迷茫消沉。但这个国家仍会生生不息，有如亿万年来波澜壮阔的长河。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;《万历十五年》 黄仁宇&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这本书，是作者最负盛名的著作，之前便屡屡听人提起，这一回终于咬定牙关啃了下来。之所以要咬定牙关，在于这本书并不易读，我个人认为原因有二：
+    * 毕竟这还是一本学术著作，行文严谨考究，有着大量细碎的史料，我们这种看惯了如《明朝那些事儿》那样风趣幽默或者细说历史的读者，自然在阅读上会显得吃力不少。 
+    * 这本书最早由英文写成，后经作者自己译成中文。但要知道，作者作为国民党军官在建国后久居于美国，他的白话文在我们看来，又有浓厚的文言色彩，这也是那个时代文人作品的特点。&lt;/p&gt;
+&lt;p&gt;这本书，详述了万历、张居正、申时行、海瑞、戚继光、李贽六人以及当时整个中国的失败与悲剧，这种全面的失败，也是体制的失败，而作者在书中屡屡提及的便是&lt;em&gt;“用道德代替法律”&lt;/em&gt;。&lt;/p&gt;
+&lt;p&gt;关于这个主旨，我是赞同的，但需要补充的事，是否否定用“道德代替法律”，采用近代西方的根据专业知识和技能任用官吏便可以走出当时中国的困境了呢？
+恰好，我又看了北大的公开课&lt;em&gt;&lt;a href="http://v.163.com/special/cuvocw/gudaizhengzhiwenhua.html"&gt;中国古代政治与文化&lt;/a&gt;&lt;/em&gt;，头三集便是讨论这个问题。&lt;/p&gt;
+&lt;p&gt;这是门非常精彩的课程，全部16集，除了吃饭睡觉外，我是一口气看完的，强烈推荐！&lt;/p&gt;</summary><category term="Reading"></category></entry><entry><title>Emacs-Prelude简介</title><link href="http://freealbert.github.com/emacs-preludejian-jie.html" rel="alternate"></link><updated>2012-09-06T00:00:00+08:00</updated><author><name>freealbert</name></author><id>tag:freealbert.github.com,2012-09-06:emacs-preludejian-jie.html</id><summary type="html">&lt;ul&gt;
+&lt;li&gt;&lt;a href="#whyPrelude"&gt;为什么需要Prelude&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#installPrelude"&gt;安装Prelude&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#reviewPrelude"&gt;再次审视Prelude&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#customPrelude"&gt;定制Prelude&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#aboutAuthor"&gt;关于作者&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#reference"&gt;参考资料&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;&lt;div id="whyPrelude"&gt;为什么需要Prelude&lt;/div&gt;&lt;/h2&gt;
+&lt;p&gt;前天重装了一下Ubuntu，忘记了备份辛辛苦苦才攒起来的 .emacs配置文件。由于我不会Emacs Lisp，再重新搜罗一下还是件挺费力的事，&lt;a href="http://shiquanwang.github.com/"&gt;qq987&lt;/a&gt;给我推荐了Emacs-Prelude，我尝试了一下，目前感觉很不错，跟大家分享一下。&lt;/p&gt;
+&lt;p&gt;在使用Emacs的时候，我们都会有这样的感觉，Emacs真是一个太棒的编辑器，可以根据自己的需求个性化的定制。但这其中有一个问题，在享受个性化定制带来的便利之前，我们有一个不得不经过的序幕或者说前奏曲，写.emacs文件。这需要用到Emacs Lisp，应该说是相当高的门槛。当然你可以同我一样，不会Emacs Lisp，从那些牛人的配置里扒一点适合自己的，勉强凑合一个，可是这个也很花时间啊，而且出了一堆error还不知道怎么办。总之，要是想将Emacs调教的千依百顺，这光源式养成计划长路漫漫，且并不平坦。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;"Get me out of the Prelude, I just want to use Emacs" &lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Prelude的出现，很大程度上的解决了这个问题，它会自动将Emacs配置得比较舒适顺手，让你直接跳过那个并不愉悦的前奏曲，这也就是Prelude这个名字的由来。&lt;/p&gt;
+&lt;h2&gt;&lt;div id="installPrelude"&gt;安装Prelude&lt;/div&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h3&gt;Emacs 24&lt;/h3&gt;
+Prelude需要Emacs 24，且不向前兼容，目前从Ubuntu的源里安装的Emacs还是23，如果你跟我一样，请先卸载。后执行如下代码（当然可以自己动手编译，不过我等懒人还是喜欢简单直接的，不过这个源实在有点慢）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;    sudo add-apt-repository ppa:cassou/emacs
+    sudo apt-get update
+    sudo apt-get install emacs-snapshot
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h3&gt;git &amp;amp; curl&lt;/h3&gt;
+由于需要用到git 和 curl，需要先安装一下&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;    sudo apt-get install git curl
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h3&gt;安装&lt;/h3&gt;
+在安装之前，请先确保将原有的 .emacs文件和 .emacs.d文件夹删掉，我之前反复安装不成功，就是这个原因，多亏了Tux的提醒。安装的过程仍然一贯的简单&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;    curl -L https://github.com/bbatsov/prelude/raw/master/utils/installer.sh | sh
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;更多的安装方法可以点&lt;a href="http://batsov.com/prelude/"&gt;这里&lt;/a&gt; 和&lt;a href="https://github.com/bbatsov/prelude"&gt;这里&lt;/a&gt;。
+事实上，应该只要从其&lt;a href="https://github.com/bbatsov/prelude"&gt;github的项目主页&lt;/a&gt;上将文件夹下下来，再重命名成 .emacs.d 放到Home下就可以了。&lt;/p&gt;
+&lt;p&gt;之后，启动Emacs，Prelude会自动安装不少东西，请稍微耐心等待一下。再次启动后，就会发现Emacs的背景色变成如下了，这是因为Prelude的配色方案默认启用了zenburn主题。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="http://i.imgur.com/B2rRm.png" /&gt;&lt;/p&gt;
+&lt;h2&gt;&lt;div id="reviewPrelude"&gt;再次审视Prelude&lt;/div&gt;&lt;/h2&gt;
+&lt;p&gt;至此，Prelude的安装便算完成了。可是Prelude对于我一个一点也不会Emacs Lisp的菜鸟来说，还只是一只一无所知的黑箱子，我只知道Prelude预设了很多便利给我，但究竟是哪些呢，我又该怎么用呢？&lt;/p&gt;
+&lt;p&gt;我适当的摸索了一些，写在下面，如果你知道更多，也请告诉我～&lt;/p&gt;
+&lt;h3&gt;Prelude的便利&lt;/h3&gt;
+&lt;p&gt;首先看上图，我们可以知道Prelude至少给了我们以下这些福利：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;取消了启动画面&lt;/li&gt;
+&lt;li&gt;取消了菜单栏和工具栏&lt;/li&gt;
+&lt;li&gt;启用了一个不错的配色主题
+  &lt;a href="http://slinky.imukuppi.org/zenburn/"&gt;zenburn&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;显示行号和列号&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;接触更多，我们还会发现更多惊喜的，比如如下这个简短的hello.py&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="http://i.imgur.com/lDyRb.png" /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;启用了yasnippet&lt;/li&gt;
+&lt;li&gt;启用了whitespace mode&lt;/li&gt;
+&lt;li&gt;引号和括号自动补全&lt;/li&gt;
+&lt;li&gt;高亮当前所在的行&lt;/li&gt;
+&lt;li&gt;minibuffer里的路径文件夹补全&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;其中，在每行的末尾都有一个美元符号$，以及缩进均有小点来标识，这就是whitespace mode，它实在是太赞了！&lt;/p&gt;
+&lt;p&gt;以前，在markdown模式下，yasnippet一直都不能用，我也搜寻了一些方法，但始终无效，现在这个问题不复存在，可以尽情的在编写markdown时使用yasnippet。&lt;/p&gt;
+&lt;h3&gt;更多便利&lt;/h3&gt;
+&lt;p&gt;Prelude预先定义了不少快捷键，我挑选了一些我常用的列举在下，更多的请阅读 &lt;a href="https://github.com/bbatsov/prelude/blob/master/prelude/prelude-global-keybindings.el"&gt; prelude-global-keybindings.el &lt;/a&gt; &lt;/p&gt;
+&lt;table border="1" width="600"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;功能描述&lt;/th&gt;
+            &lt;th&gt;快捷键&lt;/th&gt;
+            &lt;th&gt;备注&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;redo&lt;/td&gt;
+            &lt;td&gt;C-/&lt;/td&gt;
+            &lt;td&gt;replacement of "C-x u"&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;backward-kill-word&lt;/td&gt;
+            &lt;td&gt;C-M-h&lt;/td&gt;
+            &lt;td&gt;You know, like Readline.&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;align-regexp&lt;/td&gt;
+            &lt;td&gt;C-x \\&lt;/td&gt;
+            &lt;td&gt;Align your code in a pretty way.&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;text-scale-increase&lt;/td&gt;
+            &lt;td&gt;C-+&lt;/td&gt;
+            &lt;td&gt;Font size increase&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;eshell&lt;/td&gt;
+            &lt;td&gt;C-x m&lt;/td&gt;
+            &lt;td&gt;Start eshell or switch to it if it's active.&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;容许我再对其中某两个快捷键罗嗦几句，因为我实在太喜欢了～&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;align-regexp C-x \&lt;/p&gt;
+&lt;p&gt;套用&lt;a href="http://lucifr.com/"&gt;Lucifr&lt;/a&gt;的大作
+&lt;a href="http://lucifr.com/139225/sublime-text-2-tricks-and-tips/"&gt;Sublime Text 2 入门及技巧&lt;/a&gt;
+中的例子：&lt;/p&gt;
+&lt;p&gt;对于某些喜欢整齐的程序员来说，看到下面这种情况可能是让其无法忍受的：&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;joe&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;joe&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;johnny&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;johnny&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;quaid&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;quaid&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;一定要改成这样才会安心：&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;joe&lt;/span&gt;    &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;joe&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;johnny&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;johnny&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;quaid&lt;/span&gt;  &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;quaid&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;这个功能可以通过输入C-x \后再输入等号= （也就是你想要对其的符号）来对齐。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;redo C-/&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;以前我用CUA-mode，原因只有一个，那就是C-x u不方便，Prelude很贴心的设置
+了C-/来替代。&lt;/p&gt;
+&lt;h3&gt;Prelude的不便&lt;/h3&gt;
+&lt;p&gt;就像硬币总是有两面一样，Prelude预置的许多功能可以极大的方便我们，但事情总没有我们预想的那么十全十美，对我来说，Prelude至少有以下不足：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;禁用了方向键以及Home,End,Delete键&lt;/li&gt;
+&lt;li&gt;缺少快速注释和反注释&lt;/li&gt;
+&lt;li&gt;缺少行号的显示&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;其中的第一点，称其不足，应该说委屈Prelude了，我想作者一定是故意为之，禁用了上下左右方向键以及Home，End，Delete，那么我们只能以C-p，C-n，C-b，C-f和C-a，C-e，C-d来代替，更加纯粹的Emacs，不是吗？俗话说，水至清则无鱼，作为笔记本用户，对此表示压力山大，左手经常要缩成鸡爪状，很不舒服。为什么要跟自己过不去呢？&lt;/p&gt;
+&lt;p&gt;PS: &lt;a href="http://pxqing.me/"&gt;pXq&lt;/a&gt; 现在已经在研究如何制造脚踏板了～&lt;/p&gt;
+&lt;p&gt;关于如何消除这些不便，我们将在下一节讨论。&lt;/p&gt;
+&lt;h2&gt;&lt;div id="customPrelude"&gt;定制Prelude&lt;/div&gt;&lt;/h2&gt;
+&lt;p&gt;Prelude不能让你100%的满意，没关系，我们可以自己动手，在~/.emacs.d文件夹下有一个 personal文件夹，
+这里你只需新建一个后缀命是el的文件，即可开始定制，如我，是
+myconfig.el.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h3&gt;重新启用方向键&lt;/h3&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;    &lt;span class="c1"&gt;;; Re-enable the arrow keys&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;defun&lt;/span&gt; &lt;span class="nv"&gt;disable-guru-mode&lt;/span&gt; &lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;guru-mode&lt;/span&gt; &lt;span class="mi"&gt;-1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;add-hook&lt;/span&gt; &lt;span class="ss"&gt;&amp;#39;prelude-prog-mode-hook&lt;/span&gt; &lt;span class="ss"&gt;&amp;#39;disable-guru-mode&lt;/span&gt; &lt;span class="no"&gt;t&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;除了方向键，还有Home,End,Delete这些键也同时恢复了功能。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h3&gt;设置字体&lt;/h3&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;    &lt;span class="c1"&gt;;;设置字体&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;set-frame-font&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;monaco-12&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;显示代码我用的是monaco，感觉很不错，如果系统还没有安装，可以Google一下。
+字体安装在Ubuntu下极其简单，只需要双击打开字体文件（一般是OTF或者TTF文
+件）后，点击install即可。&lt;/p&gt;
+&lt;p&gt;其实Emacs会读取系统默认的字体，比如我在myunity里就将等宽字体
+(Monospace)设置成了monaco，其余均是苹果冬青黑，所以这一行配置其实是句废话。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h3&gt;更换颜色主题&lt;/h3&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;配色主题采用的是，(almost-monokai)[https://github.com/lut4rp/almost-monokai/]，顾名思义它是仿照TextMate下的monokai主题。由于它需要依赖&lt;a href="http://www.emacswiki.org/emacs/ColorTheme"&gt;color theme&lt;/a&gt;，所以我们需要先安装它。&lt;/p&gt;
+&lt;p&gt;1.安装color theme
+M-x package-install 回车后继续输入color-theme再回车即可。&lt;/p&gt;
+&lt;p&gt;2.从&lt;a href="https://github.com/lut4rp/almost-monokai/"&gt;almost-monokai的Github主页&lt;/a&gt;上将其下载并解压后，把color-theme-almost-monokai.el文件放到~/.emacs.d/themes文件夹下，然后在配置文件（我是~/.emacs.d/personal/myconfig.el)内加入如下代码即可&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;    &lt;span class="c1"&gt;;; color theme&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;load-file&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;~/.emacs.d/themes/color-theme-almost-monokai.el&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;color-theme-almost-monokai&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h3&gt;注释和反注释&lt;/h3&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;    &lt;span class="c1"&gt;;; Comment and Uncomment&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;defun&lt;/span&gt; &lt;span class="nv"&gt;comment-or-uncomment-line-or-region&lt;/span&gt; &lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="s"&gt;&amp;quot;Comments or uncomments the current line or region.&amp;quot;&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;interactive&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;region-active-p&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;comment-or-uncomment-region&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;region-beginning&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;region-end&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;comment-or-uncomment-region&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;line-beginning-position&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;line-end-position&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+    &lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;global-set-key&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;\M-,&amp;quot;&lt;/span&gt; &lt;span class="ss"&gt;&amp;#39;comment-or-uncomment-line-or-region&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;这里我们将M-,设置为注释和反注释的快捷键。当选中某块区域时，可以将该区
+域注释或者反注释；而当不选中时，则对当前行进行操作。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h3&gt;取消 whitespace-mode&lt;/h3&gt;
+我很喜欢 whitespace-mode，但也看到不少人不喜欢它。不喜欢，那便可以取消
+它，代码如下:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;add-hook&lt;/span&gt; &lt;span class="ss"&gt;&amp;#39;prog-mode-hook&lt;/span&gt; &lt;span class="ss"&gt;&amp;#39;prelude-turn-off-whitespace&lt;/span&gt; &lt;span class="no"&gt;t&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;&lt;div id="aboutAuthor"&gt;关于作者&lt;/div&gt;&lt;/h2&gt;
+&lt;p&gt;Prelude的作者名叫&lt;strong&gt;Bozhidar Ivanov Batsov&lt;/strong&gt;，来自&lt;strong&gt;保加利亚&lt;/strong&gt;的Veliko
+Tarnovo，目前居住于其首都&lt;em&gt;Sofia&lt;/em&gt;。&lt;/p&gt;
+&lt;p&gt;Batsov是一家主打商务社交的网站&lt;a href="https://tradeo.com/"&gt;tradeo.com&lt;/a&gt;的
+Technical Lead，负责开发基于Ruby on Rails的各种应用，曾经是Java工程师，
+更早的时候则是C++工程师，而他的老本行则是基于Linux内核的嵌入式开发。
+Batsov的经历，基本就是从低层逐渐往高层走的过程。&lt;/p&gt;
+&lt;p&gt;除了编程外，Bastov总是为Unix-like的操作系统着迷，最喜爱的编辑器是Emacs
+（不然也不会制作Prelude啦），常用的shell是zsh，使用git来做版本控制。&lt;/p&gt;
+&lt;p&gt;最后上一张Bastov的靓照&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Bastov" src="http://batsov.com/images/articles/bozhidar.jpg" /&gt;&lt;/p&gt;
+&lt;h2&gt;&lt;div id="reference"&gt;参考资料&lt;/div&gt;&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="http://wikemacs.org/wiki/Prelude"&gt;WikEmacs-Prelude&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://batsov.com/"&gt;Batsov's blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/bbatsov/prelude"&gt;Prelude's github page&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://batsov.com/prelude/"&gt;Prelude's Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.linkedin.com/in/bozhidarbatsov"&gt;Batsov's linkedin profile&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://tradeo.com/"&gt;tradeo.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</summary><category term="emacs"></category></entry><entry><title>解决Pygments与MathJax的冲突</title><link href="http://freealbert.github.com/jie-jue-pygmentsyu-mathjaxde-chong-tu.html" rel="alternate"></link><updated>2012-08-17T00:00:00+08:00</updated><author><name>freealbert</name></author><id>tag:freealbert.github.com,2012-08-17:jie-jue-pygmentsyu-mathjaxde-chong-tu.html</id><summary type="html">&lt;p&gt;MathJax是个人认为一个非常赞的开源项目，它是一个用来在浏览器上显示LaTeX数学公式的JavaScript引擎，本站的所有公式都是由它生成的。&lt;/p&gt;
+&lt;p&gt;Pygments是一个用来做语法高亮的利器，由pXq一直关注的Pocoo团队出品，Pocoo出品，必属精品。&lt;/p&gt;
+&lt;p&gt;但当两者共同工作时却出现了一点小意外，我发现数学公式中的字母颜色变淡了，情况如下：&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="http://i.imgur.com/xI6ox.png" /&gt;&lt;/p&gt;
+&lt;p&gt;但我使用highlight.js来做高亮时，却又是好的。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="http://i.imgur.com/KdSfO.png" /&gt;&lt;/p&gt;
+&lt;p&gt;这说明是Pygments和MathJax起了冲突。听从pXq的建议，我将Pygments的主题从default换成了vim。Pygments产生主题的语句如下：&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;pygmentize -S vim -f html &amp;gt; pygments_vim.css
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;主题名称可以从&lt;a href="http://pygments.org/demo/53718/"&gt;这里&lt;/a&gt;找到，在&lt;em&gt;Use this style:&lt;/em&gt; 的右边。&lt;/p&gt;
+&lt;p&gt;换了vim主题后，情况就变成这样了。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="http://i.imgur.com/0aNwi.png" /&gt;&lt;/p&gt;
+&lt;p&gt;从水木上得知，Pygments是只改变CSS的，那有这种状况应该是Pygments的某个CSS特性将MathJax原先的给替换掉了，导致公式里的字母也跟着代码一样变得花花绿绿。&lt;/p&gt;
+&lt;p&gt;现在的问题就是要使两者的CSS作用域分开，最后还是pXq想出了方法。刚学了一点CSS知识，我也现学现卖一下。&lt;/p&gt;
+&lt;p&gt;看一下Pygments产生的高亮CSS文件的随便一句代码：&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nc"&gt;.hll&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="k"&gt;background-color&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="m"&gt;#ffffcc&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;这句话表明，在整个网页中，只要属于hll类的元素都将具有background-color特性是#ffffcc这个效果。&lt;/p&gt;
+&lt;p&gt;但事实上，我们并不希望这样。我们希望整个页面包括数学公式中的字母默认就是黑色的，而只有代码段里的字母才会高亮。套用面向对象的说法，代码段里的效果是整体字母效果的一个子类。&lt;/p&gt;
+&lt;p&gt;看一下高亮代码段的HTML代码：&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nt"&gt;&amp;lt;div&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;codehilite&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&amp;lt;pre&amp;gt;&lt;/span&gt;    &lt;span class="nt"&gt;&amp;lt;span&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;kn&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;import&lt;span class="nt"&gt;&amp;lt;/span&amp;gt;&lt;/span&gt; &lt;span class="nt"&gt;&amp;lt;span&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;nn&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;PIL.Image&lt;span class="nt"&gt;&amp;lt;/span&amp;gt;&lt;/span&gt; &lt;span class="nt"&gt;&amp;lt;span&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;kn&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;as&lt;span class="nt"&gt;&amp;lt;/span&amp;gt;&lt;/span&gt; &lt;span class="nt"&gt;&amp;lt;span&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;nn&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;Image&lt;span class="nt"&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;/pre&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;可以看到他们都是属于codehilite类的，那么我们只要让Pygments产生的那个CSS文件只对codehilite类生效就可以了。具体方式是在每行的最开头加上 .codehilite  ，这样指定只有属于codehilite的代码才会高亮。形式如下：&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;codehilite&lt;/span&gt; &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hll&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="n"&gt;background&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;color&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="c"&gt;#ffffcc }&lt;/span&gt;
+&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;codehilite&lt;/span&gt; &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="n"&gt;color&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="c"&gt;#60a0b0; font-style: italic } /* Comment */&lt;/span&gt;
+&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;codehilite&lt;/span&gt; &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;err&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="n"&gt;border&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="n"&gt;px&lt;/span&gt; &lt;span class="n"&gt;solid&lt;/span&gt; &lt;span class="c"&gt;#FF0000 } /* Error */&lt;/span&gt;
+&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;codehilite&lt;/span&gt; &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;k&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="n"&gt;color&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="c"&gt;#007020; font-weight: bold } /* Keyword */&lt;/span&gt;
+&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;codehilite&lt;/span&gt; &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;o&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="n"&gt;color&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="c"&gt;#666666 } /* Operator */&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;由此问题便解决了。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt; 增加.codehilite只针对markdown文件，如果是rst文件，请将codehilite替换成highlight&lt;/strong&gt;&lt;/p&gt;</summary><category term="pygments"></category><category term="mathjax"></category><category term="css"></category></entry><entry><title>数字图像处理实验</title><link href="http://freealbert.github.com/shu-zi-tu-xiang-chu-li-shi-yan.html" rel="alternate"></link><updated>2012-08-13T00:00:00+08:00</updated><author><name>freealbert</name></author><id>tag:freealbert.github.com,2012-08-13:shu-zi-tu-xiang-chu-li-shi-yan.html</id><summary type="html">&lt;div id="part0"&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#part1"&gt;写在最前面的废话&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#part2"&gt;如何开始之Python篇&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#part2.1"&gt;Python简介&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#part2.2"&gt;模块介绍&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#part2.3"&gt;了解更多&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#part2.4"&gt;代码示例与骨架&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#part3"&gt;如何开始之Matlab篇&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="../ji-ben-hui-du-bian-huan.html"&gt;EXP1 基本灰度变换&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href="../zhi-fang-tu-chu-li.html"&gt;EXP2 直方图处理技术&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href="../ping-hua-ji-zhu.html"&gt;EXP3 图像平滑技术&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href="../tu-xiang-rui-hua.html"&gt;EXP4 图像锐化技术&lt;/a&gt;     &lt;br /&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;&lt;div id="part1"&gt;写在最前面的废话&lt;/div&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;既然课程名字叫作&lt;strong&gt;&lt;em&gt;数字图像处理&lt;/em&gt;&lt;/strong&gt;，而不是XXX程序语言设计，那么学生便有选择任何一种自己喜欢的语言完成实验的自由。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;本文最早的写作时间起于我刚学Python的时候，对着实验指导书码着同样是刚开始学习的matlab语言代码的，想着如果这个实验也可以用Python完成就好了。恰逢《Python科学计算》刚刚出版，我买了一本学习了一下（我是亚马逊上第二个购买的～），试着用Python完成了实验，心里也萌生了我也可以写一下Python版的实验指导书的念头。&lt;/p&gt;
+&lt;p&gt;在这个想法的牵引下，我修改了一下原先老师下发的实验指导书，从最初的Word版，用刚学会的Latex排成了PDF，顺便增加了一些我自己理解的实验原理。然后又尝试了下Beamer还有HTML5制作幻灯片，得出结论虽然PDF不是最佳形式，但幻灯片更加不是。最后我想我找到了，网页由于其天生的超链接特性，可以方便的在不同资源之间自由跳转，以前那种一言难尽的感觉终于没了。还有&lt;a href="http://www.mathjax.org/"&gt;MathJax&lt;/a&gt;这种优秀的开源项目，让呈现数学公式也变得容易。&lt;/p&gt;
+&lt;p&gt;过程中，我也收到了一些善意的建议，觉得这么做是徒劳的。我很清楚，不像同样开源的R之于统计领域，在通信这块，Matlab相比Python的优势实在巨大。开源不是万能的，科学计算方面，Python不论是文档还是社区都是远远不及，就性能而言，同样是其短板。其实更大的阻力来自于我自己的内心，我深知自己的水平，不管是这门课还是Python，连入门的门槛还没摸着，自娱自乐没事，误人子弟就罪孽深重了。也由此，这篇文章写写停停花了半年左右，现在我才发现，驱使我还在写的倒不是目的本身，而是这个过程。从一开始的LaTeX，到先前学着用Pelican，Github，带着我走进一个HTML+Javascript+CSS构成的Web世界，真的挺有趣的。&lt;/p&gt;
+&lt;p&gt;你现在正在访问的网站是由Python写成的，国内外很多著名网站比如&lt;a href="http://www.douban.com/"&gt;豆瓣&lt;/a&gt;，&lt;a href="http://www.zhihu.com/"&gt;知乎&lt;/a&gt;，&lt;a href="http://dropbox.com/"&gt;DropBox&lt;/a&gt;都是由Python写的。
+当然本文并不是要讨论其在Web端的应用以及如何建一个网站，而是在另一个领域——科学计算，更精确点也就是如何用Python完成我们的数字图像处理实验。考虑到大部分人可能对新语言不感冒，我也安排了Matlab的部分。&lt;/p&gt;
+&lt;p&gt;本文一共六个部分，除了你现在在阅读的废话环节，还有对于初学者如何用Python或Matlab来完成本实验，以及四个完整的实验，包括了实验原理，内容步骤等。其中我会用Python给出代码骨架。由于我行文实在罗嗦，因此我强烈建议你当感觉不耐烦时，按下&lt;a href="#part0"&gt;Home&lt;/a&gt;键，返回页首，然后根据目录直奔目标。&lt;/p&gt;
+&lt;h2&gt;&lt;div id="part2"&gt;如何开始之Python篇&lt;/div&gt;&lt;/h2&gt;
+&lt;h3&gt;&lt;div id="part2.1"&gt;Python简介&lt;/div&gt;&lt;/h3&gt;
+&lt;p&gt;Python不同于我们之前学过的C/C++，她是一种解释性语言，这一点，本文的另一种备选语言Matlab也是相同的。没有编译这个环节，在程序写好后，便可以运行，当程序运行到有错误的时候便会停下来。一般来说，解释性语言的速度慢于编译型语言，但在现在我们的电脑上，这一点可以完全忽略了。&lt;/p&gt;
+&lt;p&gt;Matlab除了Matlab语言本身还有许许多多的工具箱（你很可能已经在数字信号处理的课堂上见识过信号处理工具箱），工具箱其实就是一堆函数。这些工具箱就是一个个扩展的模块，用来满足某些领域的需求。比如&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;信号处理工具箱提供了丰富的信号处理方面的函数&lt;/li&gt;
+&lt;li&gt;符号数学工具箱扩展了原先只能做数值运算的Matlab使其也能够做符号运算&lt;/li&gt;
+&lt;li&gt;图像处理工具箱当然是用来做图像处理的，针对的就是本实验。&lt;/li&gt;
+&lt;li&gt;更多的工具箱，传送门在&lt;a href="http://www.mathworks.cn/products/"&gt;这里&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;同Matlba一样，Python也有许多的扩展类库，也可以称之为模块。我觉得，模块之于Python就像守护在雅典娜身边的圣斗士，团聚在其周围，扩充了其的应用领域和威力。下面这张图很好的表现了这一点：&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Athena" src="https://github.com/freealbert/PyEE/blob/master/Python/pyintro/python_1.png?raw=true" /&gt;&lt;/p&gt;
+&lt;h3&gt;&lt;div id="part2.2"&gt;模块介绍&lt;/div&gt;&lt;/h3&gt;
+&lt;p&gt;上图中的模块构成了一个较为完整的科学计算的生态系统，当然对于本实验我们用不了这么多，只要稍微了解下下面的青铜五小强即可。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.scipy.org/"&gt;Scipy&lt;/a&gt;
+Scipy是一个用于数学，科学和工程领域仿真的类库，提供了大量现成的函数。本实验中我们会使用其中的signal模块,约定模块导入的形式如下：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;    &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;scipy.signal&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;signal&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://numpy.scipy.org/"&gt;Numpy&lt;/a&gt;
+Numpy模块是Scipy的基础，提供了对矩阵和多维数组的支持以及许多数值计算的函数。约定其导入形式如下:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;    &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://matplotlib.sourceforge.net/"&gt;matplotlib&lt;/a&gt;
+matplotlib是一个二维图像绘制为主的类库，我们会用到其中的pylab模块和cm模块。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;pylab模块集成了一些常用的绘图函数，应付我们这次实验绰绰有余。&lt;/li&gt;
+&lt;li&gt;cm是colormap的缩写，指明的是表示颜色的数值和具体颜色之间以何种方式映射。拍照时的一些效果，如老照片（红铜色）就是由这个决定的。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;我们约定模块导入形式如下：&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;    &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;matplotlib.cm&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;cm&lt;/span&gt;
+    &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;matplotlib.pylab&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;pl&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;有必要提醒一下，matplotlib的那些container的层次还是搞清一下最好，有点恼人的。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.pythonware.com/products/pil/"&gt;PIL&lt;/a&gt;
+PIL是Python Image Library的缩写，顾名思义，是用来做图像处理的类库。
+我们约定模块导入形式如下：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;    &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;PIL.Image&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;Image&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://code.google.com/p/pyopencv/"&gt;PyOpenCV&lt;/a&gt;
+OpenCV是一个基于C/C++语言的开源图像处理函数库，而PyOpenCV是其Python语言的绑定，由此，我们便可以抛开一想就头大的C++,使用Python直接调用其中的函数了。OpenCV功能十分强大，完成本实验小菜一叠，&lt;strike&gt;虽然并不一定要用到它，写在这儿，权做推荐了解一下。&lt;/strike&gt;
+&lt;strong&gt;怀着激动的心情还更新下～～～ PyOpenCV好久没有更新了，建议安装OpenCV最新的Python扩展库cv2，《Python科学计算》的&lt;a href="http://hyry.dip.jp/"&gt;作者&lt;/a&gt;将书中所有的PyOpenCV都用cv2重写了，&lt;a href="http://blog.chinaunix.net/uid-23100982-id-3082055.html"&gt;这里&lt;/a&gt;有说明和实例。&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;&lt;div id="part2.3"&gt;了解更多&lt;/div&gt;&lt;/h3&gt;
+&lt;p&gt;由于篇幅有限，本文不可能对Python的语法来个详细的介绍，如果想用Python完成本实验，那么你只好去看别的教程了，幸好我们的要求并不高，一会会就可以将所能用到的语法一网打尽了，这么简单，你也可以边写程序边学习。&lt;/p&gt;
+&lt;p&gt;Python有着一个庞大的社区，网络上的好资源也是汗牛充栋。你大致了解下Python的简单语法，和一点点用Python做科学计算的知识就可以开始啦。下面是一些资源索引:&lt;/p&gt;
+&lt;h4&gt;推荐&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://woodpecker.org.cn/abyteofpython_cn/chinese/index.html"&gt;简明 Python 教程&lt;/a&gt; 推荐，可直接浏览，一天之内应该就可以写程序了。&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://hyry.dip.jp:8000/pydoc/index.html"&gt;用Python做科学计算&lt;/a&gt; 强烈推荐，这本书详细的介绍了我们会用到的类库（Numpy、Scipy、 matplotlib），目前也是唯一一本关于Python做科学计算的书。可以在图书馆借到，作者在网上放了大部分的内容，对我们实验而言已经足够了。&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://hyry.dip.jp/"&gt;HYRY Studio&lt;/a&gt; 《Python科学计算》作者的网站，汇集了博客、论坛等功能，里面的技术文章自然是很有价值，无需多言。让我印象更为深刻的是，里面记载的作者平时生活工作的点滴，让我感到就像身边稍微年长一点的前辈或是关系稍好的年轻老师，还是个好爸爸，觉得可亲，再看他的书，仿佛也更容易理解了。还有他女儿的日记呢，かわいい！&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;可参考&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.scipy.org/NumPy_for_Matlab_Users/"&gt;NumPy for Matlab Users&lt;/a&gt; Matlab与Numpy/Scipy有很多相似之处，也有很多不同。这篇文章比较了两者的差异，有兴趣者可以看看。&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://matplotlib.sourceforge.net/gallery.html"&gt;matplotlib gallery&lt;/a&gt; 有很多绘图的案例，也有相应的代码，我觉得是matplotlib绘图的最好教程了。&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.pythonware.com/library/pil/handbook/index.htm"&gt;Python Imaging Library Handbook&lt;/a&gt; PIL的官方手册，其中的Image模块我们会经常用到，虽然是英文，但也比较好懂，有兴趣可以看看。&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://docs.scipy.org/doc/numpy/reference/"&gt;Numpy Reference Guide&lt;/a&gt; Numpy的手册，非常详尽，不推荐阅读，因为太详尽会把你吓跑的。&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://docs.scipy.org/doc/scipy/reference/"&gt;Scipy Reference Guide&lt;/a&gt; Scipy手册，不推荐阅读，理由同上。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;&lt;div id="part2.4"&gt;代码示例&lt;/div&gt;&lt;/h3&gt;
+&lt;p&gt;万事开头难，先选取实验一中的步骤2作为例子。&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="c"&gt;# -*- coding:utf-8 -*-&lt;/span&gt;
+
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;Image&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;matplotlib.cm&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;cm&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;matplotlib.pylab&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;pl&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;trans_line&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;r&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="mf"&gt;0.35&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;0.3&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;r&lt;/span&gt;
+    &lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="n"&gt;r&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&lt;/span&gt; &lt;span class="mf"&gt;0.65&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;0.105&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mf"&gt;2.6333&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;0.35&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mf"&gt;0.3&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt;
+
+&lt;span class="n"&gt;rice_0&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;asarray&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Image&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;rice.png&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;convert&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;L&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nb"&gt;float&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;255&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;M&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;rice_0&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;shape&lt;/span&gt;
+&lt;span class="n"&gt;fig&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pl&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;figure&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;ori_pic&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;fig&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add_subplot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;ori_pic&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;imshow&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;rice_0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;cmap&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;cm&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;gray&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;norm&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;pl&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Normalize&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;vmin&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;vmax&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="n"&gt;ori_pic&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;set_title&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;input image&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;rice_1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;rice_0&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;copy&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;M&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="n"&gt;rice_1&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;trans_line&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;rice_0&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="n"&gt;result_pic&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;fig&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add_subplot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;222&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;result_pic&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;imshow&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;rice_1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;cmap&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;cm&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;gray&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;norm&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;pl&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Normalize&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;vmin&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;vmax&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="n"&gt;result_pic&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;set_title&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;output image&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;r&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;arange&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mf"&gt;0.001&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mf"&gt;0.001&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;array&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="n"&gt;trans_line&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;rr&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;rr&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="n"&gt;trans_line_curve_fig&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;fig&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add_subplot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,(&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="n"&gt;trans_line_curve_fig&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;trans_line_curve_fig&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;set_title&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;s-r&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;trans_line_curve_fig&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;set_xlabel&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;r&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;trans_line_curve_fig&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;set_ylabel&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;s&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;fig&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;suptitle&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;exp_1_2&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;fig&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;savefig&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;exp_1_2.jpg&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="codehilite"&gt;&lt;pre&gt;            &lt;span class="c"&gt;# -*- coding:utf-8 -*-&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Python中#开头的都是注释，通常注释都是不起作用的，但这句注释放在程序开头，是一句有意义的注释。它告诉Python解释器，里面的代码我是用utf-8编码。不然的话，Python解释器会默认程序使用的是ASCII码。ASCII码我们以前接触过，比如\n，\t，A是65，a的值是97等等，但有个缺点，不能表示中文（注释很容易出现中文），所以解释器遇到了它不认识的字符便会报错，添加这句注释，解释器就知道你用的是utf-8编码，便不会对中文报错了。&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;            &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;Image&lt;/span&gt;
+            &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;
+            &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;matplotlib.cm&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;cm&lt;/span&gt;
+            &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;matplotlib.pylab&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;pl&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;就像上文所说的那样，这段代码是告诉Python解释器我要引入相应的类库，并以相应的缩写表示，这是为了在之后用到时可以少打几个字，看起来也清爽一些，不然如果每处都要写matplotlib.pylab肯定很痛苦。&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;            &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;trans_line&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+                &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;r&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="mf"&gt;0.35&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                    &lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;0.3&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;r&lt;/span&gt;
+                &lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="n"&gt;r&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&lt;/span&gt; &lt;span class="mf"&gt;0.65&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                    &lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;0.105&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mf"&gt;2.6333&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;0.35&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+                &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;           
+                    &lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mf"&gt;0.3&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+                &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;这段代码我们是来定义如下这段函数的，对于每个像素的灰度值都进行变换。
+\[ 
+    s = \left\{
+        \begin{array}{lr}
+            0.3r， &amp;amp; r &amp;lt; 0.35 \\
+            0.105 + 2.6333(r-0.35)， &amp;amp; 0.35\leq r \leq 0.65\\
+            1 + 0.3(r-1)， &amp;amp; r &amp;gt; 0.65.
+            \end{array}
+        \right.
+\]&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;    &lt;span class="n"&gt;rice_0&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;asarray&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Image&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;rice.png&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;convert&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;L&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nb"&gt;float&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;255&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;这句话我们一下子做了很多事情。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;首先,我们用打开图片，Image.open('rice.png')是打开图片，其中图片应该是要同程序文件放在同一目录下，如果不是同一目录，那应该再加上系统路径。&lt;/li&gt;
+&lt;li&gt;convert('L')是用来确保读入的图像是灰度图像，因为有的图像是伪装成灰度图像的彩色图像。&lt;/li&gt;
+&lt;li&gt;经过上述步骤后，我们读入的其实还是一个Image类的对象，这一点，你可以在解释器中输入如下代码验证一下。
+而np.asarray(Image_Object)这一步就是为了将Image对象转化为我们能处理的ndarray对象，也就是一个二维数组。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;    &lt;span class="n"&gt;img&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Image&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;rice.png&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;convert&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;L&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;help&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;img&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;最后一步，由于我们读入图片的灰度是表示成0-255的，而要求的公式却是0-1的，所以我们要将灰度归一化。之所以要费事费力的写个float(255)
+的原因想必你已经清楚了，如果还未明了，那么可以看一下我的另一片&lt;a href="../nao-ren-de-pythonchu-fa.html"&gt;拙作&lt;/a&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;M&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;rice_0&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;shape&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;这句话我们得到了读入矩阵的形状，其中M是行数，N是列数。shape是ndarray对象均有的属性。&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="n"&gt;fig&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pl&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;figure&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;既然要画图，那当然要有一个画图的窗口啦。这句话就是产生一个画图的窗口，目前我们没有对fig的大小做任何设置，因而便自动采用默认值也就是figsize=(8, 6)，再后期，我们会遇到一个窗口里需要里放下很多张图片，那时小小的640*480窗口便不够用了（figsize中的每一个单位默认代表80个像素）。我们可以指明我们所要的窗口大小。&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="n"&gt;fig&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pl&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;figure&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;figsize&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;16&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;12&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt; &lt;span class="c"&gt;# 1280*960&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="n"&gt;ori_pic&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;fig&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add_subplot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;说曹操曹操就到，刚讲过可能一个窗口里需要放下好几副话，这不来了嘛。subplot很熟悉吧，matlab里用过，就是将窗口分为几行几列的子窗口。括号内的第一个参数是行数，第二个参数是列数，第三个参数指定需要将图画在那个子窗口上，这个序号就是从第一行第一列的那个子窗口开始从左往右数的序号。严格一点，这里的子窗口叫做Axes对象，这不ax1就是一个我们当前要画图的Axes对象。&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="n"&gt;ori_pic&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;imshow&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;rice_0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;cmap&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;cm&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;gray&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;norm&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;pl&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Normalize&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;vmin&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;vmax&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Oh,yeah!到了这句，我们的任务已经阶段性完成了一大块了，接下去的都是类似的工作，恕我不能一一详述了。在上一句中，我们将第一个子窗口命名为ax1，现在便是用imshow函数将图片显示在ax1上。你可能会问，那为什么不是ax1.imshow(rice_0)这么简单了当就可以了呢？后面的又是什么东西？再次稍微罗嗦一下。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;cmap=cm.gray 指明我们的颜色映射采用灰度图像，否则的话，imshow会启用默认的伪彩色，你得到的就是一张花花绿绿的rice了，这当然不是你想要得。&lt;/li&gt;
+&lt;li&gt;norm=pl.Normalize(vmin=0,vmax=1) 指明灰度映射时，将0映射成0,255映射成1。为什么要这么指明呢？这就是matplotlib蛋疼的地方了，它会默认进行灰度拉伸，如果你的一张图像的灰度值范围是120-220，那么它就会把120映射成0,220映射成1,造成不必要的错误。关于这一点，更多的内容可以看我的&lt;a href="../jie-jue-matplotlibde-imshowxian-shi-shi-zhen.html"&gt;另一篇文章&lt;/a&gt;和&lt;a href="http://www.newsmth.net/nForum/#!article/Python/89271"&gt;水木上的帖子&lt;/a&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="n"&gt;fig&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;savefig&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;exp_1_2.jpg&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;没错，保存图像就是这样，Python单双引号是一样的，只要在引号内输入你要的文件名即可，格式便是你输入的格式。至此，恭喜你大功告成～&lt;/p&gt;
+&lt;h2&gt;&lt;div id="part3"&gt;如何开始之Matlab篇&lt;/div&gt;&lt;/h2&gt;
+&lt;p&gt;如果从头至尾看到这，想必你也清楚我的水平了，货真价实MADAO一个。。。&lt;/p&gt;
+&lt;p&gt;Matlab应该是在之前的课程中接触过了，如果感觉有困难的话，我也不误人子弟了，图书馆里的Matlab书籍汗牛充栋，人手一本绰绰有余，而这些工具书大体都相似，故也没什么好坏之分。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;出于整个页面排版的考虑，我将实验内容做成了独立的页面。如果你性急End一下就到了这边，那还请你再按下&lt;a href="#part0"&gt;Home&lt;/a&gt;键，返回页首再选取实验内容。&lt;/strong&gt;&lt;/p&gt;</summary><category term="dip"></category><category term="pyee"></category><category term="python"></category><category term="matlab"></category></entry><entry><title>图像锐化</title><link href="http://freealbert.github.com/tu-xiang-rui-hua.html" rel="alternate"></link><updated>2012-08-13T00:00:00+08:00</updated><author><name>freealbert</name></author><id>tag:freealbert.github.com,2012-08-13:tu-xiang-rui-hua.html</id><summary type="html">&lt;h2&gt;实验目的&lt;/h2&gt;
+&lt;p&gt;通过上机实验的手段巩固课堂上所学的关于图像锐化的相关知识，自己编写Sobel,Laplacian,Roberts算子对图像进行锐化的函数，感受不同的图像处理方法对最终图像效果的影响。&lt;/p&gt;
+&lt;h2&gt;方法技术介绍&lt;/h2&gt;
+&lt;p&gt;锐化处理的主要目的是突出图像中的细节或者增强被模糊了的细节，这种模糊不是由错误操作造成的，就是特殊图像获取方法的固有影响。从前面几个实验中可以知道，在空域用像素邻域平均法可以使图像变模糊，因为均值处理与积分类似，从逻辑角度可以断定，锐化处理可以用空间微分来完成。下文将分别讨论Sobel算子、Laplacian算子和Roberts算子这三个微分锐化算子。&lt;/p&gt;
+&lt;h3&gt;Sobel算子&lt;/h3&gt;
+&lt;p&gt;在图像处理中，一阶微分是通过梯度法实现的。对于函数$f(x,y)$在其坐标$(x,y)$上的梯度是通过如下二维列向量定义的：
+\begin{equation}
+    \nabla f =
+    \left[
+        \begin{array}{c}
+            G_x\\
+            G_y
+        \end{array}
+    \right]
+    =
+    \left[
+        \begin{array}{c}
+            \frac{\partial f}{\partial x}\\
+            \frac{\partial f}{\partial y}
+        \end{array}
+    \right]
+    \label{1}
+\end{equation}
+这个向量的模值由下式给出:&lt;/p&gt;
+&lt;p&gt;\begin{align}
+\nabla f &amp;amp; = mag(\nabla \bf f)  \\
+{} &amp;amp; = [G_x^2+G_y^2]^{\frac{1}{2}}  \\
+{} &amp;amp; = [(\frac{\partial f}{\partial x})^2+(\frac{\partial f}{\partial y})^2]^{\frac{1}{2}} 
+\end{align}&lt;/p&gt;
+&lt;p&gt;Sobel算子属于一阶微分处理，对于一元函数$f(x)$，表达一阶微分的定义是一个差值:
+\begin{equation}
+    \frac{\partial f}{\partial x}=f(x+1)-f(x)
+\end{equation}
+对于水平和垂直两个方向，相应就有水平Sobel和垂直Sobel两个模板。
+\[
+    d_x=\left[
+        \begin{array}{lcr}
+            -1 &amp;amp; -2 &amp;amp; -1 \\
+             0 &amp;amp; 0 &amp;amp; 0 \\
+             1 &amp;amp; 2 &amp;amp; 1
+        \end{array}
+    \right]
+    (水平Sobel)
+\]
+\[
+    d_y=\left[
+        \begin{array}{lcr}
+            -1 &amp;amp; 0 &amp;amp; 1 \\
+            -2 &amp;amp; 0 &amp;amp; 2 \\
+            -1 &amp;amp; 0 &amp;amp; 1
+        \end{array}
+    \right]
+    (垂直Sobel)
+\]
+综合考虑水平和垂直两个方向，则采用$\sqrt{d_x^2+d_y^2}$来生成图像，也就是$(4)$式。&lt;/p&gt;
+&lt;h3&gt;Laplacian算子&lt;/h3&gt;
+&lt;p&gt;下式用差分定义$x$方向上的二阶微分:
+\begin{equation}
+    \frac{\partial^2f}{\partial x^2}=f(x+1,y)+f(x-1,y)-2f(x,y)
+\end{equation}
+相应的，$y$方向上的二阶微分则为：
+\begin{equation}
+    \frac{\partial^2f}{\partial y^2}=f(x,y+1)+f(x,y-1)-2f(x,y)
+\end{equation}
+二维拉普拉斯数字实现可由这两个分量相加得到:
+\begin{equation}
+    \nabla^2f=[f(x+1,y)+f(x-1,y)+f(x,y+1)+f(x,y-1)]-4f(x,y)
+\end{equation}
+于是，Laplacian的算子形式便为:
+\[
+    \left[
+        \begin{array}{lcr}
+            0 &amp;amp; -1 &amp;amp; 0 \\
+        -1 &amp;amp; 4 &amp;amp; -1 \\
+            0 &amp;amp; -1 &amp;amp; 0 
+        \end{array}
+    \right]
+\]
+带对角线的Laplacian算子为:
+\[
+    \left[
+        \begin{array}{lcr}
+            -1 &amp;amp; -1 &amp;amp; -1 \\
+            -1 &amp;amp;  8 &amp;amp; -1 \\
+            -1 &amp;amp; -1 &amp;amp; -1
+        \end{array}
+    \right]
+\]
+假设有一个灰度值均匀变化的斜坡，其上的一阶微分值都不是零，但是二阶微分只有在斜坡的起始处和终点处才不为零。在图像中，边缘类似于这种过渡，进而可以得出一阶微分产生较粗的边缘，而二阶微分则细的多。可见二阶微分对细节的处理好于一阶微分。但考虑到孤立噪声点的情况，在该噪声点及其周围，二阶微分比一阶反应要强的多，也就是说二阶微分对噪声敏感。&lt;/p&gt;
+&lt;h3&gt;Roberts算子&lt;/h3&gt;
+&lt;p&gt;当对整幅图像进行$(4)$式的计算时，计算量很大，因此在实际操作中常用绝对值代替平方与开放运算近似求梯度的模值：
+\begin{equation}
+    \nabla f\approx |G_x|+|G_y|\\
+\end{equation}
+Roberts于1965年提出两种定义使用了交叉差分的算法：
+\begin{eqnarray}
+    G_x=f(x+1,y+1)-f(x,y)\\
+    G_y=f(x+1,y)-f(x,y+1)
+\end{eqnarray} 从而可以得到梯度的近似算法： 
+\begin{equation} 
+    \nabla f\approx |f(x+1,y+1)-f(x,y)|+|f(x+1,y)-f(x,y+1)| 
+\end{equation}&lt;/p&gt;
+&lt;h2&gt;实验步骤&lt;/h2&gt;
+&lt;h3&gt;步骤1&lt;/h3&gt;
+&lt;p&gt;编写好Sobel,Laplacian,Roberts算子的相关函数，加入你自己编写的已经斐然成章的模块。&lt;/p&gt;
+&lt;h3&gt;步骤2&lt;/h3&gt;
+&lt;p&gt;读入cameraman.jpg图像文件，分别采用垂直方向的Sobel算子，Laplacian算子和$\sqrt{d_x^2+d_y^2}$的Sobel算子对原图进行锐化处理。将原图和处理后的图像绘在同一个窗口并保存。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://github.com/freealbert/freealbert_photo_1/blob/master/Tech/cameraman.png?raw=true" /&gt;&lt;/p&gt;
+&lt;h3&gt;步骤3&lt;/h3&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;1&lt;span class="p"&gt;.&lt;/span&gt;读入&lt;span class="n"&gt;skeleton&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;jpg&lt;/span&gt;文件，用带对角线的&lt;span class="n"&gt;Laplacian&lt;/span&gt;算子对其处理。
+2&lt;span class="p"&gt;.&lt;/span&gt;将1&lt;span class="p"&gt;)&lt;/span&gt;的结果叠加到原始图像上。可看出噪声增强了（&lt;span class="n"&gt;Laplacian&lt;/span&gt;算子对噪声敏感），应设法降低。
+3&lt;span class="p"&gt;.&lt;/span&gt;获取&lt;span class="n"&gt;Sobel&lt;/span&gt;图像并进行5&lt;span class="o"&gt;*&lt;/span&gt;5邻域平均，以减少噪声。
+4&lt;span class="p"&gt;.&lt;/span&gt;获取2&lt;span class="p"&gt;)&lt;/span&gt;和3&lt;span class="p"&gt;)&lt;/span&gt;相乘图像，噪声得以减少。
+5&lt;span class="p"&gt;.&lt;/span&gt;将4&lt;span class="p"&gt;)&lt;/span&gt;结果叠加到原始图像上。
+6&lt;span class="p"&gt;.&lt;/span&gt;最后对5&lt;span class="p"&gt;)&lt;/span&gt;的图像做幂指数为0&lt;span class="p"&gt;.&lt;/span&gt;2的幂次变换
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img alt="" src="https://github.com/freealbert/freealbert_photo_1/blob/master/Tech/skeleton.jpg?raw=true" /&gt;&lt;/p&gt;
+&lt;p&gt;将原图和处理后的图像绘在同一个窗口并保存。&lt;/p&gt;
+&lt;h3&gt;步骤4&lt;/h3&gt;
+&lt;p&gt;编写Roberts梯度锐化函数，对cell.jpg进行图像锐化，锐化图像的形成以下式为准：
+\begin{equation}
+    g(x,y)=
+    \left\{
+        \begin{array}{lr}
+            L_G, &amp;amp; G[f(x,y)]\geq T\\
+            L_B, &amp;amp; otherwise
+        \end{array}
+    \right.
+\end{equation}
+$L_G=255,L_B=0$,适当选择门限T。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://github.com/freealbert/freealbert_photo_1/blob/master/Tech/cell.jpg?raw=true" /&gt;&lt;/p&gt;
+&lt;p&gt;将原图和处理后的图像绘在同一个窗口并保存。&lt;/p&gt;
+&lt;h3&gt;实验报告要求&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;要是发现错误请在下面评论处指明噢！&lt;/strong&gt;&lt;/p&gt;</summary><category term="dip"></category><category term="pyee"></category></entry><entry><title>平滑技术</title><link href="http://freealbert.github.com/ping-hua-ji-zhu.html" rel="alternate"></link><updated>2012-08-12T00:00:00+08:00</updated><author><name>freealbert</name></author><id>tag:freealbert.github.com,2012-08-12:ping-hua-ji-zhu.html</id><summary type="html">&lt;h2&gt;实验目的&lt;/h2&gt;
+&lt;p&gt;了解各种平滑处理技术的特点和用图，掌握平滑技术的仿真与实现方法，感受不同平滑处理方法对最终图像效果的影响。&lt;/p&gt;
+&lt;h2&gt;实验内容&lt;/h2&gt;
+&lt;p&gt;滤波的概念来源于在频域对信号进行处理的傅立叶变换，但在本实验中，是直接对图像像素处理的操作，所以使用空间滤波这一词汇区别更为传统的频域滤波处理。&lt;/p&gt;
+&lt;h3&gt;均值滤波&lt;/h3&gt;
+&lt;p&gt;均值滤波器用于模糊处理和减小噪声，模糊处理经常用于预处理，例如在提取大的目标之前去除图像中的一些琐碎细节、桥接直接和曲线的缝隙，同时也可以减小噪声。
+本实验采用的$5\times5$的模板，计算公式为：
+$$R=\frac{1}{9}\sum_{i=1}^{i=25}z_i$$
+需要注意的是，当模板取得大了以后，图像会变得模糊，这是因为邻域平均相当于积分运算。&lt;/p&gt;
+&lt;h2&gt;中值滤波&lt;/h2&gt;
+&lt;p&gt;中值滤波器是将模板内的值做统计排序后，取中间值代替中心像素的值。中值滤波器的使用非常普遍，这是因为对于一定类型的随机噪声，它提供了一种优秀的去噪能力，比小尺寸的线性平滑滤波器的模糊程度明显要低。中值滤波器对处理脉冲噪声（也称为椒盐噪声）非常有效，因为这种噪声就是以黑白点叠加在图像上的。&lt;/p&gt;
+&lt;h3&gt;邻域标准差图像&lt;/h3&gt;
+&lt;p&gt;令$(x,y)$为某一图像中像素的坐标，令$S_{xy}$表示一确定大小的邻域（子图像），其中心在$(x,y)$。可得在$S_{xy}$ 像素的平均值$m_{S_{xy}}$如下式计算：&lt;/p&gt;
+&lt;p&gt;\begin{equation}
+    m_{S_{xy}}=\sum_{(s,t)\in{S_xy}}r_{s,t}p(r_{s,t})
+\end{equation}
+此处$r_{s,t}$是在邻域中坐标$(s,t)$处的灰度，且$p(r_{s,t})$是与灰度值对应的邻域归一化直方图分量。类似地，区域$S_{xy}$中像素的灰度级方差如下式：&lt;/p&gt;
+&lt;p&gt;\begin{equation}    \sigma^2_{S_{xy}}=\sum_{(s,t)\in{S_{xy}}}[r_{s,t}-m_{S_{xy}}]^2p(r_{s,t})
+\end{equation}&lt;/p&gt;
+&lt;h2&gt;实验步骤&lt;/h2&gt;
+&lt;h3&gt;步骤1&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Pyer:大家好，要是能坚持到这真了不起。其实吧，我觉得不管他有没有现成函数，自己写一遍总是有好处的。那个要不您再写下邻域平均、中值滤波和生成邻域标准差图像的函数，并将他们加入上次实验开始积累的模块？&lt;/p&gt;
+&lt;p&gt;Mer:别得意，我知道你手里撰着nlfilter,median,imnoise,fspecial,filter2,medfilt2这么一大把函数打算用。爽吧，Matlab那么贵不是白收钱的。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;步骤2&lt;/h3&gt;
+&lt;p&gt;读入test3_1.jpg,进行$5\times 5$邻域平均，并计算邻域标准差，显示邻域平均的图像和邻域标准差图像。将原图和处理后的图像绘在同一个窗口并保存。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Mer: 记得要用nlfilter函数。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img alt="" src="https://github.com/freealbert/freealbert_photo_1/blob/master/Tech/test3_1.jpg?raw=true" /&gt;&lt;/p&gt;
+&lt;h3&gt;步骤3&lt;/h3&gt;
+&lt;p&gt;在test3_1.jpg中添加均值为0，方差为0.02的高斯白噪声，对噪声污染后的图像进行$5\times5$的邻域平均。将原图和处理后的图像绘在同一个窗口并保存。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Mer：还是用nlfilter哦。&lt;/p&gt;
+&lt;p&gt;Pyer：啊呀啊呀，高斯白噪声，好像没有一个现成函数叫awgn吧。这可怎么办？别担心，勇敢的Pyer，虽然我们不能像Mer们用现成的awgn，但是我们可以编写我们自己的awgn呀。numpy的random模块有正太分布函数叫normal的。回忆下随机信号分析的知识，一下就搞定了。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;步骤4&lt;/h3&gt;
+&lt;p&gt;Mer们，请Matlab，用fspecial函数生成一$5\times 5$邻域平均窗函数，再用filter2函数求邻域平均，试比较与用nlfilter 函数求邻域平均的速度。最后请将原图和处理后的图像绘在同一个窗口并保存。&lt;/p&gt;
+&lt;p&gt;Pyer们，这轮好像是轮空欸。。。其实你也可以读入test3_2.jpg图像文件，比较自己写的邻域平均函数的运行时间和matlab中fspecial函数和nlfilter函数的运行时间。将原图和处理后的图像绘在同一个窗口并保存。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://github.com/freealbert/freealbert_photo_1/blob/master/Tech/test3_2.jpg?raw=true" /&gt;&lt;/p&gt;
+&lt;h3&gt;步骤5&lt;/h3&gt;
+&lt;p&gt;Pyer们，对test3_2.jpg图像用numpy自带的medfilt2d函数进行中值滤波。将原图和处理后的图像绘在同一个窗口并保存。&lt;/p&gt;
+&lt;p&gt;Mer们，用medfilt2函数对test3_2.jpg图像进行中值滤波。显示处理结果。&lt;/p&gt;
+&lt;h3&gt;步骤6&lt;/h3&gt;
+&lt;p&gt;这轮大家都一样，对test3_2.jpg图像用自己编写的中值滤波函数进行中值滤波。将原图和处理后的图像绘在同一个窗口并保存。&lt;/p&gt;
+&lt;h2&gt;实验报告要求&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt; 发现错误要告诉我，求轻拍。&lt;/strong&gt;&lt;/p&gt;</summary><category term="dip"></category><category term="pyee"></category></entry><entry><title>直方图处理</title><link href="http://freealbert.github.com/zhi-fang-tu-chu-li.html" rel="alternate"></link><updated>2012-08-12T00:00:00+08:00</updated><author><name>freealbert</name></author><id>tag:freealbert.github.com,2012-08-12:zhi-fang-tu-chu-li.html</id><summary type="html">&lt;h2&gt;实验目的&lt;/h2&gt;
+&lt;p&gt;通过上机实验的手段巩固课堂上所学的关于直方图均衡化和直方图匹配等图像增强技术的认识和了解，学会自行编写上述函数，感受不同的直方图增强技术对最终图像效果的影响。&lt;/p&gt;
+&lt;h2&gt;方法技术介绍&lt;/h2&gt;
+&lt;p&gt;直方图处理能有有效的用于图像增强，而直方图更是多种空间域处理技术的基础。&lt;/p&gt;
+&lt;p&gt;灰度级为[0,L-1]范围的数字图像的直方图是离散函数$h(r_k)=n_k$，其中$r_k$是第$k$级灰度，$n_k$是图像中灰度级为$r_k$的像素个数。经常以图像中的总数（用$n$表示）来除它的每个值，以得到归一化的直方图。因此，一个归一化的直方图由$P(r_k)=\frac{n_k}{n}$给出，其中$k=0,1,\cdots,L-1$。简单地说，$P(r_k)$给出了灰度级为$r_k$发生的概率估计值，显然一个归一化的直方图的所有部分之和应该等于$1$。&lt;/p&gt;
+&lt;h3&gt;直方图均衡&lt;/h3&gt;
+&lt;p&gt;直方图均衡的思想就是使处理后的图像灰度分布均衡，这样图像的信息熵最大，图像也就得到了相应的增强。
+故而，对于上文中的非均匀的密度函数$P_r(r)$经某个变换函数$s=T(r)$变换为均匀概率分布$P_s(s)$，$s$为变换后的图像灰度值。&lt;/p&gt;
+&lt;p&gt;由雅克比变换易得：
+$$  P_s(s)ds=P_r(r)dr$$
+当直方图均衡化并归一化后，
+$$  p_s(s)=1$$
+即：
+$$  ds=P_r(r)dr$$
+其中$s$,$r$归一化的含义就是$r\in[0,1],s\in[0,1]$，对应matlab中的就是图像的double类型。
+两边取积分：
+$$  s=T_r=\int\limits_{0}^{r}P_r(\omega)d\omega $$
+变换后图像的灰度$s$就是原图像灰度级的概率密度函数的积分。&lt;/p&gt;
+&lt;h3&gt;直方图匹配&lt;/h3&gt;
+&lt;p&gt;直方图均衡能自动地确定变换函数，该函数寻求产生均匀直方图的输出图像。对于某些应用来说，采用均匀直方图的基本增强并不是最好的办法，尤其是有时可以指定希望处理的图像所具有的直方图形状，这种用于产生处理后特有直方图的图像的方法，称为直方图匹配，也叫直方图规定化。&lt;/p&gt;
+&lt;p&gt;方法推导
+$r,z$为连续灰度级（看成是连续随机变量$P_r(r),P_z(z)$为它们对应的连续概率密度。
+$r$为输入图像的灰度级，$z$为输出图像的灰度级，输入图像的概率密度函数为$P_r(r)$，$P_z(z)$为希望输出图像具有的规定概率密度函数。
+令$s$为一随机变量，且有
+$$s=T(r)=\int\limits_{0}^{r}P_r(\omega)d\omega$$
+同时对希望输出的图像做直方图均衡化，有
+$$s=G(z)=\int\limits_{0}^{z}P_z(t)dt$$
+$$\because s=G(z)$$
+$$\therefore z=G^{-1}(s)$$
+$$\because s=T(r)$$
+$$\therefore z=G^{-1}(s)=G^{-1}[T(r)]$$
+故而直方图规定化的步骤为：
+&lt;em&gt; 由(5)式求$T(r)$
+&lt;/em&gt; 由(6)式求$G(z)$
+&lt;em&gt; 求反变换$G^{-1}$
+&lt;/em&gt; 对输入图像的所有像素应用(7)式得到输出图像&lt;/p&gt;
+&lt;h2&gt;实验步骤&lt;/h2&gt;
+&lt;h3&gt;步骤1&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Pyer：这个。。。我没找到直方图均衡和直方图规定化的函数。那个。。。我们只好自己写了，从这里开始正好可以开始积累由自己编写的图像处理模块。&lt;/p&gt;
+&lt;p&gt;Mer：看Pyer们，多痛苦，就算有函数，光找也要他们半条命。这就是Matlab的好处啦。Mer们，虽然我们已经有了现成的函数，但你能忍受的了旁边Pyer们可以杀人的愤怒眼神吗？要不也自己写一下吧，顺便当成一次理解这两个概念的机会了。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;步骤2&lt;/h3&gt;
+&lt;p&gt;将mountain.jpg图像读入，对其做直方图均衡化，作出处理前后的灰度直方图，将其保存在同一窗口。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://github.com/freealbert/freealbert_photo_1/blob/master/Tech/mountain.jpg?raw=true" /&gt;&lt;/p&gt;
+&lt;h3&gt;步骤3&lt;/h3&gt;
+&lt;p&gt;将mountain.jpg图像读入，按如下灰度变换函数对其做直方图匹配，作出处理前后的灰度直方图，将其保存在同一窗口。
+\[
+n=
+\left\{
+\begin{array}{lr}
+1400r,    &amp;amp; r\leq r\\
+7000-310r &amp;amp; 5&amp;lt;r\leq 20\\
+900-5r    &amp;amp; 20&amp;lt;r\leq 180\\
+-1440+8r  &amp;amp; 180&amp;lt;r\leq 225\\
+3060-12r  &amp;amp; 225&amp;lt;\leq 255
+\end{array}
+\right.
+\]&lt;/p&gt;
+&lt;h2&gt;实验报告要求&lt;/h2&gt;
+&lt;p&gt;嗯，我还是一如既往的没有要求。唯一的要求：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;要是发现错误请在下面评论处指明噢！&lt;/strong&gt;&lt;/p&gt;</summary><category term="dip"></category><category term="pyee"></category></entry><entry><title>基本灰度变换</title><link href="http://freealbert.github.com/ji-ben-hui-du-bian-huan.html" rel="alternate"></link><updated>2012-08-08T00:00:00+08:00</updated><author><name>freealbert</name></author><id>tag:freealbert.github.com,2012-08-08:ji-ben-hui-du-bian-huan.html</id><summary type="html">&lt;blockquote&gt;
+&lt;p&gt;在以后的日子里，你可能需要根据概念定义编写直方图均衡、直方图规定化，
+Sobel锐化，Laplacian锐化，Roberts锐化等函数，对此，你准备好了吗?上课一定要认真听讲哦!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;带上冈萨雷斯的第三版一块出发吧!&lt;/p&gt;
+&lt;h2&gt;实验目的&lt;/h2&gt;
+&lt;p&gt;通过上机实验的手段巩固课堂上所学的关于图像反转、幂次变换和分段线性变换有关的知识，感受
+不同的灰度变换方法对最终图像效果的影响。&lt;/p&gt;
+&lt;h2&gt;方法技术介绍&lt;/h2&gt;
+&lt;p&gt;灰度变换函数是图像增强技术中最简单的一类，处理前后的像素值分别用r和s定义，于是我们可以用如下表达式来表示原像素值r映射到值s的变换:
+$$  s = T(r)$$&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h3&gt;图像反转&lt;/h3&gt;
+&lt;p&gt;灰度级范围为[0，L-1]的图像反转表达式为:
+$$  s = L-1-r$$
+采用上式可以产生图像反转的对等图像，这种处理尤其适合用于增强嵌入于图像暗色区域的白色或
+灰色细节，特别是当黑色面积占主导地位时。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3&gt;幂次变换&lt;/h3&gt;
+&lt;p&gt;幂次变换的基本形式为:
+$$ s = cr^{\gamma}$$
+其中c和γ为正常数。从下图可以看出，当γ &amp;lt; 1，幂次变换能够将窄带暗值映射成宽带输出值，γ &amp;gt;
+1，则正好相反。应注意的是，当c = γ = 1时，幂次变换将简化为正比运算。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="" src="https://github.com/freealbert/freealbert-slide-1/blob/master/gray-2012-8-8/power_trans.jpg?raw=true" /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h3&gt;分段线性变换&lt;/h3&gt;
+与前面两个函数相比，分段线性变换的主要优势在于形式可以任意合成，其中分段线性变换还可以
+细分为对比拉伸、灰度切割、位图切割等方法。&lt;ul&gt;
+&lt;li&gt;
+&lt;h4&gt;对比拉伸&lt;/h4&gt;
+&lt;p&gt;对比拉伸的思想是提高低对比度图像处理是灰度级的动态范围。低对比度的成因有照明不足、成像传感器动态范围太小，甚至在图像获取过程中透镜光圈设置错误引起。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h4&gt;灰度切割&lt;/h4&gt;
+&lt;p&gt;在图像处理中提高特定灰度范围的亮度通常是很有必要的，这样的灰度切割可以让感兴趣的图像内容
+更加明显。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;实验步骤&lt;/h2&gt;
+&lt;h3&gt;步骤1&lt;/h3&gt;
+&lt;p&gt;将实验用图:rice.png读入内存，以便后续处理。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Mer：使用imread函数将图像读入Matlab。&lt;/p&gt;
+&lt;p&gt;Pyer：忘了可以&lt;a href="../shu-zi-tu-xiang-chu-li-shi-yan.html#part2.4"&gt;回去看下&lt;/a&gt;哦。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img alt="" src="https://github.com/freealbert/freealbert-slide-1/blob/master/gray-2012-8-8/rice.png?raw=true" /&gt;&lt;/p&gt;
+&lt;h3&gt;步骤2&lt;/h3&gt;
+&lt;p&gt;用如下的灰度变换函数对rice.png图像进行处理，在同一个窗口中画出处理前后的图像，并保存。
+\[ 
+    s = \left\{
+        \begin{array}{lr}
+            0.3r， &amp;amp; r &amp;lt; 0.35 \\
+            0.105 + 2.6333(r-0.35)， &amp;amp; 0.35\leq r \leq 0.65\\
+            1 + 0.3(r-1)， &amp;amp; r &amp;gt; 0.65.
+            \end{array}
+        \right.
+\]&lt;/p&gt;
+&lt;h3&gt;步骤3&lt;/h3&gt;
+&lt;p&gt;用如下灰度变换函数对rice.png进行处理，在同一个窗口中画出处理前后的图像，并保存。&lt;/p&gt;
+&lt;p&gt;\[ s = \left\{
+        \begin{array}{lr}
+            15.9744r^5， &amp;amp; r {\leq} 0.5 \\
+    (r-0.5)^{0.2}+0.12， &amp;amp; r &amp;gt; 0.5 
+        \end{array}\right.
+\]&lt;/p&gt;
+&lt;h3&gt;步骤4&lt;/h3&gt;
+&lt;p&gt;分别用$s = r^{0.6}， s = r^{0.4}， s = r^{0.3}$ 对kids.tif图像进行处理，在同一个窗口中画出处理前后的图像，并
+保存。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://github.com/freealbert/freealbert-slide-1/blob/master/gray-2012-8-8/kids.png?raw=true" /&gt;&lt;/p&gt;
+&lt;h3&gt;步骤5&lt;/h3&gt;
+&lt;p&gt;对circuit.jpg图像实施反变换，在同一个窗口中画出处理前后的图像，并保存。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://github.com/freealbert/freealbert-slide-1/blob/master/gray-2012-8-8/circuit.png?raw=true" /&gt;&lt;/p&gt;
+&lt;h3&gt;步骤6&lt;/h3&gt;
+&lt;p&gt;对rice.jpg图像实施灰度切片。具体要求为:当0.2 ≤ r ≤ 0.4时，将r置为0.6，当r位于其他区间时，
+保持其灰度值不变。在同一个窗口中画出处理前后的图像，并保存。&lt;/p&gt;
+&lt;h3&gt;步骤7&lt;/h3&gt;
+&lt;p&gt;利用灰度变换对Picture.jpg做增强处理，突出图中人物，改善整个图像过于灰暗的背景。给出图像
+处理前后的直方图，写出所采用的拉伸表达式。在同一个窗口中画出处理前后的图像，并保存。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://github.com/freealbert/freealbert-slide-1/blob/master/gray-2012-8-8/Picture.jpg?raw=true" /&gt;&lt;/p&gt;
+&lt;h2&gt;实验报告要求&lt;/h2&gt;
+&lt;p&gt;其实我没啥要求，反正我也不是老师，扯要求干嘛。你能看我写的东西就是上帝了，嗯，访客是上帝。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;上帝们，要是发现错误请在下面评论处指明噢！&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;不过我猜老师肯定让你们提交原图像和各种变换函数的曲线，以及按照各种变换函数处理后的图像。&lt;/p&gt;</summary><category term="dip"></category><category term="pyee"></category></entry><entry><title>高维真理</title><link href="http://freealbert.github.com/gao-wei-zhen-li.html" rel="alternate"></link><updated>2012-07-30T00:00:00+08:00</updated><author><name>freealbert</name></author><id>tag:freealbert.github.com,2012-07-30:gao-wei-zhen-li.html</id><summary type="html">&lt;p&gt;最近发现PDF对于&lt;a href="https://github.com/freealbert/PyEE"&gt;PyEE&lt;/a&gt;并不是一种非常好的载体，我就寻思着将整个项目搬到web上去，希望借助于超链接和日新月异的技术能够让PyEE的表现力更强，也更为美观。接触Web开发，不可避免的便要学习HTML,CSS,Javasript这三座大山。
+起初，我并不知道有CSS这种东西，直到现在我还每每将其读成CCS。但当我了解了CSS究竟是用来做什么的时候，一种熟悉感油然而生。先来看一下维基百科上说为何要采用CSS&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;CSS最主要的目的是将文件的结构（用HTML或其他相关的语言写的）与文件的显示（CSS）分隔开来。这个分隔有许多好处：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;文件的可读性被加强&lt;/li&gt;
+&lt;li&gt;文件的结构更加灵活&lt;/li&gt;
+&lt;li&gt;作者和读者可以自己决定文件的显示&lt;/li&gt;
+&lt;li&gt;文件的结构简化了。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;笼统的概括一下CSS背后的目的，分工尽量精细，让每一样事物尽量专注自己的领域。这种想法，并不惟CSS独有，LaTeX也有自己事先定义好各种模板，目的也是为了让使用者更加专注与内容本身，而不是外观。再推远一点，面向对象编程出现的背后，同样是这种思想在推动。不止是编程领域，这种思想存在于这个世界的角角落落，因为把这种思想再精简一点，便是流水线。人类社会的发展一直便是分工尽量精细的过程，得益于工业化，全世界的流水线大大加速，小到一个CSS文件，大到一个人乃至一个国家实体，都是这亘古运转的流水线上的一环。&lt;/p&gt;
+&lt;p&gt;在这里，我不想讨论社会的流水线化是否会一直持续，精细分工究竟是好是坏。我更加关心的是，为何，这个世界上风马牛不相及的领域内会有相同的现象，抑或法则，抑或真理。
+这个疑问，从我高一学习化学的时候便开始困扰我。&lt;/p&gt;
+&lt;p&gt;在有机化学中，当氢原子要脱落时，首先会从氢原子本来就少的碳原子上脱落；反之，当氢原子要增加时，首先增加的却是氢原子本来就多的碳原子上。这种现象与经济学上贫者愈贫，富者愈富，赢家通吃的经济学中收入分配不公的现象同样被称为马太效应。还有许许多多的其他领域同样存在着马太效应。&lt;/p&gt;
+&lt;p&gt;这么多不同领域却有着相同原理的现象背后，我并不认为这是一种巧合，也许，这个世界的确存在一个同一的真理。
+再举一个我们熟悉的例子，大统一场理论（也称为万物之理），它是物理学家一直试图用同一组方程式描述全部粒子和力(强相互作用、弱相互作用、万有引力、电磁相互作用四种人类目前所知的所有的力)的物理性质的理论或模型。&lt;/p&gt;
+&lt;p&gt;我觉得，这个世界或许远不止弦论描述的是10维或是超弦理论描述的11维，很可能存在更高的维数，100维，抑或无穷维也有可能。在那里只存在着一条真理，但由于我们只能感知到空间的三维和时间的一维，于是我们对真理的认识也是非常片面的。每学科的研究都如盲人摸象一般，只能研究到高维真理的一小块碎片而已。这也可以解释为何在不同的学科之间存在相同的原理，因为他们本来就属于统一高维真理，只不过由于我们的视界只有四维，真理被碎片化了，但总有一点还是相同的。而不同的学科研究，便是沿着不同的山路攀爬同一座山峰。到了山顶，所有风景都是相似的。&lt;/p&gt;
+&lt;p&gt;我还可以提供一个有趣的例子，以供思考。&lt;/p&gt;
+&lt;p&gt;天线的辐射方向图其实是电流分布在天线上的傅立叶变换。下式是远区场的情形：
+$$E_{\theta}=\int_{-l/2}^{+l/2}dE_{\theta}=j\eta\frac{ke^{-jkr}}{4\pi r}\sin{\theta}[\int_{-l/2}^{+l/2}I_{e}(x',y',z')e^{jkz'\cos{\theta}}dz']$$&lt;/p&gt;
+&lt;p&gt;公式右边的中括号内，便是不折不扣的傅立叶变换。这么样，为何无线小偶极子不会有旁瓣也就很容易解释了，因为冲击函数的傅立叶变换是1，每个方向都是均匀的，也就不会有旁瓣。&lt;/p&gt;
+&lt;p&gt;下图是一张矩形缝隙天线的辐射方向图，来自维基百科，从图中可以看出，正好是一个Sinc函数。众所周知，门函数的傅立叶变换便是Sinc函数。
+&lt;img alt="alt text" src="https://github.com/freealbert/freealbert_photo_1/blob/master/Tech/sinc.jpg?raw=true" title="sinc" /&gt;&lt;/p&gt;
+&lt;p&gt;关于旁瓣和傅立叶变换的关系，更多的资料可以&lt;a href="http://en.wikipedia.org/wiki/Side_lobe"&gt;点此&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;最后，附上我天线大作业的&lt;a href="http://dymslide-freealbert.dotcloud.com/antenna-2012-6-28/antenna.html"&gt;幻灯片&lt;/a&gt;，主要内容为无限小偶极子天线的辐射方向图以及旁瓣和傅立叶变换的关系，我将它改成了HTML5的形式，可以在线浏览。&lt;/p&gt;</summary><category term="electromagnetic"></category></entry><entry><title>Some history about Pelican</title><link href="http://freealbert.github.com/some-history-about-pelican.html" rel="alternate"></link><updated>2012-07-23T00:00:00+08:00</updated><author><name>freealbert</name></author><id>tag:freealbert.github.com,2012-07-23:some-history-about-pelican.html</id><summary type="html">&lt;blockquote&gt;
+&lt;p&gt;这篇文章翻译自Pelican的文档，主要讲述了Pelican的技术方案，&lt;a href="http://pelican.notmyidea.org/en/latest/report.html"&gt;原文请点此&lt;/a&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;&lt;pre&gt;提示：这篇文章是由Pelican的作者Alexis Métaireau在2010年12月写的，有些信息也许已经过时了。&lt;/pre&gt;&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Pelican 是一个简单的静态博客生成器。它分析由Markdown或是reStructuredText写就的标记语言文档，并产生一个包括了建博客所需的所有HTML文件的文件夹。考虑到Python语言较为简单且能满足我的所有需求，我选择了它来开发Pelican。我并不想为每一样事物都定义一个类(class)，但仍希望所有东西都能宽松的耦合。结果证明这正是我想要的。也要感谢一些用户们时不时的极有价值的反馈，我每次都只需很少的时间来修复一些bug。到目前为止，我已经彻底重构了 Pelican 的代码两次，每次都不到30分钟。&lt;/p&gt;
+&lt;h2&gt;Pelican的方案&lt;/h2&gt;
+&lt;p&gt;早先，我是WordPress用户，WordPress是用PHP语言开发的博客平台，支持在PHP和MySQL的服务器上架设并管理自己的博客。大多数时候，我更喜欢用诸如Markdown、reStructuredText这样的标记语言来写文章，还有，我都是用vim来写的！（译者注:Alexis是vim党）我觉得让人们有选择他们自己喜欢的文本编辑器来写文章的自由是非常重要的！在我看来，一个博客管理器只要能把无论什么格式的输入文件转化成一个博客这件事做好就可以了。这就是Pelican的用途，可以让你选择你钟爱的任何编辑器，使用你想用的标记语言，来生成一个静态的HTML博客站点。
+&lt;img alt="alt text" src="https://github.com/freealbert/freealbert_photo_1/blob/master/Tech/overall.png?raw=true" title="overall" /&gt;&lt;/p&gt;
+&lt;p&gt;出于足够灵活的考虑，Pelican提供模板支持，只要你想要，便能轻松地写出你自己的模板。&lt;/p&gt;
+&lt;h2&gt;设计过程&lt;/h2&gt;
+&lt;p&gt;Pelican 来自我个人的需求，起初，它只是只有一个文件的程序，渐渐的，它已经茁壮成长成现在这样了。最初，我写下我希望能够实现的功能，然后写了一个reStructuredText文件来作为语法分析的测试用例，并开始反复试验和修改代码。当Pelican第一次可用时，它有200行代码，包含了差不多10个函数和一个类&lt;/p&gt;
+&lt;p&gt;开发过程中，总是会冒出各种各样不同的问题，而我也总是想实现更多的功能。支持setting file，是我想要添加的第一个功能。在这之前，Pelican其实也可以通过命令行传递一些选项来实现设置功能，但当选项一多，这样做就十分繁琐和无聊了。后来，以同样的方式，我添加了Atom feeds,多种主题，多种标记语言支持等等。某种意义上这表明，我把Pelican程序全写在一个文件里是有问题的，因此，我决定全部推倒，把程序分散到多个不同的文件里，从头再写一遍。&lt;/p&gt;
+&lt;p&gt;从逻辑的角度出发，我区分了一些类和内容&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;writer类，负责生成最终的所有文件，不管是.html文件还是RSS feeds或是其它东西。writer对象一产生，接着便是将它们传递给generator对象。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;reader类，可以读入不同格式的文件（目前还仅支持Markdown和reStructuredText，但系统是可以扩展的),给定一个文件，返回诸如作者、标签、分类目录这样的元数据以及html格式的内容。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;generator类生成不同的输出。举个例子，Pelican有一个文章生成器（ArticlesGenerator）还有一个页面生成器（PagesGenerator），他们一块来生成些别的东西。给定一个配置，他们便会按照你的配置去做。多数情况下，pelican根据用户输入的文件来产生输出。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;我还处理了那些容器对象，不管是Aticles,Pages,Quotes还是你自己定制的，所有用来展现内容的对象都可以在contents.py里被定义。&lt;/p&gt;
+&lt;h2&gt;更多细节&lt;/h2&gt;
+&lt;p&gt;这是一张Pelican所有类的关系图.
+&lt;img alt="alt text" src="https://github.com/freealbert/freealbert_photo_1/blob/master/Tech/uml.jpg?raw=true" title="uml" /&gt;&lt;/p&gt;
+&lt;p&gt;由于我用了鸭子类型，而不是接口，所以上图中的接口(interface)并不存在，之所以画出来，只是为了让整幅图像更加清晰而已。
+Pelican内部是这么运行的：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;首先，对用户输入的命令行进行语法分析，其中的某些内容被用来初始化不同的generator类的对象。&lt;/li&gt;
+&lt;li&gt;接着，产生一个context，它包含一些从命令行的来的设置，如果有setting file的话，还要包括setting file。&lt;/li&gt;
+&lt;li&gt;然后，每个generator对象的generate_context方法被调用，更新context。&lt;/li&gt;
+&lt;li&gt;最后，writer对象被创建，并被传递给每个generator对象的generator_output方法。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;我觉得当不同的 generator 对象产生了各自的输出后，保持内容的不变非常重要，所以我用了两个调用函数。换句话说，只有第一个 generate_context 方法被允许修改context，而第二个 generator_output 方法绝不可以。对于 generate_context 方法和generator_output方法，合理的就是只做他们应该做的事。下面是调用ArticlesGenerator类的generate_context 方法时所发生的事情，或许能帮助理解：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;读入文件夹路径，找寻restructuredtext，每载入一个文件，先用reader对象读入，然后构造一个Article类的内容对象&lt;/li&gt;
+&lt;li&gt;更新所有读入的文章的context&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;最后，generate_content方法用context 和writer来生成你所想要的最终的输出。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;pre&gt;本作品采用&lt;em&gt;自由转载-非商用-非衍生-保持署名 | &lt;a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh"&gt;Creative Commons BY-NC-ND 3.0&lt;/a&gt;&lt;/em&gt;进行许可。&lt;/pre&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;感谢我的好友&lt;em&gt;&lt;a href="http://panxiuqing.github.com/"&gt;pXq&lt;/a&gt;&lt;/em&gt;审阅了本文并提供了宝贵的建议。&lt;/p&gt;</summary><category term="pelican"></category><category term="python"></category><category term="web"></category></entry><entry><title>解决matplotlib的imshow显示失真</title><link href="http://freealbert.github.com/jie-jue-matplotlibde-imshowxian-shi-shi-zhen.html" rel="alternate"></link><updated>2012-04-18T00:00:00+08:00</updated><author><name>freealbert</name></author><id>tag:freealbert.github.com,2012-04-18:jie-jue-matplotlibde-imshowxian-shi-shi-zhen.html</id><summary type="html">&lt;p&gt;我用python写了数字图像处理的上机实验，做到最后一小题处理cell的时候，发现用imshow显示读入的图片发现明显跟直接打开图片看不同。回去看之前的题目，都跟原图有出入。
+原图如下&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="http://i.imgur.com/Bs0YH.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;打开后的失真图像如下&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="http://i.imgur.com/Znksp.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;这是我的代码片段：&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="n"&gt;im_0&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;asarray&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Image&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;cell.jpg&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;convert&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;L&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="n"&gt;fig&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pl&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;figure&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;figsize&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="n"&gt;ax_0&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;fig&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add_subplot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;121&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;ax_0&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;imshow&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;im_0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;cmap&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;cm&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;gray&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;由于imshow默认是显示伪彩色，所以colormap用了gray。仔细看对比两张图片可以发现，失真的图片很像是对原图做了灰度拉伸操作，故而变得比原图像清晰了。苦于找不到原因，我在水木的Python版上发了帖子求教，经过xgr和DaNei两位热心兄台的提点，我最终找到了原因和解决的途径。&lt;/p&gt;
+&lt;p&gt;原来，matplotlib的imshow函数显示灰度图像时，会对图像矩阵进行归一化，就是把矩阵中最小的灰度值(vmin)作为0，最大的灰度值(vmax)作为1，然后重新给colormap赋值 。用getextrema函数可以查看图像灰度值的最大值和最小值，cell的最大灰度值为138，最小灰度值为90。也就是说90～138会被线性拉伸成0~255。如果显示图片时，可以设置norm的值显式地令vmax=255，vmin=0，则可以显示这个问题，相应的，0～1的浮点数矩阵，vmax=1，vmin=0。&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="n"&gt;ax4&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;imshow&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;C&lt;/span&gt;&lt;span class="p"&gt;[:,:,&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;&lt;span class="n"&gt;cmap&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;cm&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;gray&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;norm&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;pl&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Normalize&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;vmin&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;vmax&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;255&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;下图是设置后的图片，跟原图一模一样。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="http://i.imgur.com/4Ru2t.jpg" /&gt;&lt;/p&gt;</summary><category term="python"></category><category term="matplotlib"></category></entry><entry><title>恼人的Python除法</title><link href="http://freealbert.github.com/nao-ren-de-pythonchu-fa.html" rel="alternate"></link><updated>2012-03-21T00:00:00+08:00</updated><author><name>freealbert</name></author><id>tag:freealbert.github.com,2012-03-21:nao-ren-de-pythonchu-fa.html</id><summary type="html">&lt;p&gt;没搞清楚Python的除法已经变成最多的语义错误来源咯，所以今天好好看了下Learning Python。&lt;/p&gt;
+&lt;p&gt;在Python里一共有三种除法，分别是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;传统除法：对于操作数均为整数时结果会省去小数部分，对于操作数中有浮点数时，就会保留小数部分，也就是说，传统除法的结果是依赖于操作数类型的。Python2.x用 / 表示&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;真除法：无论操作数是任何类型，结果均为保留小数的浮点数。Python3.x中用 / 表示。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Floor除法：不考虑操作数类型，结果总会省略掉小数部分。Python2.x和Python3.x中均用 // 表示。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table width="600" border="1" align="center"&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Python2.x&lt;/td&gt;
+&lt;td&gt;Python3.x&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;传统除法&lt;/td&gt;   &lt;td&gt;X/Y&lt;/td&gt;&lt;td&gt;无&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;真除法&lt;/td&gt;&lt;td&gt;无&lt;/td&gt;&lt;td&gt;X/Y&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Floor除法&lt;/td&gt;&lt;td&gt;X//Y&lt;/td&gt;&lt;td&gt;X//Y&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;p&gt;有一点需要提醒，虽然Floor除法总是省略小数，但并不是说其结果总是整形数。结果还是根据操作数的类型来的，比如：&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class="mf"&gt;1.0&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class="mf"&gt;0.0&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="python"></category></entry></feed>

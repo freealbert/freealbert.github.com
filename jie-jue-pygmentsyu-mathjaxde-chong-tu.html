@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>freealbert's blog </title>
+  <meta charset="utf-8">
+<!-- Using MathJax, with the delimiters $ -->
+<!-- Conflict with pygments for the .mo and .mi -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true},
+    "HTML-CSS": { availableFonts: ["TeX"], linebreaks: {automatic: true}},
+    TeX: {equationNumbers: {autoNumber: ["AMS"], useLabelIds: true}},
+    <!-- "HTML-CSS": {linebreaks: {automatic: true}}, -->
+    SVG: {linebreaks: {automatic: true}}
+});
+</script>
+
+<script type="text/javascript" src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<!-- <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script> 
+-->
+
+
+  <link rel="stylesheet" href="./theme/css/style.css">
+<!-- <link rel="stylesheet" href="./theme/css/styles/default.css"> -->
+<!-- <script src="./theme/css/highlight.pack.js"></script> -->
+<!-- <script>hljs.initHighlightingOnLoad();</script> -->
+<!-- <link rel="stylesheet" href="./theme/css/pygments.css"> -->
+<!-- <link rel="stylesheet" href="./theme/css/pygments_emacs.css"> -->
+<link rel="stylesheet" href="./theme/css/pygments_friendly.css">
+
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+
+  <!-- google analysis  -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34015459-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+ <link href="./" type="application/atom+xml" rel="alternate" title="freealbert's blog ATOM Feed" />
+
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <a href="./index.html">freealbert's blog</a>
+      <!-- <span>--Virya</span> -->
+    </div>
+    <div class="navigation">
+      <ul>
+	      <li><a href="./index.html">Home</a></li>
+	        
+	          <!-- <li><a href="./pages/pages/about.html">About</a></li> -->
+            <li><a href="./pages/about.html">About</a></li>
+	        
+        <!-- <li><a href="./about.html">About</a></li>   -->
+	      <li><a href="./tags.html">Tags</a></li>
+	      <!-- <li><a href="./archives.html">Archives</a></li> -->
+      </ul>
+    </div>
+    <div class="body">
+      
+<h1 class="title">解决Pygments与MathJax的冲突</h1>
+<p class="date">written on 17 Aug 2012</p>
+<div><p>MathJax是个人认为一个非常赞的开源项目，它是一个用来在浏览器上显示LaTeX数学公式的JavaScript引擎，本站的所有公式都是由它生成的。</p>
+<p>Pygments是一个用来做语法高亮的利器，由pXq一直关注的Pocoo团队出品，Pocoo出品，必属精品。</p>
+<p>但当两者共同工作时却出现了一点小意外，我发现数学公式中的字母颜色变淡了，情况如下：</p>
+<p><img alt="" src="http://i.imgur.com/xI6ox.png" /></p>
+<p>但我使用highlight.js来做高亮时，却又是好的。</p>
+<p><img alt="" src="http://i.imgur.com/KdSfO.png" /></p>
+<p>这说明是Pygments和MathJax起了冲突。听从pXq的建议，我将Pygments的主题从default换成了vim。Pygments产生主题的语句如下：</p>
+<div class="codehilite"><pre><span class="nv">$ </span>pygmentize -S vim -f html &gt; pygments_vim.css
+</pre></div>
+
+
+<p>主题名称可以从<a href="http://pygments.org/demo/53718/">这里</a>找到，在<em>Use this style:</em> 的右边。</p>
+<p>换了vim主题后，情况就变成这样了。</p>
+<p><img alt="" src="http://i.imgur.com/0aNwi.png" /></p>
+<p>从水木上得知，Pygments是只改变CSS的，那有这种状况应该是Pygments的某个CSS特性将MathJax原先的给替换掉了，导致公式里的字母也跟着代码一样变得花花绿绿。</p>
+<p>现在的问题就是要使两者的CSS作用域分开，最后还是pXq想出了方法。刚学了一点CSS知识，我也现学现卖一下。</p>
+<p>看一下Pygments产生的高亮CSS文件的随便一句代码：</p>
+<div class="codehilite"><pre><span class="nc">.hll</span> <span class="p">{</span> <span class="k">background-color</span><span class="o">:</span> <span class="m">#ffffcc</span> <span class="p">}</span>
+</pre></div>
+
+
+<p>这句话表明，在整个网页中，只要属于hll类的元素都将具有background-color特性是#ffffcc这个效果。</p>
+<p>但事实上，我们并不希望这样。我们希望整个页面包括数学公式中的字母默认就是黑色的，而只有代码段里的字母才会高亮。套用面向对象的说法，代码段里的效果是整体字母效果的一个子类。</p>
+<p>看一下高亮代码段的HTML代码：</p>
+<div class="codehilite"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;codehilite&quot;</span><span class="nt">&gt;&lt;pre&gt;</span>    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;kn&quot;</span><span class="nt">&gt;</span>import<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;nn&quot;</span><span class="nt">&gt;</span>PIL.Image<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;kn&quot;</span><span class="nt">&gt;</span>as<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;nn&quot;</span><span class="nt">&gt;</span>Image<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/pre&gt;&lt;/div&gt;</span>
+</pre></div>
+
+
+<p>可以看到他们都是属于codehilite类的，那么我们只要让Pygments产生的那个CSS文件只对codehilite类生效就可以了。具体方式是在每行的最开头加上 .codehilite  ，这样指定只有属于codehilite的代码才会高亮。形式如下：</p>
+<div class="codehilite"><pre><span class="o">.</span><span class="n">codehilite</span> <span class="o">.</span><span class="n">hll</span> <span class="p">{</span> <span class="n">background</span><span class="o">-</span><span class="n">color</span><span class="p">:</span> <span class="c">#ffffcc }</span>
+<span class="o">.</span><span class="n">codehilite</span> <span class="o">.</span><span class="n">c</span> <span class="p">{</span> <span class="n">color</span><span class="p">:</span> <span class="c">#60a0b0; font-style: italic } /* Comment */</span>
+<span class="o">.</span><span class="n">codehilite</span> <span class="o">.</span><span class="n">err</span> <span class="p">{</span> <span class="n">border</span><span class="p">:</span> <span class="mi">1</span><span class="n">px</span> <span class="n">solid</span> <span class="c">#FF0000 } /* Error */</span>
+<span class="o">.</span><span class="n">codehilite</span> <span class="o">.</span><span class="n">k</span> <span class="p">{</span> <span class="n">color</span><span class="p">:</span> <span class="c">#007020; font-weight: bold } /* Keyword */</span>
+<span class="o">.</span><span class="n">codehilite</span> <span class="o">.</span><span class="n">o</span> <span class="p">{</span> <span class="n">color</span><span class="p">:</span> <span class="c">#666666 } /* Operator */</span>
+<span class="o">...</span>
+</pre></div>
+
+
+<p>由此问题便解决了。</p>
+<p><strong> 增加.codehilite只针对markdown文件，如果是rst文件，请将codehilite替换成highlight</strong></p></div>
+
+  <p class="tags">
+  This entry was taged 
+  
+    <a href="./tag/pygments.html">pygments,</a>
+  
+    <a href="./tag/mathjax.html">mathjax,</a>
+  
+    <a href="./tag/css.html">css,</a>
+  
+
+</p>  
+
+<div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'freealbertsblog'; // required: replace example with your forum shortname
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+         	
+
+    </div>
+
+ 
+
+
+    <div class="footer">
+      <p>&copy Copyright 2012 by freealbert</p>
+      <p>Content licensed under the Creative Commons attribution-noncommercial-sharealike License. </p>
+      <p>Contact me via
+	<a href="http://github.com/freealbert">github</a>,
+	<a href="mailto:jim2429212@gmail.com">mail</a>,
+	<a href="http://weibo.com/u/1844630250">weibo</a>.
+	<a href="http://fusion.google.com/add?source=atgs&feedurl=http%3A//dym.me">feed</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

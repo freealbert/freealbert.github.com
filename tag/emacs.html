@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>freealbert's blog - emacs </title>
+  <meta charset="utf-8">
+<!-- Using MathJax, with the delimiters $ -->
+<!-- Conflict with pygments for the .mo and .mi -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true},
+    "HTML-CSS": { availableFonts: ["TeX"], linebreaks: {automatic: true}},
+    TeX: {equationNumbers: {autoNumber: ["AMS"], useLabelIds: true}},
+    <!-- "HTML-CSS": {linebreaks: {automatic: true}}, -->
+    SVG: {linebreaks: {automatic: true}}
+});
+</script>
+
+<script type="text/javascript" src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<!-- <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script> 
+-->
+
+
+  <link rel="stylesheet" href=".././theme/css/style.css">
+<!-- <link rel="stylesheet" href=".././theme/css/styles/default.css"> -->
+<!-- <script src=".././theme/css/highlight.pack.js"></script> -->
+<!-- <script>hljs.initHighlightingOnLoad();</script> -->
+<!-- <link rel="stylesheet" href=".././theme/css/pygments.css"> -->
+<!-- <link rel="stylesheet" href=".././theme/css/pygments_emacs.css"> -->
+<link rel="stylesheet" href=".././theme/css/pygments_friendly.css">
+
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+
+  <!-- google analysis  -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34015459-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+ <link href=".././" type="application/atom+xml" rel="alternate" title="freealbert's blog ATOM Feed" />
+
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <a href=".././index.html">freealbert's blog</a>
+      <!-- <span>--Virya</span> -->
+    </div>
+    <div class="navigation">
+      <ul>
+	      <li><a href=".././index.html">Home</a></li>
+	        
+	          <!-- <li><a href=".././pages/pages/about.html">About</a></li> -->
+            <li><a href=".././pages/about.html">About</a></li>
+	        
+        <!-- <li><a href=".././about.html">About</a></li>   -->
+	      <li><a href=".././tags.html">Tags</a></li>
+	      <!-- <li><a href=".././archives.html">Archives</a></li> -->
+      </ul>
+    </div>
+    <div class="body">
+      
+
+
+  
+  <div class="entry-overview">
+    <div class="date">
+      06 Sep 2012
+    </div>
+    <div class="detail">
+      <h1><a href=".././emacs-preludejian-jie.html">Emacs-Prelude简介</a> </h1>
+      <!-- <div class="summary">
+	<p><ul>
+<li><a href="#whyPrelude">为什么需要Prelude</a></li>
+<li><a href="#installPrelude">安装Prelude</a></li>
+<li><a href="#reviewPrelude">再次审视Prelude</a></li>
+<li><a href="#customPrelude">定制Prelude</a></li>
+<li><a href="#aboutAuthor">关于作者</a></li>
+<li><a href="#reference">参考资料</a></li>
+</ul>
+<h2><div id="whyPrelude">为什么需要Prelude</div></h2>
+<p>前天重装了一下Ubuntu，忘记了备份辛辛苦苦才攒起来的 .emacs配置文件。由于我不会Emacs Lisp，再重新搜罗一下还是件挺费力的事，<a href="http://shiquanwang.github.com/">qq987</a>给我推荐了Emacs-Prelude，我尝试了一下，目前感觉很不错，跟大家分享一下。</p>
+<p>在使用Emacs的时候，我们都会有这样的感觉，Emacs真是一个太棒的编辑器，可以根据自己的需求个性化的定制。但这其中有一个问题，在享受个性化定制带来的便利之前，我们有一个不得不经过的序幕或者说前奏曲，写.emacs文件。这需要用到Emacs Lisp，应该说是相当高的门槛。当然你可以同我一样，不会Emacs Lisp，从那些牛人的配置里扒一点适合自己的，勉强凑合一个，可是这个也很花时间啊，而且出了一堆error还不知道怎么办。总之，要是想将Emacs调教的千依百顺，这光源式养成计划长路漫漫，且并不平坦。</p>
+<blockquote>
+<p><strong>"Get me out of the Prelude, I just want to use Emacs" </strong></p>
+</blockquote>
+<p>Prelude的出现，很大程度上的解决了这个问题，它会自动将Emacs配置得比较舒适顺手，让你直接跳过那个并不愉悦的前奏曲，这也就是Prelude这个名字的由来。</p>
+<h2><div id="installPrelude">安装Prelude</div></h2>
+<ul>
+<li>
+<h3>Emacs 24</h3>
+Prelude需要Emacs 24，且不向前兼容，目前从Ubuntu的源里安装的Emacs还是23，如果你跟我一样，请先卸载。后执行如下代码（当然可以自己动手编译，不过我等懒人还是喜欢简单直接的，不过这个源实在有点慢）</li>
+</ul>
+<div class="codehilite"><pre>    sudo add-apt-repository ppa:cassou/emacs
+    sudo apt-get update
+    sudo apt-get install emacs-snapshot
+</pre></div>
+
+
+<ul>
+<li>
+<h3>git &amp; curl</h3>
+由于需要用到git 和 curl，需要先安装一下</li>
+</ul>
+<div class="codehilite"><pre>    sudo apt-get install git curl
+</pre></div>
+
+
+<ul>
+<li>
+<h3>安装</h3>
+在安装之前，请先确保将原有的 .emacs文件和 .emacs.d文件夹删掉，我之前反复安装不成功，就是这个原因，多亏了Tux的提醒。安装的过程仍然一贯的简单</li>
+</ul>
+<div class="codehilite"><pre>    curl -L https://github.com/bbatsov/prelude/raw/master/utils/installer.sh | sh
+</pre></div>
+
+
+<p>更多的安装方法可以点<a href="http://batsov.com/prelude/">这里</a> 和<a href="https://github.com/bbatsov/prelude">这里</a>。
+事实上，应该只要从其<a href="https://github.com/bbatsov/prelude">github的项目主页</a>上将文件夹下下来，再重命名成 .emacs.d 放到Home下就可以了。</p>
+<p>之后，启动Emacs，Prelude会自动安装不少东西，请稍微耐心等待一下。再次启动后，就会发现Emacs的背景色变成如下了，这是因为Prelude的配色方案默认启用了zenburn主题。</p>
+<p><img alt="" src="http://i.imgur.com/B2rRm.png" /></p>
+<h2><div id="reviewPrelude">再次审视Prelude</div></h2>
+<p>至此，Prelude的安装便算完成了。可是Prelude对于我一个一点也不会Emacs Lisp的菜鸟来说，还只是一只一无所知的黑箱子，我只知道Prelude预设了很多便利给我，但究竟是哪些呢，我又该怎么用呢？</p>
+<p>我适当的摸索了一些，写在下面，如果你知道更多，也请告诉我～</p>
+<h3>Prelude的便利</h3>
+<p>首先看上图，我们可以知道Prelude至少给了我们以下这些福利：</p>
+<ul>
+<li>取消了启动画面</li>
+<li>取消了菜单栏和工具栏</li>
+<li>启用了一个不错的配色主题
+  <a href="http://slinky.imukuppi.org/zenburn/">zenburn</a></li>
+<li>显示行号和列号</li>
+</ul>
+<p>接触更多，我们还会发现更多惊喜的，比如如下这个简短的hello.py</p>
+<p><img alt="" src="http://i.imgur.com/lDyRb.png" /></p>
+<ul>
+<li>启用了yasnippet</li>
+<li>启用了whitespace mode</li>
+<li>引号和括号自动补全</li>
+<li>高亮当前所在的行</li>
+<li>minibuffer里的路径文件夹补全</li>
+</ul>
+<p>其中，在每行的末尾都有一个美元符号$，以及缩进均有小点来标识，这就是whitespace mode，它实在是太赞了！</p>
+<p>以前，在markdown模式下，yasnippet一直都不能用，我也搜寻了一些方法，但始终无效，现在这个问题不复存在，可以尽情的在编写markdown时使用yasnippet。</p>
+<h3>更多便利</h3>
+<p>Prelude预先定义了不少快捷键，我挑选了一些我常用的列举在下，更多的请阅读 <a href="https://github.com/bbatsov/prelude/blob/master/prelude/prelude-global-keybindings.el"> prelude-global-keybindings.el </a> </p>
+<table border="1" width="600">
+    <thead>
+        <tr>
+            <th>功能描述</th>
+            <th>快捷键</th>
+            <th>备注</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>redo</td>
+            <td>C-/</td>
+            <td>replacement of "C-x u"</td>
+        </tr>
+        <tr>
+            <td>backward-kill-word</td>
+            <td>C-M-h</td>
+            <td>You know, like Readline.>
+        </tr>
+        <tr>
+            <td>align-regexp</td>
+            <td>C-x \\</td>
+            <td>Align your code in a pretty way.</td>
+        </tr>
+        <tr>
+            <td>text-scale-increase</td>
+            <td>C-+</td>
+            <td>Font size increase</td>
+        </tr>
+        <tr>
+            <td>eshell</td>
+            <td>C-x m</td>
+            <td>Start eshell or switch to it if it's active.</td>
+        </tr>
+    </tbody>
+</table>
+
+<p>容许我再对其中某两个快捷键罗嗦几句，因为我实在太喜欢了～</p>
+<ul>
+<li>
+<p>align-regexp C-x \</p>
+<p>套用<a href="http://lucifr.com/">Lucifr</a>的大作
+<a href="http://lucifr.com/139225/sublime-text-2-tricks-and-tips/">Sublime Text 2 入门及技巧</a>
+中的例子：</p>
+<p>对于某些喜欢整齐的程序员来说，看到下面这种情况可能是让其无法忍受的：</p>
+</li>
+</ul>
+<div class="codehilite"><pre>    <span class="kd">var</span> <span class="nx">joe</span> <span class="o">=</span> <span class="s1">&#39;joe&#39;</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">johnny</span> <span class="o">=</span> <span class="s1">&#39;johnny&#39;</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">quaid</span> <span class="o">=</span> <span class="s1">&#39;quaid&#39;</span><span class="p">;</span>
+</pre></div>
+
+
+<p>一定要改成这样才会安心：</p>
+<div class="codehilite"><pre>    <span class="kd">var</span> <span class="nx">joe</span>    <span class="o">=</span> <span class="s1">&#39;joe&#39;</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">johnny</span> <span class="o">=</span> <span class="s1">&#39;johnny&#39;</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">quaid</span>  <span class="o">=</span> <span class="s1">&#39;quaid&#39;</span><span class="p">;</span>
+</pre></div>
+
+
+<p>这个功能可以通过输入C-x \后再输入等号= （也就是你想要对其的符号）来对齐。</p>
+<ul>
+<li>redo C-/</li>
+</ul>
+<p>以前我用CUA-mode，原因只有一个，那就是C-x u不方便，Prelude很贴心的设置
+了C-/来替代。</p>
+<h3>Prelude的不便</h3>
+<p>就像硬币总是有两面一样，Prelude预置的许多功能可以极大的方便我们，但事情总没有我们预想的那么十全十美，对我来说，Prelude至少有以下不足：</p>
+<ul>
+<li>禁用了方向键以及Home,End,Delete键</li>
+<li>缺少快速注释和反注释</li>
+<li>缺少行号的显示</li>
+</ul>
+<p>其中的第一点，称其不足，应该说委屈Prelude了，我想作者一定是故意为之，禁用了上下左右方向键以及Home，End，Delete，那么我们只能以C-p，C-n，C-b，C-f和C-a，C-e，C-d来代替，更加纯粹的Emacs，不是吗？俗话说，水至清则无鱼，作为笔记本用户，对此表示压力山大，左手经常要缩成鸡爪状，很不舒服。为什么要跟自己过不去呢？</p>
+<p>PS: <a href="http://pxqing.me/">pXq</a> 现在已经在研究如何制造脚踏板了～</p>
+<p>关于如何消除这些不便，我们将在下一节讨论。</p>
+<h2><div id="customPrelude">定制Prelude</div></h2>
+<p>Prelude不能让你100%的满意，没关系，我们可以自己动手，在~/.emacs.d文件夹下有一个 personal文件夹，
+这里你只需新建一个后缀命是el的文件，即可开始定制，如我，是
+myconfig.el.</p>
+<ul>
+<li>
+<h3>重新启用方向键</h3>
+</li>
+</ul>
+<div class="codehilite"><pre>    <span class="c1">;; Re-enable the arrow keys</span>
+    <span class="p">(</span><span class="nb">defun</span> <span class="nv">disable-guru-mode</span> <span class="p">()</span>
+    <span class="p">(</span><span class="nv">guru-mode</span> <span class="mi">-1</span><span class="p">)</span>
+    <span class="p">)</span>
+    <span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;prelude-prog-mode-hook</span> <span class="ss">&#39;disable-guru-mode</span> <span class="no">t</span><span class="p">)</span>
+</pre></div>
+
+
+<p>除了方向键，还有Home,End,Delete这些键也同时恢复了功能。</p>
+<ul>
+<li>
+<h3>设置字体</h3>
+</li>
+</ul>
+<div class="codehilite"><pre>    <span class="c1">;;设置字体</span>
+    <span class="p">(</span><span class="nv">set-frame-font</span> <span class="s">&quot;monaco-12&quot;</span><span class="p">)</span>
+</pre></div>
+
+
+<p>显示代码我用的是monaco，感觉很不错，如果系统还没有安装，可以Google一下。
+字体安装在Ubuntu下极其简单，只需要双击打开字体文件（一般是OTF或者TTF文
+件）后，点击install即可。</p>
+<p>其实Emacs会读取系统默认的字体，比如我在myunity里就将等宽字体
+(Monospace)设置成了monaco，其余均是苹果冬青黑，所以这一行配置其实是句废话。</p>
+<ul>
+<li>
+<h3>更换颜色主题</h3>
+</li>
+</ul>
+<p>配色主题采用的是，(almost-monokai)[https://github.com/lut4rp/almost-monokai/]，顾名思义它是仿照TextMate下的monokai主题。由于它需要依赖<a href="http://www.emacswiki.org/emacs/ColorTheme">color theme</a>，所以我们需要先安装它。</p>
+<p>1.安装color theme
+M-x package-install 回车后继续输入color-theme再回车即可。</p>
+<p>2.从<a href="https://github.com/lut4rp/almost-monokai/">almost-monokai的Github主页</a>上将其下载并解压后，把color-theme-almost-monokai.el文件放到~/.emacs.d/themes文件夹下，然后在配置文件（我是~/.emacs.d/personal/myconfig.el)内加入如下代码即可</p>
+<div class="codehilite"><pre>    <span class="c1">;; color theme</span>
+    <span class="p">(</span><span class="nv">load-file</span> <span class="s">&quot;~/.emacs.d/themes/color-theme-almost-monokai.el&quot;</span><span class="p">)</span>
+    <span class="p">(</span><span class="nv">color-theme-almost-monokai</span><span class="p">)</span>
+</pre></div>
+
+
+<ul>
+<li>
+<h3>注释和反注释</h3>
+</li>
+</ul>
+<div class="codehilite"><pre>    <span class="c1">;; Comment and Uncomment</span>
+    <span class="p">(</span><span class="nb">defun</span> <span class="nv">comment-or-uncomment-line-or-region</span> <span class="p">()</span>
+    <span class="s">&quot;Comments or uncomments the current line or region.&quot;</span>
+    <span class="p">(</span><span class="nv">interactive</span><span class="p">)</span>
+    <span class="p">(</span><span class="k">if</span> <span class="p">(</span><span class="nv">region-active-p</span><span class="p">)</span>
+    <span class="p">(</span><span class="nv">comment-or-uncomment-region</span> <span class="p">(</span><span class="nv">region-beginning</span><span class="p">)</span> <span class="p">(</span><span class="nv">region-end</span><span class="p">))</span>
+    <span class="p">(</span><span class="nv">comment-or-uncomment-region</span> <span class="p">(</span><span class="nv">line-beginning-position</span><span class="p">)</span> <span class="p">(</span><span class="nv">line-end-position</span><span class="p">))</span>
+    <span class="p">)</span>
+    <span class="p">)</span>
+    <span class="p">(</span><span class="nv">global-set-key</span> <span class="s">&quot;\M-,&quot;</span> <span class="ss">&#39;comment-or-uncomment-line-or-region</span><span class="p">)</span>
+</pre></div>
+
+
+<p>这里我们将M-,设置为注释和反注释的快捷键。当选中某块区域时，可以将该区
+域注释或者反注释；而当不选中时，则对当前行进行操作。</p>
+<ul>
+<li>
+<h3>取消 whitespace-mode</h3>
+我很喜欢 whitespace-mode，但也看到不少人不喜欢它。不喜欢，那便可以取消
+它，代码如下:</li>
+</ul>
+<div class="codehilite"><pre>    <span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;prog-mode-hook</span> <span class="ss">&#39;prelude-turn-off-whitespace</span> <span class="no">t</span><span class="p">)</span>
+</pre></div>
+
+
+<h2><div id="aboutAuthor">关于作者</div></h2>
+<p>Prelude的作者名叫<strong>Bozhidar Ivanov Batsov</strong>，来自<strong>保加利亚</strong>的Veliko
+Tarnovo，目前居住于其首都<em>Sofia</em>。</p>
+<p>Batsov是一家主打商务社交的网站<a href="https://tradeo.com/">tradeo.com</a>的
+Technical Lead，负责开发基于Ruby on Rails的各种应用，曾经是Java工程师，
+更早的时候则是C++工程师，而他的老本行则是基于Linux内核的嵌入式开发。
+Batsov的经历，基本就是从低层逐渐往高层走的过程。</p>
+<p>除了编程外，Bastov总是为Unix-like的操作系统着迷，最喜爱的编辑器是Emacs
+（不然也不会制作Prelude啦），常用的shell是zsh，使用git来做版本控制。</p>
+<p>最后上一张Bastov的靓照</p>
+<p><img alt="Bastov" src="http://batsov.com/images/articles/bozhidar.jpg" /></p>
+<h2><div id="reference">参考资料</div></h2>
+<ol>
+<li><a href="http://wikemacs.org/wiki/Prelude">WikEmacs-Prelude</a></li>
+<li><a href="http://batsov.com/">Batsov's blog</a></li>
+<li><a href="https://github.com/bbatsov/prelude">Prelude's github page</a></li>
+<li><a href="http://batsov.com/prelude/">Prelude's Home</a></li>
+<li><a href="http://www.linkedin.com/in/bozhidarbatsov">Batsov's linkedin profile</a></li>
+<li><a href="https://tradeo.com/">tradeo.com</a></li>
+</ol></p>
+      </div> -->
+    </div>
+  </div>
+  
+
+ 
+<!-- <div class="pagination"> -->
+<!--    -->
+<!--     <a href="#"> <b>&larr;</b>Previous</a> -->
+<!--    -->
+
+<!--    -->
+<!--     <a href="#">Next&rarr; </a> -->
+<!--    -->
+<!-- </div> -->
+<div class="pagination">
+<!-- <ul> -->
+
+    <a href="#">&laquo; Previous</a>
+
+
+
+    <a href=".././tag/emacs.html">1</a>
+
+
+
+    <a href="#">Next &raquo;</a>
+
+
+<!-- </ul> -->
+</div>
+
+    </div>
+
+ 
+
+
+    <div class="footer">
+      <p>&copy Copyright 2012 by freealbert</p>
+      <p>Content licensed under the Creative Commons attribution-noncommercial-sharealike License. </p>
+      <p>Contact me via
+	<a href="http://github.com/freealbert">github</a>,
+	<a href="mailto:jim2429212@gmail.com">mail</a>,
+	<a href="http://weibo.com/u/1844630250">weibo</a>.
+	<a href="http://fusion.google.com/add?source=atgs&feedurl=http%3A//dym.me">feed</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

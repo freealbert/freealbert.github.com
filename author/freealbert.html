@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>freealbert's blog - Articles by freealbert </title>
+  <meta charset="utf-8">
+<!-- Using MathJax, with the delimiters $ -->
+<!-- Conflict with pygments for the .mo and .mi -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true},
+    "HTML-CSS": { availableFonts: ["TeX"], linebreaks: {automatic: true}},
+    TeX: {equationNumbers: {autoNumber: ["AMS"], useLabelIds: true}},
+    <!-- "HTML-CSS": {linebreaks: {automatic: true}}, -->
+    SVG: {linebreaks: {automatic: true}}
+});
+</script>
+
+<script type="text/javascript" src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<!-- <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script> 
+-->
+
+
+  <link rel="stylesheet" href=".././theme/css/style.css">
+<!-- <link rel="stylesheet" href=".././theme/css/styles/default.css"> -->
+<!-- <script src=".././theme/css/highlight.pack.js"></script> -->
+<!-- <script>hljs.initHighlightingOnLoad();</script> -->
+<!-- <link rel="stylesheet" href=".././theme/css/pygments.css"> -->
+<!-- <link rel="stylesheet" href=".././theme/css/pygments_emacs.css"> -->
+<link rel="stylesheet" href=".././theme/css/pygments_friendly.css">
+
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+
+  <!-- google analysis  -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34015459-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+ <link href=".././" type="application/atom+xml" rel="alternate" title="freealbert's blog ATOM Feed" />
+
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <a href=".././index.html">freealbert's blog</a>
+      <!-- <span>--Virya</span> -->
+    </div>
+    <div class="navigation">
+      <ul>
+	      <li><a href=".././index.html">Home</a></li>
+	        
+	          <!-- <li><a href=".././pages/pages/about.html">About</a></li> -->
+            <li><a href=".././pages/about.html">About</a></li>
+	        
+        <!-- <li><a href=".././about.html">About</a></li>   -->
+	      <li><a href=".././tags.html">Tags</a></li>
+	      <!-- <li><a href=".././archives.html">Archives</a></li> -->
+      </ul>
+    </div>
+    <div class="body">
+      
+
+
+  
+  <div class="entry-overview">
+    <div class="date">
+      06 Sep 2012
+    </div>
+    <div class="detail">
+      <h1><a href=".././emacs-preludejian-jie.html">Emacs-Prelude简介</a> </h1>
+      <!-- <div class="summary">
+	<p><ul>
+<li><a href="#whyPrelude">为什么需要Prelude</a></li>
+<li><a href="#installPrelude">安装Prelude</a></li>
+<li><a href="#reviewPrelude">再次审视Prelude</a></li>
+<li><a href="#customPrelude">定制Prelude</a></li>
+<li><a href="#aboutAuthor">关于作者</a></li>
+<li><a href="#reference">参考资料</a></li>
+</ul>
+<h2><div id="whyPrelude">为什么需要Prelude</div></h2>
+<p>前天重装了一下Ubuntu，忘记了备份辛辛苦苦才攒起来的 .emacs配置文件。由于我不会Emacs Lisp，再重新搜罗一下还是件挺费力的事，<a href="http://shiquanwang.github.com/">qq987</a>给我推荐了Emacs-Prelude，我尝试了一下，目前感觉很不错，跟大家分享一下。</p>
+<p>在使用Emacs的时候，我们都会有这样的感觉，Emacs真是一个太棒的编辑器，可以根据自己的需求个性化的定制。但这其中有一个问题，在享受个性化定制带来的便利之前，我们有一个不得不经过的序幕或者说前奏曲，写.emacs文件。这需要用到Emacs Lisp，应该说是相当高的门槛。当然你可以同我一样，不会Emacs Lisp，从那些牛人的配置里扒一点适合自己的，勉强凑合一个，可是这个也很花时间啊，而且出了一堆error还不知道怎么办。总之，要是想将Emacs调教的千依百顺，这光源式养成计划长路漫漫，且并不平坦。</p>
+<blockquote>
+<p><strong>"Get me out of the Prelude, I just want to use Emacs" </strong></p>
+</blockquote>
+<p>Prelude的出现，很大程度上的解决了这个问题，它会自动将Emacs配置得比较舒适顺手，让你直接跳过那个并不愉悦的前奏曲，这也就是Prelude这个名字的由来。</p>
+<h2><div id="installPrelude">安装Prelude</div></h2>
+<ul>
+<li>
+<h3>Emacs 24</h3>
+Prelude需要Emacs 24，且不向前兼容，目前从Ubuntu的源里安装的Emacs还是23，如果你跟我一样，请先卸载。后执行如下代码（当然可以自己动手编译，不过我等懒人还是喜欢简单直接的，不过这个源实在有点慢）</li>
+</ul>
+<div class="codehilite"><pre>    sudo add-apt-repository ppa:cassou/emacs
+    sudo apt-get update
+    sudo apt-get install emacs-snapshot
+</pre></div>
+
+
+<ul>
+<li>
+<h3>git &amp; curl</h3>
+由于需要用到git 和 curl，需要先安装一下</li>
+</ul>
+<div class="codehilite"><pre>    sudo apt-get install git curl
+</pre></div>
+
+
+<ul>
+<li>
+<h3>安装</h3>
+在安装之前，请先确保将原有的 .emacs文件和 .emacs.d文件夹删掉，我之前反复安装不成功，就是这个原因，多亏了Tux的提醒。安装的过程仍然一贯的简单</li>
+</ul>
+<div class="codehilite"><pre>    curl -L https://github.com/bbatsov/prelude/raw/master/utils/installer.sh | sh
+</pre></div>
+
+
+<p>更多的安装方法可以点<a href="http://batsov.com/prelude/">这里</a> 和<a href="https://github.com/bbatsov/prelude">这里</a>。
+事实上，应该只要从其<a href="https://github.com/bbatsov/prelude">github的项目主页</a>上将文件夹下下来，再重命名成 .emacs.d 放到Home下就可以了。</p>
+<p>之后，启动Emacs，Prelude会自动安装不少东西，请稍微耐心等待一下。再次启动后，就会发现Emacs的背景色变成如下了，这是因为Prelude的配色方案默认启用了zenburn主题。</p>
+<p><img alt="" src="http://i.imgur.com/B2rRm.png" /></p>
+<h2><div id="reviewPrelude">再次审视Prelude</div></h2>
+<p>至此，Prelude的安装便算完成了。可是Prelude对于我一个一点也不会Emacs Lisp的菜鸟来说，还只是一只一无所知的黑箱子，我只知道Prelude预设了很多便利给我，但究竟是哪些呢，我又该怎么用呢？</p>
+<p>我适当的摸索了一些，写在下面，如果你知道更多，也请告诉我～</p>
+<h3>Prelude的便利</h3>
+<p>首先看上图，我们可以知道Prelude至少给了我们以下这些福利：</p>
+<ul>
+<li>取消了启动画面</li>
+<li>取消了菜单栏和工具栏</li>
+<li>启用了一个不错的配色主题
+  <a href="http://slinky.imukuppi.org/zenburn/">zenburn</a></li>
+<li>显示行号和列号</li>
+</ul>
+<p>接触更多，我们还会发现更多惊喜的，比如如下这个简短的hello.py</p>
+<p><img alt="" src="http://i.imgur.com/lDyRb.png" /></p>
+<ul>
+<li>启用了yasnippet</li>
+<li>启用了whitespace mode</li>
+<li>引号和括号自动补全</li>
+<li>高亮当前所在的行</li>
+<li>minibuffer里的路径文件夹补全</li>
+</ul>
+<p>其中，在每行的末尾都有一个美元符号$，以及缩进均有小点来标识，这就是whitespace mode，它实在是太赞了！</p>
+<p>以前，在markdown模式下，yasnippet一直都不能用，我也搜寻了一些方法，但始终无效，现在这个问题不复存在，可以尽情的在编写markdown时使用yasnippet。</p>
+<h3>更多便利</h3>
+<p>Prelude预先定义了不少快捷键，我挑选了一些我常用的列举在下，更多的请阅读 <a href="https://github.com/bbatsov/prelude/blob/master/prelude/prelude-global-keybindings.el"> prelude-global-keybindings.el </a> </p>
+<table border="1" width="600">
+    <thead>
+        <tr>
+            <th>功能描述</th>
+            <th>快捷键</th>
+            <th>备注</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>redo</td>
+            <td>C-/</td>
+            <td>replacement of "C-x u"</td>
+        </tr>
+        <tr>
+            <td>backward-kill-word</td>
+            <td>C-M-h</td>
+            <td>You know, like Readline.>
+        </tr>
+        <tr>
+            <td>align-regexp</td>
+            <td>C-x \\</td>
+            <td>Align your code in a pretty way.</td>
+        </tr>
+        <tr>
+            <td>text-scale-increase</td>
+            <td>C-+</td>
+            <td>Font size increase</td>
+        </tr>
+        <tr>
+            <td>eshell</td>
+            <td>C-x m</td>
+            <td>Start eshell or switch to it if it's active.</td>
+        </tr>
+    </tbody>
+</table>
+
+<p>容许我再对其中某两个快捷键罗嗦几句，因为我实在太喜欢了～</p>
+<ul>
+<li>
+<p>align-regexp C-x \</p>
+<p>套用<a href="http://lucifr.com/">Lucifr</a>的大作
+<a href="http://lucifr.com/139225/sublime-text-2-tricks-and-tips/">Sublime Text 2 入门及技巧</a>
+中的例子：</p>
+<p>对于某些喜欢整齐的程序员来说，看到下面这种情况可能是让其无法忍受的：</p>
+</li>
+</ul>
+<div class="codehilite"><pre>    <span class="kd">var</span> <span class="nx">joe</span> <span class="o">=</span> <span class="s1">&#39;joe&#39;</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">johnny</span> <span class="o">=</span> <span class="s1">&#39;johnny&#39;</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">quaid</span> <span class="o">=</span> <span class="s1">&#39;quaid&#39;</span><span class="p">;</span>
+</pre></div>
+
+
+<p>一定要改成这样才会安心：</p>
+<div class="codehilite"><pre>    <span class="kd">var</span> <span class="nx">joe</span>    <span class="o">=</span> <span class="s1">&#39;joe&#39;</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">johnny</span> <span class="o">=</span> <span class="s1">&#39;johnny&#39;</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">quaid</span>  <span class="o">=</span> <span class="s1">&#39;quaid&#39;</span><span class="p">;</span>
+</pre></div>
+
+
+<p>这个功能可以通过输入C-x \后再输入等号= （也就是你想要对其的符号）来对齐。</p>
+<ul>
+<li>redo C-/</li>
+</ul>
+<p>以前我用CUA-mode，原因只有一个，那就是C-x u不方便，Prelude很贴心的设置
+了C-/来替代。</p>
+<h3>Prelude的不便</h3>
+<p>就像硬币总是有两面一样，Prelude预置的许多功能可以极大的方便我们，但事情总没有我们预想的那么十全十美，对我来说，Prelude至少有以下不足：</p>
+<ul>
+<li>禁用了方向键以及Home,End,Delete键</li>
+<li>缺少快速注释和反注释</li>
+<li>缺少行号的显示</li>
+</ul>
+<p>其中的第一点，称其不足，应该说委屈Prelude了，我想作者一定是故意为之，禁用了上下左右方向键以及Home，End，Delete，那么我们只能以C-p，C-n，C-b，C-f和C-a，C-e，C-d来代替，更加纯粹的Emacs，不是吗？俗话说，水至清则无鱼，作为笔记本用户，对此表示压力山大，左手经常要缩成鸡爪状，很不舒服。为什么要跟自己过不去呢？</p>
+<p>PS: <a href="http://pxqing.me/">pXq</a> 现在已经在研究如何制造脚踏板了～</p>
+<p>关于如何消除这些不便，我们将在下一节讨论。</p>
+<h2><div id="customPrelude">定制Prelude</div></h2>
+<p>Prelude不能让你100%的满意，没关系，我们可以自己动手，在~/.emacs.d文件夹下有一个 personal文件夹，
+这里你只需新建一个后缀命是el的文件，即可开始定制，如我，是
+myconfig.el.</p>
+<ul>
+<li>
+<h3>重新启用方向键</h3>
+</li>
+</ul>
+<div class="codehilite"><pre>    <span class="c1">;; Re-enable the arrow keys</span>
+    <span class="p">(</span><span class="nb">defun</span> <span class="nv">disable-guru-mode</span> <span class="p">()</span>
+    <span class="p">(</span><span class="nv">guru-mode</span> <span class="mi">-1</span><span class="p">)</span>
+    <span class="p">)</span>
+    <span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;prelude-prog-mode-hook</span> <span class="ss">&#39;disable-guru-mode</span> <span class="no">t</span><span class="p">)</span>
+</pre></div>
+
+
+<p>除了方向键，还有Home,End,Delete这些键也同时恢复了功能。</p>
+<ul>
+<li>
+<h3>设置字体</h3>
+</li>
+</ul>
+<div class="codehilite"><pre>    <span class="c1">;;设置字体</span>
+    <span class="p">(</span><span class="nv">set-frame-font</span> <span class="s">&quot;monaco-12&quot;</span><span class="p">)</span>
+</pre></div>
+
+
+<p>显示代码我用的是monaco，感觉很不错，如果系统还没有安装，可以Google一下。
+字体安装在Ubuntu下极其简单，只需要双击打开字体文件（一般是OTF或者TTF文
+件）后，点击install即可。</p>
+<p>其实Emacs会读取系统默认的字体，比如我在myunity里就将等宽字体
+(Monospace)设置成了monaco，其余均是苹果冬青黑，所以这一行配置其实是句废话。</p>
+<ul>
+<li>
+<h3>更换颜色主题</h3>
+</li>
+</ul>
+<p>配色主题采用的是，(almost-monokai)[https://github.com/lut4rp/almost-monokai/]，顾名思义它是仿照TextMate下的monokai主题。由于它需要依赖<a href="http://www.emacswiki.org/emacs/ColorTheme">color theme</a>，所以我们需要先安装它。</p>
+<p>1.安装color theme
+M-x package-install 回车后继续输入color-theme再回车即可。</p>
+<p>2.从<a href="https://github.com/lut4rp/almost-monokai/">almost-monokai的Github主页</a>上将其下载并解压后，把color-theme-almost-monokai.el文件放到~/.emacs.d/themes文件夹下，然后在配置文件（我是~/.emacs.d/personal/myconfig.el)内加入如下代码即可</p>
+<div class="codehilite"><pre>    <span class="c1">;; color theme</span>
+    <span class="p">(</span><span class="nv">load-file</span> <span class="s">&quot;~/.emacs.d/themes/color-theme-almost-monokai.el&quot;</span><span class="p">)</span>
+    <span class="p">(</span><span class="nv">color-theme-almost-monokai</span><span class="p">)</span>
+</pre></div>
+
+
+<ul>
+<li>
+<h3>注释和反注释</h3>
+</li>
+</ul>
+<div class="codehilite"><pre>    <span class="c1">;; Comment and Uncomment</span>
+    <span class="p">(</span><span class="nb">defun</span> <span class="nv">comment-or-uncomment-line-or-region</span> <span class="p">()</span>
+    <span class="s">&quot;Comments or uncomments the current line or region.&quot;</span>
+    <span class="p">(</span><span class="nv">interactive</span><span class="p">)</span>
+    <span class="p">(</span><span class="k">if</span> <span class="p">(</span><span class="nv">region-active-p</span><span class="p">)</span>
+    <span class="p">(</span><span class="nv">comment-or-uncomment-region</span> <span class="p">(</span><span class="nv">region-beginning</span><span class="p">)</span> <span class="p">(</span><span class="nv">region-end</span><span class="p">))</span>
+    <span class="p">(</span><span class="nv">comment-or-uncomment-region</span> <span class="p">(</span><span class="nv">line-beginning-position</span><span class="p">)</span> <span class="p">(</span><span class="nv">line-end-position</span><span class="p">))</span>
+    <span class="p">)</span>
+    <span class="p">)</span>
+    <span class="p">(</span><span class="nv">global-set-key</span> <span class="s">&quot;\M-,&quot;</span> <span class="ss">&#39;comment-or-uncomment-line-or-region</span><span class="p">)</span>
+</pre></div>
+
+
+<p>这里我们将M-,设置为注释和反注释的快捷键。当选中某块区域时，可以将该区
+域注释或者反注释；而当不选中时，则对当前行进行操作。</p>
+<ul>
+<li>
+<h3>取消 whitespace-mode</h3>
+我很喜欢 whitespace-mode，但也看到不少人不喜欢它。不喜欢，那便可以取消
+它，代码如下:</li>
+</ul>
+<div class="codehilite"><pre>    <span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;prog-mode-hook</span> <span class="ss">&#39;prelude-turn-off-whitespace</span> <span class="no">t</span><span class="p">)</span>
+</pre></div>
+
+
+<h2><div id="aboutAuthor">关于作者</div></h2>
+<p>Prelude的作者名叫<strong>Bozhidar Ivanov Batsov</strong>，来自<strong>保加利亚</strong>的Veliko
+Tarnovo，目前居住于其首都<em>Sofia</em>。</p>
+<p>Batsov是一家主打商务社交的网站<a href="https://tradeo.com/">tradeo.com</a>的
+Technical Lead，负责开发基于Ruby on Rails的各种应用，曾经是Java工程师，
+更早的时候则是C++工程师，而他的老本行则是基于Linux内核的嵌入式开发。
+Batsov的经历，基本就是从低层逐渐往高层走的过程。</p>
+<p>除了编程外，Bastov总是为Unix-like的操作系统着迷，最喜爱的编辑器是Emacs
+（不然也不会制作Prelude啦），常用的shell是zsh，使用git来做版本控制。</p>
+<p>最后上一张Bastov的靓照</p>
+<p><img alt="Bastov" src="http://batsov.com/images/articles/bozhidar.jpg" /></p>
+<h2><div id="reference">参考资料</div></h2>
+<ol>
+<li><a href="http://wikemacs.org/wiki/Prelude">WikEmacs-Prelude</a></li>
+<li><a href="http://batsov.com/">Batsov's blog</a></li>
+<li><a href="https://github.com/bbatsov/prelude">Prelude's github page</a></li>
+<li><a href="http://batsov.com/prelude/">Prelude's Home</a></li>
+<li><a href="http://www.linkedin.com/in/bozhidarbatsov">Batsov's linkedin profile</a></li>
+<li><a href="https://tradeo.com/">tradeo.com</a></li>
+</ol></p>
+      </div> -->
+    </div>
+  </div>
+  
+  <div class="entry-overview">
+    <div class="date">
+      30 Jul 2012
+    </div>
+    <div class="detail">
+      <h1><a href=".././gao-wei-zhen-li.html">高维真理</a> </h1>
+      <!-- <div class="summary">
+	<p><p>最近发现PDF对于<a href="https://github.com/freealbert/PyEE">PyEE</a>并不是一种非常好的载体，我就寻思着将整个项目搬到web上去，希望借助于超链接和日新月异的技术能够让PyEE的表现力更强，也更为美观。接触Web开发，不可避免的便要学习HTML,CSS,Javasript这三座大山。
+起初，我并不知道有CSS这种东西，直到现在我还每每将其读成CCS。但当我了解了CSS究竟是用来做什么的时候，一种熟悉感油然而生。先来看一下维基百科上说为何要采用CSS</p>
+<blockquote>
+<p>CSS最主要的目的是将文件的结构（用HTML或其他相关的语言写的）与文件的显示（CSS）分隔开来。这个分隔有许多好处：</p>
+<ul>
+<li>文件的可读性被加强</li>
+<li>文件的结构更加灵活</li>
+<li>作者和读者可以自己决定文件的显示</li>
+<li>文件的结构简化了。</li>
+</ul>
+</blockquote>
+<p>笼统的概括一下CSS背后的目的，分工尽量精细，让每一样事物尽量专注自己的领域。这种想法，并不惟CSS独有，LaTeX也有自己事先定义好各种模板，目的也是为了让使用者更加专注与内容本身，而不是外观。再推远一点，面向对象编程出现的背后，同样是这种思想在推动。不止是编程领域，这种思想存在于这个世界的角角落落，因为把这种思想再精简一点，便是流水线。人类社会的发展一直便是分工尽量精细的过程，得益于工业化，全世界的流水线大大加速，小到一个CSS文件，大到一个人乃至一个国家实体，都是这亘古运转的流水线上的一环。</p>
+<p>在这里，我不想讨论社会的流水线化是否会一直持续，精细分工究竟是好是坏。我更加关心的是，为何，这个世界上风马牛不相及的领域内会有相同的现象，抑或法则，抑或真理。
+这个疑问，从我高一学习化学的时候便开始困扰我。</p>
+<p>在有机化学中，当氢原子要脱落时，首先会从氢原子本来就少的碳原子上脱落；反之，当氢原子要增加时，首先增加的却是氢原子本来就多的碳原子上。这种现象与经济学上贫者愈贫，富者愈富，赢家通吃的经济学中收入分配不公的现象同样被称为马太效应。还有许许多多的其他领域同样存在着马太效应。</p>
+<p>这么多不同领域却有着相同原理的现象背后，我并不认为这是一种巧合，也许，这个世界的确存在一个同一的真理。
+再举一个我们熟悉的例子，大统一场理论（也称为万物之理），它是物理学家一直试图用同一组方程式描述全部粒子和力(强相互作用、弱相互作用、万有引力、电磁相互作用四种人类目前所知的所有的力)的物理性质的理论或模型。</p>
+<p>我觉得，这个世界或许远不止弦论描述的是10维或是超弦理论描述的11维，很可能存在更高的维数，100维，抑或无穷维也有可能。在那里只存在着一条真理，但由于我们只能感知到空间的三维和时间的一维，于是我们对真理的认识也是非常片面的。每学科的研究都如盲人摸象一般，只能研究到高维真理的一小块碎片而已。这也可以解释为何在不同的学科之间存在相同的原理，因为他们本来就属于统一高维真理，只不过由于我们的视界只有四维，真理被碎片化了，但总有一点还是相同的。而不同的学科研究，便是沿着不同的山路攀爬同一座山峰。到了山顶，所有风景都是相似的。</p>
+<p>我还可以提供一个有趣的例子，以供思考。</p>
+<p>天线的辐射方向图其实是电流分布在天线上的傅立叶变换。下式是远区场的情形：
+$$E_{\theta}=\int_{-l/2}^{+l/2}dE_{\theta}=j\eta\frac{ke^{-jkr}}{4\pi r}\sin{\theta}[\int_{-l/2}^{+l/2}I_{e}(x',y',z')e^{jkz'\cos{\theta}}dz']$$</p>
+<p>公式右边的中括号内，便是不折不扣的傅立叶变换。这么样，为何无线小偶极子不会有旁瓣也就很容易解释了，因为冲击函数的傅立叶变换是1，每个方向都是均匀的，也就不会有旁瓣。</p>
+<p>下图是一张矩形缝隙天线的辐射方向图，来自维基百科，从图中可以看出，正好是一个Sinc函数。众所周知，门函数的傅立叶变换便是Sinc函数。
+<img alt="alt text" src="https://github.com/freealbert/freealbert_photo_1/blob/master/Tech/sinc.jpg?raw=true" title="sinc" /></p>
+<p>关于旁瓣和傅立叶变换的关系，更多的资料可以<a href="http://en.wikipedia.org/wiki/Side_lobe">点此</a>。</p>
+<p>最后，附上我天线大作业的<a href="http://dymslide-freealbert.dotcloud.com/antenna-2012-6-28/antenna.html">幻灯片</a>，主要内容为无限小偶极子天线的辐射方向图以及旁瓣和傅立叶变换的关系，我将它改成了HTML5的形式，可以在线浏览。</p></p>
+      </div> -->
+    </div>
+  </div>
+  
+  <div class="entry-overview">
+    <div class="date">
+      08 Aug 2012
+    </div>
+    <div class="detail">
+      <h1><a href=".././ji-ben-hui-du-bian-huan.html">基本灰度变换</a> </h1>
+      <!-- <div class="summary">
+	<p><blockquote>
+<p>在以后的日子里，你可能需要根据概念定义编写直方图均衡、直方图规定化，
+Sobel锐化，Laplacian锐化，Roberts锐化等函数，对此，你准备好了吗?上课一定要认真听讲哦!</p>
+</blockquote>
+<p>带上冈萨雷斯的第三版一块出发吧!</p>
+<h2>实验目的</h2>
+<p>通过上机实验的手段巩固课堂上所学的关于图像反转、幂次变换和分段线性变换有关的知识，感受
+不同的灰度变换方法对最终图像效果的影响。</p>
+<h2>方法技术介绍</h2>
+<p>灰度变换函数是图像增强技术中最简单的一类，处理前后的像素值分别用r和s定义，于是我们可以用如下表达式来表示原像素值r映射到值s的变换:
+$$  s = T(r)$$</p>
+<ul>
+<li>
+<h3>图像反转</h3>
+<p>灰度级范围为[0，L-1]的图像反转表达式为:
+$$  s = L-1-r$$
+采用上式可以产生图像反转的对等图像，这种处理尤其适合用于增强嵌入于图像暗色区域的白色或
+灰色细节，特别是当黑色面积占主导地位时。</p>
+</li>
+<li>
+<h3>幂次变换</h3>
+<p>幂次变换的基本形式为:
+$$ s = cr^{\gamma}$$
+其中c和γ为正常数。从下图可以看出，当γ &lt; 1，幂次变换能够将窄带暗值映射成宽带输出值，γ &gt;
+1，则正好相反。应注意的是，当c = γ = 1时，幂次变换将简化为正比运算。</p>
+</li>
+</ul>
+<p><img alt="" src="https://github.com/freealbert/freealbert-slide-1/blob/master/gray-2012-8-8/power_trans.jpg?raw=true" /></p>
+<ul>
+<li>
+<h3>分段线性变换</h3>
+与前面两个函数相比，分段线性变换的主要优势在于形式可以任意合成，其中分段线性变换还可以
+细分为对比拉伸、灰度切割、位图切割等方法。<ul>
+<li>
+<h4>对比拉伸</h4>
+<p>对比拉伸的思想是提高低对比度图像处理是灰度级的动态范围。低对比度的成因有照明不足、成像传感器动态范围太小，甚至在图像获取过程中透镜光圈设置错误引起。</p>
+</li>
+<li>
+<h4>灰度切割</h4>
+<p>在图像处理中提高特定灰度范围的亮度通常是很有必要的，这样的灰度切割可以让感兴趣的图像内容
+更加明显。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2>实验步骤</h2>
+<h3>步骤1</h3>
+<p>将实验用图:rice.png读入内存，以便后续处理。</p>
+<blockquote>
+<p>Mer：使用imread函数将图像读入Matlab。</p>
+<p>Pyer：忘了可以<a href="../shu-zi-tu-xiang-chu-li-shi-yan.html#part2.4">回去看下</a>哦。</p>
+</blockquote>
+<p><img alt="" src="https://github.com/freealbert/freealbert-slide-1/blob/master/gray-2012-8-8/rice.png?raw=true" /></p>
+<h3>步骤2</h3>
+<p>用如下的灰度变换函数对rice.png图像进行处理，在同一个窗口中画出处理前后的图像，并保存。
+\[ 
+    s = \left\{
+        \begin{array}{lr}
+            0.3r， &amp; r &lt; 0.35 \\
+            0.105 + 2.6333(r-0.35)， &amp; 0.35\leq r \leq 0.65\\
+            1 + 0.3(r-1)， &amp; r &gt; 0.65.
+            \end{array}
+        \right.
+\]</p>
+<h3>步骤3</h3>
+<p>用如下灰度变换函数对rice.png进行处理，在同一个窗口中画出处理前后的图像，并保存。</p>
+<p>\[ s = \left\{
+        \begin{array}{lr}
+            15.9744r^5， &amp; r {\leq} 0.5 \\
+    (r-0.5)^{0.2}+0.12， &amp; r &gt; 0.5 
+        \end{array}\right.
+\]</p>
+<h3>步骤4</h3>
+<p>分别用$s = r^{0.6}， s = r^{0.4}， s = r^{0.3}$ 对kids.tif图像进行处理，在同一个窗口中画出处理前后的图像，并
+保存。</p>
+<p><img alt="" src="https://github.com/freealbert/freealbert-slide-1/blob/master/gray-2012-8-8/kids.png?raw=true" /></p>
+<h3>步骤5</h3>
+<p>对circuit.jpg图像实施反变换，在同一个窗口中画出处理前后的图像，并保存。</p>
+<p><img alt="" src="https://github.com/freealbert/freealbert-slide-1/blob/master/gray-2012-8-8/circuit.png?raw=true" /></p>
+<h3>步骤6</h3>
+<p>对rice.jpg图像实施灰度切片。具体要求为:当0.2 ≤ r ≤ 0.4时，将r置为0.6，当r位于其他区间时，
+保持其灰度值不变。在同一个窗口中画出处理前后的图像，并保存。</p>
+<h3>步骤7</h3>
+<p>利用灰度变换对Picture.jpg做增强处理，突出图中人物，改善整个图像过于灰暗的背景。给出图像
+处理前后的直方图，写出所采用的拉伸表达式。在同一个窗口中画出处理前后的图像，并保存。</p>
+<p><img alt="" src="https://github.com/freealbert/freealbert-slide-1/blob/master/gray-2012-8-8/Picture.jpg?raw=true" /></p>
+<h2>实验报告要求</h2>
+<p>其实我没啥要求，反正我也不是老师，扯要求干嘛。你能看我写的东西就是上帝了，嗯，访客是上帝。</p>
+<p><strong>上帝们，要是发现错误请在下面评论处指明噢！</strong></p>
+<p>不过我猜老师肯定让你们提交原图像和各种变换函数的曲线，以及按照各种变换函数处理后的图像。</p></p>
+      </div> -->
+    </div>
+  </div>
+  
+  <div class="entry-overview">
+    <div class="date">
+      18 Apr 2012
+    </div>
+    <div class="detail">
+      <h1><a href=".././jie-jue-matplotlibde-imshowxian-shi-shi-zhen.html">解决matplotlib的imshow显示失真</a> </h1>
+      <!-- <div class="summary">
+	<p><p>我用python写了数字图像处理的上机实验，做到最后一小题处理cell的时候，发现用imshow显示读入的图片发现明显跟直接打开图片看不同。回去看之前的题目，都跟原图有出入。
+原图如下</p>
+<p><img alt="" src="http://i.imgur.com/Bs0YH.jpg" /></p>
+<p>打开后的失真图像如下</p>
+<p><img alt="" src="http://i.imgur.com/Znksp.jpg" /></p>
+<p>这是我的代码片段：</p>
+<div class="codehilite"><pre><span class="n">im_0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s">&#39;cell.jpg&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="s">&#39;L&#39;</span><span class="p">))</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">ax_0</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">121</span><span class="p">)</span>
+<span class="n">ax_0</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">im_0</span><span class="p">,</span><span class="n">cmap</span><span class="o">=</span><span class="n">cm</span><span class="o">.</span><span class="n">gray</span><span class="p">)</span>
+</pre></div>
+
+
+<p>由于imshow默认是显示伪彩色，所以colormap用了gray。仔细看对比两张图片可以发现，失真的图片很像是对原图做了灰度拉伸操作，故而变得比原图像清晰了。苦于找不到原因，我在水木的Python版上发了帖子求教，经过xgr和DaNei两位热心兄台的提点，我最终找到了原因和解决的途径。</p>
+<p>原来，matplotlib的imshow函数显示灰度图像时，会对图像矩阵进行归一化，就是把矩阵中最小的灰度值(vmin)作为0，最大的灰度值(vmax)作为1，然后重新给colormap赋值 。用getextrema函数可以查看图像灰度值的最大值和最小值，cell的最大灰度值为138，最小灰度值为90。也就是说90～138会被线性拉伸成0~255。如果显示图片时，可以设置norm的值显式地令vmax=255，vmin=0，则可以显示这个问题，相应的，0～1的浮点数矩阵，vmax=1，vmin=0。</p>
+<div class="codehilite"><pre><span class="n">ax4</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">C</span><span class="p">[:,:,</span><span class="mi">1</span><span class="p">],</span><span class="n">cmap</span><span class="o">=</span><span class="n">cm</span><span class="o">.</span><span class="n">gray</span><span class="p">,</span><span class="n">norm</span><span class="o">=</span><span class="n">pl</span><span class="o">.</span><span class="n">Normalize</span><span class="p">(</span><span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">vmax</span><span class="o">=</span><span class="mi">255</span><span class="p">))</span>
+</pre></div>
+
+
+<p>下图是设置后的图片，跟原图一模一样。</p>
+<p><img alt="" src="http://i.imgur.com/4Ru2t.jpg" /></p></p>
+      </div> -->
+    </div>
+  </div>
+  
+  <div class="entry-overview">
+    <div class="date">
+      17 Aug 2012
+    </div>
+    <div class="detail">
+      <h1><a href=".././jie-jue-pygmentsyu-mathjaxde-chong-tu.html">解决Pygments与MathJax的冲突</a> </h1>
+      <!-- <div class="summary">
+	<p><p>MathJax是个人认为一个非常赞的开源项目，它是一个用来在浏览器上显示LaTeX数学公式的JavaScript引擎，本站的所有公式都是由它生成的。</p>
+<p>Pygments是一个用来做语法高亮的利器，由pXq一直关注的Pocoo团队出品，Pocoo出品，必属精品。</p>
+<p>但当两者共同工作时却出现了一点小意外，我发现数学公式中的字母颜色变淡了，情况如下：</p>
+<p><img alt="" src="http://i.imgur.com/xI6ox.png" /></p>
+<p>但我使用highlight.js来做高亮时，却又是好的。</p>
+<p><img alt="" src="http://i.imgur.com/KdSfO.png" /></p>
+<p>这说明是Pygments和MathJax起了冲突。听从pXq的建议，我将Pygments的主题从default换成了vim。Pygments产生主题的语句如下：</p>
+<div class="codehilite"><pre><span class="nv">$ </span>pygmentize -S vim -f html &gt; pygments_vim.css
+</pre></div>
+
+
+<p>主题名称可以从<a href="http://pygments.org/demo/53718/">这里</a>找到，在<em>Use this style:</em> 的右边。</p>
+<p>换了vim主题后，情况就变成这样了。</p>
+<p><img alt="" src="http://i.imgur.com/0aNwi.png" /></p>
+<p>从水木上得知，Pygments是只改变CSS的，那有这种状况应该是Pygments的某个CSS特性将MathJax原先的给替换掉了，导致公式里的字母也跟着代码一样变得花花绿绿。</p>
+<p>现在的问题就是要使两者的CSS作用域分开，最后还是pXq想出了方法。刚学了一点CSS知识，我也现学现卖一下。</p>
+<p>看一下Pygments产生的高亮CSS文件的随便一句代码：</p>
+<div class="codehilite"><pre><span class="nc">.hll</span> <span class="p">{</span> <span class="k">background-color</span><span class="o">:</span> <span class="m">#ffffcc</span> <span class="p">}</span>
+</pre></div>
+
+
+<p>这句话表明，在整个网页中，只要属于hll类的元素都将具有background-color特性是#ffffcc这个效果。</p>
+<p>但事实上，我们并不希望这样。我们希望整个页面包括数学公式中的字母默认就是黑色的，而只有代码段里的字母才会高亮。套用面向对象的说法，代码段里的效果是整体字母效果的一个子类。</p>
+<p>看一下高亮代码段的HTML代码：</p>
+<div class="codehilite"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;codehilite&quot;</span><span class="nt">&gt;&lt;pre&gt;</span>    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;kn&quot;</span><span class="nt">&gt;</span>import<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;nn&quot;</span><span class="nt">&gt;</span>PIL.Image<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;kn&quot;</span><span class="nt">&gt;</span>as<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;nn&quot;</span><span class="nt">&gt;</span>Image<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/pre&gt;&lt;/div&gt;</span>
+</pre></div>
+
+
+<p>可以看到他们都是属于codehilite类的，那么我们只要让Pygments产生的那个CSS文件只对codehilite类生效就可以了。具体方式是在每行的最开头加上 .codehilite  ，这样指定只有属于codehilite的代码才会高亮。形式如下：</p>
+<div class="codehilite"><pre><span class="o">.</span><span class="n">codehilite</span> <span class="o">.</span><span class="n">hll</span> <span class="p">{</span> <span class="n">background</span><span class="o">-</span><span class="n">color</span><span class="p">:</span> <span class="c">#ffffcc }</span>
+<span class="o">.</span><span class="n">codehilite</span> <span class="o">.</span><span class="n">c</span> <span class="p">{</span> <span class="n">color</span><span class="p">:</span> <span class="c">#60a0b0; font-style: italic } /* Comment */</span>
+<span class="o">.</span><span class="n">codehilite</span> <span class="o">.</span><span class="n">err</span> <span class="p">{</span> <span class="n">border</span><span class="p">:</span> <span class="mi">1</span><span class="n">px</span> <span class="n">solid</span> <span class="c">#FF0000 } /* Error */</span>
+<span class="o">.</span><span class="n">codehilite</span> <span class="o">.</span><span class="n">k</span> <span class="p">{</span> <span class="n">color</span><span class="p">:</span> <span class="c">#007020; font-weight: bold } /* Keyword */</span>
+<span class="o">.</span><span class="n">codehilite</span> <span class="o">.</span><span class="n">o</span> <span class="p">{</span> <span class="n">color</span><span class="p">:</span> <span class="c">#666666 } /* Operator */</span>
+<span class="o">...</span>
+</pre></div>
+
+
+<p>由此问题便解决了。</p>
+<p><strong> 增加.codehilite只针对markdown文件，如果是rst文件，请将codehilite替换成highlight</strong></p></p>
+      </div> -->
+    </div>
+  </div>
+  
+
+ 
+<!-- <div class="pagination"> -->
+<!--    -->
+<!--     <a href="#"> <b>&larr;</b>Previous</a> -->
+<!--    -->
+
+<!--    -->
+<!--     <a href=".././author/freealbert2.html">Next<b>&rarr;</b></a> -->
+<!--    -->
+<!-- </div> -->
+<div class="pagination">
+<!-- <ul> -->
+
+    <a href="#">&laquo; Previous</a>
+
+
+
+    <a href=".././author/freealbert.html">1</a>
+
+    <a href=".././author/freealbert2.html">2</a>
+
+    <a href=".././author/freealbert3.html">3</a>
+
+
+
+    <a href=".././author/freealbert2.html">Next &raquo;</a>
+
+
+<!-- </ul> -->
+</div>
+
+    </div>
+
+ 
+
+
+    <div class="footer">
+      <p>&copy Copyright 2012 by freealbert</p>
+      <p>Content licensed under the Creative Commons attribution-noncommercial-sharealike License. </p>
+      <p>Contact me via
+	<a href="http://github.com/freealbert">github</a>,
+	<a href="mailto:jim2429212@gmail.com">mail</a>,
+	<a href="http://weibo.com/u/1844630250">weibo</a>.
+	<a href="http://fusion.google.com/add?source=atgs&feedurl=http%3A//dym.me">feed</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

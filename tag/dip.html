@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>freealbert's blog - dip </title>
+  <meta charset="utf-8">
+<!-- Using MathJax, with the delimiters $ -->
+<!-- Conflict with pygments for the .mo and .mi -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true},
+    "HTML-CSS": { availableFonts: ["TeX"], linebreaks: {automatic: true}},
+    TeX: {equationNumbers: {autoNumber: ["AMS"], useLabelIds: true}},
+    <!-- "HTML-CSS": {linebreaks: {automatic: true}}, -->
+    SVG: {linebreaks: {automatic: true}}
+});
+</script>
+
+<script type="text/javascript" src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<!-- <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script> 
+-->
+
+
+  <link rel="stylesheet" href=".././theme/css/style.css">
+<!-- <link rel="stylesheet" href=".././theme/css/styles/default.css"> -->
+<!-- <script src=".././theme/css/highlight.pack.js"></script> -->
+<!-- <script>hljs.initHighlightingOnLoad();</script> -->
+<!-- <link rel="stylesheet" href=".././theme/css/pygments.css"> -->
+<!-- <link rel="stylesheet" href=".././theme/css/pygments_emacs.css"> -->
+<link rel="stylesheet" href=".././theme/css/pygments_friendly.css">
+
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+
+  <!-- google analysis  -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34015459-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+ <link href=".././" type="application/atom+xml" rel="alternate" title="freealbert's blog ATOM Feed" />
+
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <a href=".././index.html">freealbert's blog</a>
+      <!-- <span>--Virya</span> -->
+    </div>
+    <div class="navigation">
+      <ul>
+	      <li><a href=".././index.html">Home</a></li>
+	        
+	          <!-- <li><a href=".././pages/pages/about.html">About</a></li> -->
+            <li><a href=".././pages/about.html">About</a></li>
+	        
+        <!-- <li><a href=".././about.html">About</a></li>   -->
+	      <li><a href=".././tags.html">Tags</a></li>
+	      <!-- <li><a href=".././archives.html">Archives</a></li> -->
+      </ul>
+    </div>
+    <div class="body">
+      
+
+
+  
+  <div class="entry-overview">
+    <div class="date">
+      13 Aug 2012
+    </div>
+    <div class="detail">
+      <h1><a href=".././shu-zi-tu-xiang-chu-li-shi-yan.html">数字图像处理实验</a> </h1>
+      <!-- <div class="summary">
+	<p><div id="part0"></div>
+
+<ul>
+<li><a href="#part1">写在最前面的废话</a></li>
+<li><a href="#part2">如何开始之Python篇</a><ul>
+<li><a href="#part2.1">Python简介</a></li>
+<li><a href="#part2.2">模块介绍</a></li>
+<li><a href="#part2.3">了解更多</a></li>
+<li><a href="#part2.4">代码示例与骨架</a></li>
+</ul>
+</li>
+<li><a href="#part3">如何开始之Matlab篇</a></li>
+<li><a href="../ji-ben-hui-du-bian-huan.html">EXP1 基本灰度变换</a> </li>
+<li><a href="../zhi-fang-tu-chu-li.html">EXP2 直方图处理技术</a> </li>
+<li><a href="../ping-hua-ji-zhu.html">EXP3 图像平滑技术</a> </li>
+<li><a href="../tu-xiang-rui-hua.html">EXP4 图像锐化技术</a>     <br />
+</li>
+</ul>
+<h2><div id="part1">写在最前面的废话</div></h2>
+<blockquote>
+<p>既然课程名字叫作<strong><em>数字图像处理</em></strong>，而不是XXX程序语言设计，那么学生便有选择任何一种自己喜欢的语言完成实验的自由。</p>
+</blockquote>
+<p>本文最早的写作时间起于我刚学Python的时候，对着实验指导书码着同样是刚开始学习的matlab语言代码的，想着如果这个实验也可以用Python完成就好了。恰逢《Python科学计算》刚刚出版，我买了一本学习了一下（我是亚马逊上第二个购买的～），试着用Python完成了实验，心里也萌生了我也可以写一下Python版的实验指导书的念头。</p>
+<p>在这个想法的牵引下，我修改了一下原先老师下发的实验指导书，从最初的Word版，用刚学会的Latex排成了PDF，顺便增加了一些我自己理解的实验原理。然后又尝试了下Beamer还有HTML5制作幻灯片，得出结论虽然PDF不是最佳形式，但幻灯片更加不是。最后我想我找到了，网页由于其天生的超链接特性，可以方便的在不同资源之间自由跳转，以前那种一言难尽的感觉终于没了。还有<a href="http://www.mathjax.org/">MathJax</a>这种优秀的开源项目，让呈现数学公式也变得容易。</p>
+<p>过程中，我也收到了一些善意的建议，觉得这么做是徒劳的。我很清楚，不像同样开源的R之于统计领域，在通信这块，Matlab相比Python的优势实在巨大。开源不是万能的，科学计算方面，Python不论是文档还是社区都是远远不及，就性能而言，同样是其短板。其实更大的阻力来自于我自己的内心，我深知自己的水平，不管是这门课还是Python，连入门的门槛还没摸着，自娱自乐没事，误人子弟就罪孽深重了。也由此，这篇文章写写停停花了半年左右，现在我才发现，驱使我还在写的倒不是目的本身，而是这个过程。从一开始的LaTeX，到先前学着用Pelican，Github，带着我走进一个HTML+Javascript+CSS构成的Web世界，真的挺有趣的。</p>
+<p>你现在正在访问的网站是由Python写成的，国内外很多著名网站比如<a href="http://www.douban.com/">豆瓣</a>，<a href="http://www.zhihu.com/">知乎</a>，<a href="http://dropbox.com/">DropBox</a>都是由Python写的。
+当然本文并不是要讨论其在Web端的应用以及如何建一个网站，而是在另一个领域——科学计算，更精确点也就是如何用Python完成我们的数字图像处理实验。考虑到大部分人可能对新语言不感冒，我也安排了Matlab的部分。</p>
+<p>本文一共六个部分，除了你现在在阅读的废话环节，还有对于初学者如何用Python或Matlab来完成本实验，以及四个完整的实验，包括了实验原理，内容步骤等。其中我会用Python给出代码骨架。由于我行文实在罗嗦，因此我强烈建议你当感觉不耐烦时，按下<a href="#part0">Home</a>键，返回页首，然后根据目录直奔目标。</p>
+<h2><div id="part2">如何开始之Python篇</div></h2>
+<h3><div id="part2.1">Python简介</div></h3>
+<p>Python不同于我们之前学过的C/C++，她是一种解释性语言，这一点，本文的另一种备选语言Matlab也是相同的。没有编译这个环节，在程序写好后，便可以运行，当程序运行到有错误的时候便会停下来。一般来说，解释性语言的速度慢于编译型语言，但在现在我们的电脑上，这一点可以完全忽略了。</p>
+<p>Matlab除了Matlab语言本身还有许许多多的工具箱（你很可能已经在数字信号处理的课堂上见识过信号处理工具箱），工具箱其实就是一堆函数。这些工具箱就是一个个扩展的模块，用来满足某些领域的需求。比如</p>
+<ul>
+<li>信号处理工具箱提供了丰富的信号处理方面的函数</li>
+<li>符号数学工具箱扩展了原先只能做数值运算的Matlab使其也能够做符号运算</li>
+<li>图像处理工具箱当然是用来做图像处理的，针对的就是本实验。</li>
+<li>更多的工具箱，传送门在<a href="http://www.mathworks.cn/products/">这里</a></li>
+</ul>
+<p>同Matlba一样，Python也有许多的扩展类库，也可以称之为模块。我觉得，模块之于Python就像守护在雅典娜身边的圣斗士，团聚在其周围，扩充了其的应用领域和威力。下面这张图很好的表现了这一点：</p>
+<p><img alt="Athena" src="https://github.com/freealbert/PyEE/blob/master/Python/pyintro/python_1.png?raw=true" /></p>
+<h3><div id="part2.2">模块介绍</div></h3>
+<p>上图中的模块构成了一个较为完整的科学计算的生态系统，当然对于本实验我们用不了这么多，只要稍微了解下下面的青铜五小强即可。</p>
+<ul>
+<li><a href="http://www.scipy.org/">Scipy</a>
+Scipy是一个用于数学，科学和工程领域仿真的类库，提供了大量现成的函数。本实验中我们会使用其中的signal模块,约定模块导入的形式如下：</li>
+</ul>
+<div class="codehilite"><pre>    <span class="kn">import</span> <span class="nn">scipy.signal</span> <span class="kn">as</span> <span class="nn">signal</span>
+</pre></div>
+
+
+<ul>
+<li><a href="http://numpy.scipy.org/">Numpy</a>
+Numpy模块是Scipy的基础，提供了对矩阵和多维数组的支持以及许多数值计算的函数。约定其导入形式如下:</li>
+</ul>
+<div class="codehilite"><pre>    <span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+</pre></div>
+
+
+<ul>
+<li>
+<p><a href="http://matplotlib.sourceforge.net/">matplotlib</a>
+matplotlib是一个二维图像绘制为主的类库，我们会用到其中的pylab模块和cm模块。</p>
+<ul>
+<li>pylab模块集成了一些常用的绘图函数，应付我们这次实验绰绰有余。</li>
+<li>cm是colormap的缩写，指明的是表示颜色的数值和具体颜色之间以何种方式映射。拍照时的一些效果，如老照片（红铜色）就是由这个决定的。</li>
+</ul>
+<p>我们约定模块导入形式如下：</p>
+</li>
+</ul>
+<div class="codehilite"><pre>    <span class="kn">import</span> <span class="nn">matplotlib.cm</span> <span class="kn">as</span> <span class="nn">cm</span>
+    <span class="kn">import</span> <span class="nn">matplotlib.pylab</span> <span class="kn">as</span> <span class="nn">pl</span>
+</pre></div>
+
+
+<p>有必要提醒一下，matplotlib的那些container的层次还是搞清一下最好，有点恼人的。</p>
+<ul>
+<li><a href="http://www.pythonware.com/products/pil/">PIL</a>
+PIL是Python Image Library的缩写，顾名思义，是用来做图像处理的类库。
+我们约定模块导入形式如下：</li>
+</ul>
+<div class="codehilite"><pre>    <span class="kn">import</span> <span class="nn">PIL.Image</span> <span class="kn">as</span> <span class="nn">Image</span>
+</pre></div>
+
+
+<ul>
+<li><a href="http://code.google.com/p/pyopencv/">PyOpenCV</a>
+OpenCV是一个基于C/C++语言的开源图像处理函数库，而PyOpenCV是其Python语言的绑定，由此，我们便可以抛开一想就头大的C++,使用Python直接调用其中的函数了。OpenCV功能十分强大，完成本实验小菜一叠，<strike>虽然并不一定要用到它，写在这儿，权做推荐了解一下。</strike>
+<strong>怀着激动的心情还更新下～～～ PyOpenCV好久没有更新了，建议安装OpenCV最新的Python扩展库cv2，《Python科学计算》的<a href="http://hyry.dip.jp/">作者</a>将书中所有的PyOpenCV都用cv2重写了，<a href="http://blog.chinaunix.net/uid-23100982-id-3082055.html">这里</a>有说明和实例。</strong></li>
+</ul>
+<h3><div id="part2.3">了解更多</div></h3>
+<p>由于篇幅有限，本文不可能对Python的语法来个详细的介绍，如果想用Python完成本实验，那么你只好去看别的教程了，幸好我们的要求并不高，一会会就可以将所能用到的语法一网打尽了，这么简单，你也可以边写程序边学习。</p>
+<p>Python有着一个庞大的社区，网络上的好资源也是汗牛充栋。你大致了解下Python的简单语法，和一点点用Python做科学计算的知识就可以开始啦。下面是一些资源索引:</p>
+<h4>推荐</h4>
+<ul>
+<li><a href="http://woodpecker.org.cn/abyteofpython_cn/chinese/index.html">简明 Python 教程</a> 推荐，可直接浏览，一天之内应该就可以写程序了。</li>
+<li><a href="http://hyry.dip.jp:8000/pydoc/index.html">用Python做科学计算</a> 强烈推荐，这本书详细的介绍了我们会用到的类库（Numpy、Scipy、 matplotlib），目前也是唯一一本关于Python做科学计算的书。可以在图书馆借到，作者在网上放了大部分的内容，对我们实验而言已经足够了。</li>
+<li><a href="http://hyry.dip.jp/">HYRY Studio</a> 《Python科学计算》作者的网站，汇集了博客、论坛等功能，里面的技术文章自然是很有价值，无需多言。让我印象更为深刻的是，里面记载的作者平时生活工作的点滴，让我感到就像身边稍微年长一点的前辈或是关系稍好的年轻老师，还是个好爸爸，觉得可亲，再看他的书，仿佛也更容易理解了。还有他女儿的日记呢，かわいい！</li>
+</ul>
+<h4>可参考</h4>
+<ul>
+<li><a href="http://www.scipy.org/NumPy_for_Matlab_Users/">NumPy for Matlab Users</a> Matlab与Numpy/Scipy有很多相似之处，也有很多不同。这篇文章比较了两者的差异，有兴趣者可以看看。</li>
+<li><a href="http://matplotlib.sourceforge.net/gallery.html">matplotlib gallery</a> 有很多绘图的案例，也有相应的代码，我觉得是matplotlib绘图的最好教程了。</li>
+<li><a href="http://www.pythonware.com/library/pil/handbook/index.htm">Python Imaging Library Handbook</a> PIL的官方手册，其中的Image模块我们会经常用到，虽然是英文，但也比较好懂，有兴趣可以看看。</li>
+<li><a href="http://docs.scipy.org/doc/numpy/reference/">Numpy Reference Guide</a> Numpy的手册，非常详尽，不推荐阅读，因为太详尽会把你吓跑的。</li>
+<li><a href="http://docs.scipy.org/doc/scipy/reference/">Scipy Reference Guide</a> Scipy手册，不推荐阅读，理由同上。</li>
+</ul>
+<h3><div id="part2.4">代码示例</div></h3>
+<p>万事开头难，先选取实验一中的步骤2作为例子。</p>
+<div class="codehilite"><pre><span class="c"># -*- coding:utf-8 -*-</span>
+
+<span class="kn">import</span> <span class="nn">Image</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.cm</span> <span class="kn">as</span> <span class="nn">cm</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pylab</span> <span class="kn">as</span> <span class="nn">pl</span>
+
+<span class="k">def</span> <span class="nf">trans_line</span><span class="p">(</span><span class="n">r</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">r</span> <span class="o">&lt;</span> <span class="mf">0.35</span><span class="p">:</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="mf">0.3</span><span class="o">*</span><span class="n">r</span>
+    <span class="k">elif</span> <span class="n">r</span> <span class="o">&lt;=</span> <span class="mf">0.65</span><span class="p">:</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="mf">0.105</span><span class="o">+</span><span class="mf">2.6333</span><span class="o">*</span><span class="p">(</span><span class="n">r</span><span class="o">-</span><span class="mf">0.35</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="mf">0.3</span><span class="o">*</span><span class="p">(</span><span class="n">r</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">s</span>
+
+<span class="n">rice_0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s">&#39;rice.png&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="s">&#39;L&#39;</span><span class="p">))</span><span class="o">/</span><span class="nb">float</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span>
+<span class="p">(</span><span class="n">M</span><span class="p">,</span><span class="n">N</span><span class="p">)</span> <span class="o">=</span> <span class="n">rice_0</span><span class="o">.</span><span class="n">shape</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">ori_pic</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">ori_pic</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">rice_0</span><span class="p">,</span><span class="n">cmap</span><span class="o">=</span><span class="n">cm</span><span class="o">.</span><span class="n">gray</span><span class="p">,</span><span class="n">norm</span><span class="o">=</span><span class="n">pl</span><span class="o">.</span><span class="n">Normalize</span><span class="p">(</span><span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">vmax</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+<span class="n">ori_pic</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s">&#39;input image&#39;</span><span class="p">)</span>
+
+<span class="n">rice_1</span> <span class="o">=</span> <span class="n">rice_0</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">M</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+        <span class="n">rice_1</span><span class="p">[</span><span class="n">m</span><span class="p">,</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="n">trans_line</span><span class="p">(</span><span class="n">rice_0</span><span class="p">[</span><span class="n">m</span><span class="p">,</span><span class="n">n</span><span class="p">])</span>
+<span class="n">result_pic</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">222</span><span class="p">)</span>
+<span class="n">result_pic</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">rice_1</span><span class="p">,</span><span class="n">cmap</span><span class="o">=</span><span class="n">cm</span><span class="o">.</span><span class="n">gray</span><span class="p">,</span><span class="n">norm</span><span class="o">=</span><span class="n">pl</span><span class="o">.</span><span class="n">Normalize</span><span class="p">(</span><span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">vmax</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+<span class="n">result_pic</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s">&#39;output image&#39;</span><span class="p">)</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="o">+</span><span class="mf">0.001</span><span class="p">,</span><span class="mf">0.001</span><span class="p">)</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">trans_line</span><span class="p">(</span><span class="n">rr</span><span class="p">)</span> <span class="k">for</span> <span class="n">rr</span> <span class="ow">in</span> <span class="n">r</span><span class="p">])</span>
+<span class="n">trans_line_curve_fig</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">trans_line_curve_fig</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="n">s</span><span class="p">)</span>
+<span class="n">trans_line_curve_fig</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s">&#39;s-r&#39;</span><span class="p">)</span>
+<span class="n">trans_line_curve_fig</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">trans_line_curve_fig</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s">&#39;s&#39;</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s">&#39;exp_1_2&#39;</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s">&#39;exp_1_2.jpg&#39;</span><span class="p">)</span>
+</pre></div>
+
+
+<div class="codehilite"><pre>            <span class="c"># -*- coding:utf-8 -*-</span>
+</pre></div>
+
+
+<p>Python中#开头的都是注释，通常注释都是不起作用的，但这句注释放在程序开头，是一句有意义的注释。它告诉Python解释器，里面的代码我是用utf-8编码。不然的话，Python解释器会默认程序使用的是ASCII码。ASCII码我们以前接触过，比如\n，\t，A是65，a的值是97等等，但有个缺点，不能表示中文（注释很容易出现中文），所以解释器遇到了它不认识的字符便会报错，添加这句注释，解释器就知道你用的是utf-8编码，便不会对中文报错了。</p>
+<div class="codehilite"><pre>            <span class="kn">import</span> <span class="nn">Image</span>
+            <span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+            <span class="kn">import</span> <span class="nn">matplotlib.cm</span> <span class="kn">as</span> <span class="nn">cm</span>
+            <span class="kn">import</span> <span class="nn">matplotlib.pylab</span> <span class="kn">as</span> <span class="nn">pl</span>
+</pre></div>
+
+
+<p>就像上文所说的那样，这段代码是告诉Python解释器我要引入相应的类库，并以相应的缩写表示，这是为了在之后用到时可以少打几个字，看起来也清爽一些，不然如果每处都要写matplotlib.pylab肯定很痛苦。</p>
+<div class="codehilite"><pre>            <span class="k">def</span> <span class="nf">trans_line</span><span class="p">(</span><span class="n">r</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">r</span> <span class="o">&lt;</span> <span class="mf">0.35</span><span class="p">:</span>
+                    <span class="n">s</span> <span class="o">=</span> <span class="mf">0.3</span><span class="o">*</span><span class="n">r</span>
+                <span class="k">elif</span> <span class="n">r</span> <span class="o">&lt;=</span> <span class="mf">0.65</span><span class="p">:</span>
+                    <span class="n">s</span> <span class="o">=</span> <span class="mf">0.105</span><span class="o">+</span><span class="mf">2.6333</span><span class="o">*</span><span class="p">(</span><span class="n">r</span><span class="o">-</span><span class="mf">0.35</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>           
+                    <span class="n">s</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="mf">0.3</span><span class="o">*</span><span class="p">(</span><span class="n">r</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+                <span class="k">return</span> <span class="n">s</span>
+</pre></div>
+
+
+<p>这段代码我们是来定义如下这段函数的，对于每个像素的灰度值都进行变换。
+\[ 
+    s = \left\{
+        \begin{array}{lr}
+            0.3r， &amp; r &lt; 0.35 \\
+            0.105 + 2.6333(r-0.35)， &amp; 0.35\leq r \leq 0.65\\
+            1 + 0.3(r-1)， &amp; r &gt; 0.65.
+            \end{array}
+        \right.
+\]</p>
+<div class="codehilite"><pre>    <span class="n">rice_0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s">&#39;rice.png&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="s">&#39;L&#39;</span><span class="p">))</span><span class="o">/</span><span class="nb">float</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span>
+</pre></div>
+
+
+<p>这句话我们一下子做了很多事情。</p>
+<ul>
+<li>首先,我们用打开图片，Image.open('rice.png')是打开图片，其中图片应该是要同程序文件放在同一目录下，如果不是同一目录，那应该再加上系统路径。</li>
+<li>convert('L')是用来确保读入的图像是灰度图像，因为有的图像是伪装成灰度图像的彩色图像。</li>
+<li>经过上述步骤后，我们读入的其实还是一个Image类的对象，这一点，你可以在解释器中输入如下代码验证一下。
+而np.asarray(Image_Object)这一步就是为了将Image对象转化为我们能处理的ndarray对象，也就是一个二维数组。</li>
+</ul>
+<div class="codehilite"><pre>    <span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s">&#39;rice.png&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="s">&#39;L&#39;</span><span class="p">)</span>
+    <span class="n">help</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+</pre></div>
+
+
+<ul>
+<li>最后一步，由于我们读入图片的灰度是表示成0-255的，而要求的公式却是0-1的，所以我们要将灰度归一化。之所以要费事费力的写个float(255)
+的原因想必你已经清楚了，如果还未明了，那么可以看一下我的另一片<a href="../nao-ren-de-pythonchu-fa.html">拙作</a>。</li>
+</ul>
+<div class="codehilite"><pre><span class="p">(</span><span class="n">M</span><span class="p">,</span><span class="n">N</span><span class="p">)</span> <span class="o">=</span> <span class="n">rice_0</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+
+
+<p>这句话我们得到了读入矩阵的形状，其中M是行数，N是列数。shape是ndarray对象均有的属性。</p>
+<div class="codehilite"><pre><span class="n">fig</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+</pre></div>
+
+
+<p>既然要画图，那当然要有一个画图的窗口啦。这句话就是产生一个画图的窗口，目前我们没有对fig的大小做任何设置，因而便自动采用默认值也就是figsize=(8, 6)，再后期，我们会遇到一个窗口里需要里放下很多张图片，那时小小的640*480窗口便不够用了（figsize中的每一个单位默认代表80个像素）。我们可以指明我们所要的窗口大小。</p>
+<div class="codehilite"><pre><span class="n">fig</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="mi">12</span><span class="p">))</span> <span class="c"># 1280*960</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span class="n">ori_pic</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+
+<p>说曹操曹操就到，刚讲过可能一个窗口里需要放下好几副话，这不来了嘛。subplot很熟悉吧，matlab里用过，就是将窗口分为几行几列的子窗口。括号内的第一个参数是行数，第二个参数是列数，第三个参数指定需要将图画在那个子窗口上，这个序号就是从第一行第一列的那个子窗口开始从左往右数的序号。严格一点，这里的子窗口叫做Axes对象，这不ax1就是一个我们当前要画图的Axes对象。</p>
+<div class="codehilite"><pre><span class="n">ori_pic</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">rice_0</span><span class="p">,</span><span class="n">cmap</span><span class="o">=</span><span class="n">cm</span><span class="o">.</span><span class="n">gray</span><span class="p">,</span><span class="n">norm</span><span class="o">=</span><span class="n">pl</span><span class="o">.</span><span class="n">Normalize</span><span class="p">(</span><span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">vmax</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+</pre></div>
+
+
+<p>Oh,yeah!到了这句，我们的任务已经阶段性完成了一大块了，接下去的都是类似的工作，恕我不能一一详述了。在上一句中，我们将第一个子窗口命名为ax1，现在便是用imshow函数将图片显示在ax1上。你可能会问，那为什么不是ax1.imshow(rice_0)这么简单了当就可以了呢？后面的又是什么东西？再次稍微罗嗦一下。</p>
+<ul>
+<li>cmap=cm.gray 指明我们的颜色映射采用灰度图像，否则的话，imshow会启用默认的伪彩色，你得到的就是一张花花绿绿的rice了，这当然不是你想要得。</li>
+<li>norm=pl.Normalize(vmin=0,vmax=1) 指明灰度映射时，将0映射成0,255映射成1。为什么要这么指明呢？这就是matplotlib蛋疼的地方了，它会默认进行灰度拉伸，如果你的一张图像的灰度值范围是120-220，那么它就会把120映射成0,220映射成1,造成不必要的错误。关于这一点，更多的内容可以看我的<a href="../jie-jue-matplotlibde-imshowxian-shi-shi-zhen.html">另一篇文章</a>和<a href="http://www.newsmth.net/nForum/#!article/Python/89271">水木上的帖子</a>。</li>
+</ul>
+<div class="codehilite"><pre><span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s">&#39;exp_1_2.jpg&#39;</span><span class="p">)</span>
+</pre></div>
+
+
+<p>没错，保存图像就是这样，Python单双引号是一样的，只要在引号内输入你要的文件名即可，格式便是你输入的格式。至此，恭喜你大功告成～</p>
+<h2><div id="part3">如何开始之Matlab篇</div></h2>
+<p>如果从头至尾看到这，想必你也清楚我的水平了，货真价实MADAO一个。。。</p>
+<p>Matlab应该是在之前的课程中接触过了，如果感觉有困难的话，我也不误人子弟了，图书馆里的Matlab书籍汗牛充栋，人手一本绰绰有余，而这些工具书大体都相似，故也没什么好坏之分。</p>
+<p><strong>出于整个页面排版的考虑，我将实验内容做成了独立的页面。如果你性急End一下就到了这边，那还请你再按下<a href="#part0">Home</a>键，返回页首再选取实验内容。</strong></p></p>
+      </div> -->
+    </div>
+  </div>
+  
+  <div class="entry-overview">
+    <div class="date">
+      13 Aug 2012
+    </div>
+    <div class="detail">
+      <h1><a href=".././tu-xiang-rui-hua.html">图像锐化</a> </h1>
+      <!-- <div class="summary">
+	<p><h2>实验目的</h2>
+<p>通过上机实验的手段巩固课堂上所学的关于图像锐化的相关知识，自己编写Sobel,Laplacian,Roberts算子对图像进行锐化的函数，感受不同的图像处理方法对最终图像效果的影响。</p>
+<h2>方法技术介绍</h2>
+<p>锐化处理的主要目的是突出图像中的细节或者增强被模糊了的细节，这种模糊不是由错误操作造成的，就是特殊图像获取方法的固有影响。从前面几个实验中可以知道，在空域用像素邻域平均法可以使图像变模糊，因为均值处理与积分类似，从逻辑角度可以断定，锐化处理可以用空间微分来完成。下文将分别讨论Sobel算子、Laplacian算子和Roberts算子这三个微分锐化算子。</p>
+<h3>Sobel算子</h3>
+<p>在图像处理中，一阶微分是通过梯度法实现的。对于函数$f(x,y)$在其坐标$(x,y)$上的梯度是通过如下二维列向量定义的：
+\begin{equation}
+    \nabla f =
+    \left[
+        \begin{array}{c}
+            G_x\\
+            G_y
+        \end{array}
+    \right]
+    =
+    \left[
+        \begin{array}{c}
+            \frac{\partial f}{\partial x}\\
+            \frac{\partial f}{\partial y}
+        \end{array}
+    \right]
+    \label{1}
+\end{equation}
+这个向量的模值由下式给出:</p>
+<p>\begin{align}
+\nabla f &amp; = mag(\nabla \bf f)  \\
+{} &amp; = [G_x^2+G_y^2]^{\frac{1}{2}}  \\
+{} &amp; = [(\frac{\partial f}{\partial x})^2+(\frac{\partial f}{\partial y})^2]^{\frac{1}{2}} 
+\end{align}</p>
+<p>Sobel算子属于一阶微分处理，对于一元函数$f(x)$，表达一阶微分的定义是一个差值:
+\begin{equation}
+    \frac{\partial f}{\partial x}=f(x+1)-f(x)
+\end{equation}
+对于水平和垂直两个方向，相应就有水平Sobel和垂直Sobel两个模板。
+\[
+    d_x=\left[
+        \begin{array}{lcr}
+            -1 &amp; -2 &amp; -1 \\
+             0 &amp; 0 &amp; 0 \\
+             1 &amp; 2 &amp; 1
+        \end{array}
+    \right]
+    (水平Sobel)
+\]
+\[
+    d_y=\left[
+        \begin{array}{lcr}
+            -1 &amp; 0 &amp; 1 \\
+            -2 &amp; 0 &amp; 2 \\
+            -1 &amp; 0 &amp; 1
+        \end{array}
+    \right]
+    (垂直Sobel)
+\]
+综合考虑水平和垂直两个方向，则采用$\sqrt{d_x^2+d_y^2}$来生成图像，也就是$(4)$式。</p>
+<h3>Laplacian算子</h3>
+<p>下式用差分定义$x$方向上的二阶微分:
+\begin{equation}
+    \frac{\partial^2f}{\partial x^2}=f(x+1,y)+f(x-1,y)-2f(x,y)
+\end{equation}
+相应的，$y$方向上的二阶微分则为：
+\begin{equation}
+    \frac{\partial^2f}{\partial y^2}=f(x,y+1)+f(x,y-1)-2f(x,y)
+\end{equation}
+二维拉普拉斯数字实现可由这两个分量相加得到:
+\begin{equation}
+    \nabla^2f=[f(x+1,y)+f(x-1,y)+f(x,y+1)+f(x,y-1)]-4f(x,y)
+\end{equation}
+于是，Laplacian的算子形式便为:
+\[
+    \left[
+        \begin{array}{lcr}
+            0 &amp; -1 &amp; 0 \\
+        -1 &amp; 4 &amp; -1 \\
+            0 &amp; -1 &amp; 0 
+        \end{array}
+    \right]
+\]
+带对角线的Laplacian算子为:
+\[
+    \left[
+        \begin{array}{lcr}
+            -1 &amp; -1 &amp; -1 \\
+            -1 &amp;  8 &amp; -1 \\
+            -1 &amp; -1 &amp; -1
+        \end{array}
+    \right]
+\]
+假设有一个灰度值均匀变化的斜坡，其上的一阶微分值都不是零，但是二阶微分只有在斜坡的起始处和终点处才不为零。在图像中，边缘类似于这种过渡，进而可以得出一阶微分产生较粗的边缘，而二阶微分则细的多。可见二阶微分对细节的处理好于一阶微分。但考虑到孤立噪声点的情况，在该噪声点及其周围，二阶微分比一阶反应要强的多，也就是说二阶微分对噪声敏感。</p>
+<h3>Roberts算子</h3>
+<p>当对整幅图像进行$(4)$式的计算时，计算量很大，因此在实际操作中常用绝对值代替平方与开放运算近似求梯度的模值：
+\begin{equation}
+    \nabla f\approx |G_x|+|G_y|\\
+\end{equation}
+Roberts于1965年提出两种定义使用了交叉差分的算法：
+\begin{eqnarray}
+    G_x=f(x+1,y+1)-f(x,y)\\
+    G_y=f(x+1,y)-f(x,y+1)
+\end{eqnarray} 从而可以得到梯度的近似算法： 
+\begin{equation} 
+    \nabla f\approx |f(x+1,y+1)-f(x,y)|+|f(x+1,y)-f(x,y+1)| 
+\end{equation}</p>
+<h2>实验步骤</h2>
+<h3>步骤1</h3>
+<p>编写好Sobel,Laplacian,Roberts算子的相关函数，加入你自己编写的已经斐然成章的模块。</p>
+<h3>步骤2</h3>
+<p>读入cameraman.jpg图像文件，分别采用垂直方向的Sobel算子，Laplacian算子和$\sqrt{d_x^2+d_y^2}$的Sobel算子对原图进行锐化处理。将原图和处理后的图像绘在同一个窗口并保存。</p>
+<p><img alt="" src="https://github.com/freealbert/freealbert_photo_1/blob/master/Tech/cameraman.png?raw=true" /></p>
+<h3>步骤3</h3>
+<div class="codehilite"><pre>1<span class="p">.</span>读入<span class="n">skeleton</span><span class="p">.</span><span class="n">jpg</span>文件，用带对角线的<span class="n">Laplacian</span>算子对其处理。
+2<span class="p">.</span>将1<span class="p">)</span>的结果叠加到原始图像上。可看出噪声增强了（<span class="n">Laplacian</span>算子对噪声敏感），应设法降低。
+3<span class="p">.</span>获取<span class="n">Sobel</span>图像并进行5<span class="o">*</span>5邻域平均，以减少噪声。
+4<span class="p">.</span>获取2<span class="p">)</span>和3<span class="p">)</span>相乘图像，噪声得以减少。
+5<span class="p">.</span>将4<span class="p">)</span>结果叠加到原始图像上。
+6<span class="p">.</span>最后对5<span class="p">)</span>的图像做幂指数为0<span class="p">.</span>2的幂次变换
+</pre></div>
+
+
+<p><img alt="" src="https://github.com/freealbert/freealbert_photo_1/blob/master/Tech/skeleton.jpg?raw=true" /></p>
+<p>将原图和处理后的图像绘在同一个窗口并保存。</p>
+<h3>步骤4</h3>
+<p>编写Roberts梯度锐化函数，对cell.jpg进行图像锐化，锐化图像的形成以下式为准：
+\begin{equation}
+    g(x,y)=
+    \left\{
+        \begin{array}{lr}
+            L_G, &amp; G[f(x,y)]\geq T\\
+            L_B, &amp; otherwise
+        \end{array}
+    \right.
+\end{equation}
+$L_G=255,L_B=0$,适当选择门限T。</p>
+<p><img alt="" src="https://github.com/freealbert/freealbert_photo_1/blob/master/Tech/cell.jpg?raw=true" /></p>
+<p>将原图和处理后的图像绘在同一个窗口并保存。</p>
+<h3>实验报告要求</h3>
+<p><strong>要是发现错误请在下面评论处指明噢！</strong></p></p>
+      </div> -->
+    </div>
+  </div>
+  
+  <div class="entry-overview">
+    <div class="date">
+      12 Aug 2012
+    </div>
+    <div class="detail">
+      <h1><a href=".././zhi-fang-tu-chu-li.html">直方图处理</a> </h1>
+      <!-- <div class="summary">
+	<p><h2>实验目的</h2>
+<p>通过上机实验的手段巩固课堂上所学的关于直方图均衡化和直方图匹配等图像增强技术的认识和了解，学会自行编写上述函数，感受不同的直方图增强技术对最终图像效果的影响。</p>
+<h2>方法技术介绍</h2>
+<p>直方图处理能有有效的用于图像增强，而直方图更是多种空间域处理技术的基础。</p>
+<p>灰度级为[0,L-1]范围的数字图像的直方图是离散函数$h(r_k)=n_k$，其中$r_k$是第$k$级灰度，$n_k$是图像中灰度级为$r_k$的像素个数。经常以图像中的总数（用$n$表示）来除它的每个值，以得到归一化的直方图。因此，一个归一化的直方图由$P(r_k)=\frac{n_k}{n}$给出，其中$k=0,1,\cdots,L-1$。简单地说，$P(r_k)$给出了灰度级为$r_k$发生的概率估计值，显然一个归一化的直方图的所有部分之和应该等于$1$。</p>
+<h3>直方图均衡</h3>
+<p>直方图均衡的思想就是使处理后的图像灰度分布均衡，这样图像的信息熵最大，图像也就得到了相应的增强。
+故而，对于上文中的非均匀的密度函数$P_r(r)$经某个变换函数$s=T(r)$变换为均匀概率分布$P_s(s)$，$s$为变换后的图像灰度值。</p>
+<p>由雅克比变换易得：
+$$  P_s(s)ds=P_r(r)dr$$
+当直方图均衡化并归一化后，
+$$  p_s(s)=1$$
+即：
+$$  ds=P_r(r)dr$$
+其中$s$,$r$归一化的含义就是$r\in[0,1],s\in[0,1]$，对应matlab中的就是图像的double类型。
+两边取积分：
+$$  s=T_r=\int\limits_{0}^{r}P_r(\omega)d\omega $$
+变换后图像的灰度$s$就是原图像灰度级的概率密度函数的积分。</p>
+<h3>直方图匹配</h3>
+<p>直方图均衡能自动地确定变换函数，该函数寻求产生均匀直方图的输出图像。对于某些应用来说，采用均匀直方图的基本增强并不是最好的办法，尤其是有时可以指定希望处理的图像所具有的直方图形状，这种用于产生处理后特有直方图的图像的方法，称为直方图匹配，也叫直方图规定化。</p>
+<p>方法推导
+$r,z$为连续灰度级（看成是连续随机变量$P_r(r),P_z(z)$为它们对应的连续概率密度。
+$r$为输入图像的灰度级，$z$为输出图像的灰度级，输入图像的概率密度函数为$P_r(r)$，$P_z(z)$为希望输出图像具有的规定概率密度函数。
+令$s$为一随机变量，且有
+$$s=T(r)=\int\limits_{0}^{r}P_r(\omega)d\omega$$
+同时对希望输出的图像做直方图均衡化，有
+$$s=G(z)=\int\limits_{0}^{z}P_z(t)dt$$
+$$\because s=G(z)$$
+$$\therefore z=G^{-1}(s)$$
+$$\because s=T(r)$$
+$$\therefore z=G^{-1}(s)=G^{-1}[T(r)]$$
+故而直方图规定化的步骤为：
+<em> 由(5)式求$T(r)$
+</em> 由(6)式求$G(z)$
+<em> 求反变换$G^{-1}$
+</em> 对输入图像的所有像素应用(7)式得到输出图像</p>
+<h2>实验步骤</h2>
+<h3>步骤1</h3>
+<blockquote>
+<p>Pyer：这个。。。我没找到直方图均衡和直方图规定化的函数。那个。。。我们只好自己写了，从这里开始正好可以开始积累由自己编写的图像处理模块。</p>
+<p>Mer：看Pyer们，多痛苦，就算有函数，光找也要他们半条命。这就是Matlab的好处啦。Mer们，虽然我们已经有了现成的函数，但你能忍受的了旁边Pyer们可以杀人的愤怒眼神吗？要不也自己写一下吧，顺便当成一次理解这两个概念的机会了。</p>
+</blockquote>
+<h3>步骤2</h3>
+<p>将mountain.jpg图像读入，对其做直方图均衡化，作出处理前后的灰度直方图，将其保存在同一窗口。</p>
+<p><img alt="" src="https://github.com/freealbert/freealbert_photo_1/blob/master/Tech/mountain.jpg?raw=true" /></p>
+<h3>步骤3</h3>
+<p>将mountain.jpg图像读入，按如下灰度变换函数对其做直方图匹配，作出处理前后的灰度直方图，将其保存在同一窗口。
+\[
+n=
+\left\{
+\begin{array}{lr}
+1400r,    &amp; r\leq r\\
+7000-310r &amp; 5&lt;r\leq 20\\
+900-5r    &amp; 20&lt;r\leq 180\\
+-1440+8r  &amp; 180&lt;r\leq 225\\
+3060-12r  &amp; 225&lt;\leq 255
+\end{array}
+\right.
+\]</p>
+<h2>实验报告要求</h2>
+<p>嗯，我还是一如既往的没有要求。唯一的要求：</p>
+<p><strong>要是发现错误请在下面评论处指明噢！</strong></p></p>
+      </div> -->
+    </div>
+  </div>
+  
+  <div class="entry-overview">
+    <div class="date">
+      12 Aug 2012
+    </div>
+    <div class="detail">
+      <h1><a href=".././ping-hua-ji-zhu.html">平滑技术</a> </h1>
+      <!-- <div class="summary">
+	<p><h2>实验目的</h2>
+<p>了解各种平滑处理技术的特点和用图，掌握平滑技术的仿真与实现方法，感受不同平滑处理方法对最终图像效果的影响。</p>
+<h2>实验内容</h2>
+<p>滤波的概念来源于在频域对信号进行处理的傅立叶变换，但在本实验中，是直接对图像像素处理的操作，所以使用空间滤波这一词汇区别更为传统的频域滤波处理。</p>
+<h3>均值滤波</h3>
+<p>均值滤波器用于模糊处理和减小噪声，模糊处理经常用于预处理，例如在提取大的目标之前去除图像中的一些琐碎细节、桥接直接和曲线的缝隙，同时也可以减小噪声。
+本实验采用的$5\times5$的模板，计算公式为：
+$$R=\frac{1}{9}\sum_{i=1}^{i=25}z_i$$
+需要注意的是，当模板取得大了以后，图像会变得模糊，这是因为邻域平均相当于积分运算。</p>
+<h2>中值滤波</h2>
+<p>中值滤波器是将模板内的值做统计排序后，取中间值代替中心像素的值。中值滤波器的使用非常普遍，这是因为对于一定类型的随机噪声，它提供了一种优秀的去噪能力，比小尺寸的线性平滑滤波器的模糊程度明显要低。中值滤波器对处理脉冲噪声（也称为椒盐噪声）非常有效，因为这种噪声就是以黑白点叠加在图像上的。</p>
+<h3>邻域标准差图像</h3>
+<p>令$(x,y)$为某一图像中像素的坐标，令$S_{xy}$表示一确定大小的邻域（子图像），其中心在$(x,y)$。可得在$S_{xy}$ 像素的平均值$m_{S_{xy}}$如下式计算：</p>
+<p>\begin{equation}
+    m_{S_{xy}}=\sum_{(s,t)\in{S_xy}}r_{s,t}p(r_{s,t})
+\end{equation}
+此处$r_{s,t}$是在邻域中坐标$(s,t)$处的灰度，且$p(r_{s,t})$是与灰度值对应的邻域归一化直方图分量。类似地，区域$S_{xy}$中像素的灰度级方差如下式：</p>
+<p>\begin{equation}    \sigma^2_{S_{xy}}=\sum_{(s,t)\in{S_{xy}}}[r_{s,t}-m_{S_{xy}}]^2p(r_{s,t})
+\end{equation}</p>
+<h2>实验步骤</h2>
+<h3>步骤1</h3>
+<blockquote>
+<p>Pyer:大家好，要是能坚持到这真了不起。其实吧，我觉得不管他有没有现成函数，自己写一遍总是有好处的。那个要不您再写下邻域平均、中值滤波和生成邻域标准差图像的函数，并将他们加入上次实验开始积累的模块？</p>
+<p>Mer:别得意，我知道你手里撰着nlfilter,median,imnoise,fspecial,filter2,medfilt2这么一大把函数打算用。爽吧，Matlab那么贵不是白收钱的。</p>
+</blockquote>
+<h3>步骤2</h3>
+<p>读入test3_1.jpg,进行$5\times 5$邻域平均，并计算邻域标准差，显示邻域平均的图像和邻域标准差图像。将原图和处理后的图像绘在同一个窗口并保存。</p>
+<blockquote>
+<p>Mer: 记得要用nlfilter函数。</p>
+</blockquote>
+<p><img alt="" src="https://github.com/freealbert/freealbert_photo_1/blob/master/Tech/test3_1.jpg?raw=true" /></p>
+<h3>步骤3</h3>
+<p>在test3_1.jpg中添加均值为0，方差为0.02的高斯白噪声，对噪声污染后的图像进行$5\times5$的邻域平均。将原图和处理后的图像绘在同一个窗口并保存。</p>
+<blockquote>
+<p>Mer：还是用nlfilter哦。</p>
+<p>Pyer：啊呀啊呀，高斯白噪声，好像没有一个现成函数叫awgn吧。这可怎么办？别担心，勇敢的Pyer，虽然我们不能像Mer们用现成的awgn，但是我们可以编写我们自己的awgn呀。numpy的random模块有正太分布函数叫normal的。回忆下随机信号分析的知识，一下就搞定了。</p>
+</blockquote>
+<h3>步骤4</h3>
+<p>Mer们，请Matlab，用fspecial函数生成一$5\times 5$邻域平均窗函数，再用filter2函数求邻域平均，试比较与用nlfilter 函数求邻域平均的速度。最后请将原图和处理后的图像绘在同一个窗口并保存。</p>
+<p>Pyer们，这轮好像是轮空欸。。。其实你也可以读入test3_2.jpg图像文件，比较自己写的邻域平均函数的运行时间和matlab中fspecial函数和nlfilter函数的运行时间。将原图和处理后的图像绘在同一个窗口并保存。</p>
+<p><img alt="" src="https://github.com/freealbert/freealbert_photo_1/blob/master/Tech/test3_2.jpg?raw=true" /></p>
+<h3>步骤5</h3>
+<p>Pyer们，对test3_2.jpg图像用numpy自带的medfilt2d函数进行中值滤波。将原图和处理后的图像绘在同一个窗口并保存。</p>
+<p>Mer们，用medfilt2函数对test3_2.jpg图像进行中值滤波。显示处理结果。</p>
+<h3>步骤6</h3>
+<p>这轮大家都一样，对test3_2.jpg图像用自己编写的中值滤波函数进行中值滤波。将原图和处理后的图像绘在同一个窗口并保存。</p>
+<h2>实验报告要求</h2>
+<p><strong> 发现错误要告诉我，求轻拍。</strong></p></p>
+      </div> -->
+    </div>
+  </div>
+  
+  <div class="entry-overview">
+    <div class="date">
+      08 Aug 2012
+    </div>
+    <div class="detail">
+      <h1><a href=".././ji-ben-hui-du-bian-huan.html">基本灰度变换</a> </h1>
+      <!-- <div class="summary">
+	<p><blockquote>
+<p>在以后的日子里，你可能需要根据概念定义编写直方图均衡、直方图规定化，
+Sobel锐化，Laplacian锐化，Roberts锐化等函数，对此，你准备好了吗?上课一定要认真听讲哦!</p>
+</blockquote>
+<p>带上冈萨雷斯的第三版一块出发吧!</p>
+<h2>实验目的</h2>
+<p>通过上机实验的手段巩固课堂上所学的关于图像反转、幂次变换和分段线性变换有关的知识，感受
+不同的灰度变换方法对最终图像效果的影响。</p>
+<h2>方法技术介绍</h2>
+<p>灰度变换函数是图像增强技术中最简单的一类，处理前后的像素值分别用r和s定义，于是我们可以用如下表达式来表示原像素值r映射到值s的变换:
+$$  s = T(r)$$</p>
+<ul>
+<li>
+<h3>图像反转</h3>
+<p>灰度级范围为[0，L-1]的图像反转表达式为:
+$$  s = L-1-r$$
+采用上式可以产生图像反转的对等图像，这种处理尤其适合用于增强嵌入于图像暗色区域的白色或
+灰色细节，特别是当黑色面积占主导地位时。</p>
+</li>
+<li>
+<h3>幂次变换</h3>
+<p>幂次变换的基本形式为:
+$$ s = cr^{\gamma}$$
+其中c和γ为正常数。从下图可以看出，当γ &lt; 1，幂次变换能够将窄带暗值映射成宽带输出值，γ &gt;
+1，则正好相反。应注意的是，当c = γ = 1时，幂次变换将简化为正比运算。</p>
+</li>
+</ul>
+<p><img alt="" src="https://github.com/freealbert/freealbert-slide-1/blob/master/gray-2012-8-8/power_trans.jpg?raw=true" /></p>
+<ul>
+<li>
+<h3>分段线性变换</h3>
+与前面两个函数相比，分段线性变换的主要优势在于形式可以任意合成，其中分段线性变换还可以
+细分为对比拉伸、灰度切割、位图切割等方法。<ul>
+<li>
+<h4>对比拉伸</h4>
+<p>对比拉伸的思想是提高低对比度图像处理是灰度级的动态范围。低对比度的成因有照明不足、成像传感器动态范围太小，甚至在图像获取过程中透镜光圈设置错误引起。</p>
+</li>
+<li>
+<h4>灰度切割</h4>
+<p>在图像处理中提高特定灰度范围的亮度通常是很有必要的，这样的灰度切割可以让感兴趣的图像内容
+更加明显。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2>实验步骤</h2>
+<h3>步骤1</h3>
+<p>将实验用图:rice.png读入内存，以便后续处理。</p>
+<blockquote>
+<p>Mer：使用imread函数将图像读入Matlab。</p>
+<p>Pyer：忘了可以<a href="../shu-zi-tu-xiang-chu-li-shi-yan.html#part2.4">回去看下</a>哦。</p>
+</blockquote>
+<p><img alt="" src="https://github.com/freealbert/freealbert-slide-1/blob/master/gray-2012-8-8/rice.png?raw=true" /></p>
+<h3>步骤2</h3>
+<p>用如下的灰度变换函数对rice.png图像进行处理，在同一个窗口中画出处理前后的图像，并保存。
+\[ 
+    s = \left\{
+        \begin{array}{lr}
+            0.3r， &amp; r &lt; 0.35 \\
+            0.105 + 2.6333(r-0.35)， &amp; 0.35\leq r \leq 0.65\\
+            1 + 0.3(r-1)， &amp; r &gt; 0.65.
+            \end{array}
+        \right.
+\]</p>
+<h3>步骤3</h3>
+<p>用如下灰度变换函数对rice.png进行处理，在同一个窗口中画出处理前后的图像，并保存。</p>
+<p>\[ s = \left\{
+        \begin{array}{lr}
+            15.9744r^5， &amp; r {\leq} 0.5 \\
+    (r-0.5)^{0.2}+0.12， &amp; r &gt; 0.5 
+        \end{array}\right.
+\]</p>
+<h3>步骤4</h3>
+<p>分别用$s = r^{0.6}， s = r^{0.4}， s = r^{0.3}$ 对kids.tif图像进行处理，在同一个窗口中画出处理前后的图像，并
+保存。</p>
+<p><img alt="" src="https://github.com/freealbert/freealbert-slide-1/blob/master/gray-2012-8-8/kids.png?raw=true" /></p>
+<h3>步骤5</h3>
+<p>对circuit.jpg图像实施反变换，在同一个窗口中画出处理前后的图像，并保存。</p>
+<p><img alt="" src="https://github.com/freealbert/freealbert-slide-1/blob/master/gray-2012-8-8/circuit.png?raw=true" /></p>
+<h3>步骤6</h3>
+<p>对rice.jpg图像实施灰度切片。具体要求为:当0.2 ≤ r ≤ 0.4时，将r置为0.6，当r位于其他区间时，
+保持其灰度值不变。在同一个窗口中画出处理前后的图像，并保存。</p>
+<h3>步骤7</h3>
+<p>利用灰度变换对Picture.jpg做增强处理，突出图中人物，改善整个图像过于灰暗的背景。给出图像
+处理前后的直方图，写出所采用的拉伸表达式。在同一个窗口中画出处理前后的图像，并保存。</p>
+<p><img alt="" src="https://github.com/freealbert/freealbert-slide-1/blob/master/gray-2012-8-8/Picture.jpg?raw=true" /></p>
+<h2>实验报告要求</h2>
+<p>其实我没啥要求，反正我也不是老师，扯要求干嘛。你能看我写的东西就是上帝了，嗯，访客是上帝。</p>
+<p><strong>上帝们，要是发现错误请在下面评论处指明噢！</strong></p>
+<p>不过我猜老师肯定让你们提交原图像和各种变换函数的曲线，以及按照各种变换函数处理后的图像。</p></p>
+      </div> -->
+    </div>
+  </div>
+  
+
+ 
+<!-- <div class="pagination"> -->
+<!--    -->
+<!--     <a href="#"> <b>&larr;</b>Previous</a> -->
+<!--    -->
+
+<!--    -->
+<!--     <a href="#">Next&rarr; </a> -->
+<!--    -->
+<!-- </div> -->
+<div class="pagination">
+<!-- <ul> -->
+
+    <a href="#">&laquo; Previous</a>
+
+
+
+    <a href=".././tag/dip.html">1</a>
+
+
+
+    <a href="#">Next &raquo;</a>
+
+
+<!-- </ul> -->
+</div>
+
+    </div>
+
+ 
+
+
+    <div class="footer">
+      <p>&copy Copyright 2012 by freealbert</p>
+      <p>Content licensed under the Creative Commons attribution-noncommercial-sharealike License. </p>
+      <p>Contact me via
+	<a href="http://github.com/freealbert">github</a>,
+	<a href="mailto:jim2429212@gmail.com">mail</a>,
+	<a href="http://weibo.com/u/1844630250">weibo</a>.
+	<a href="http://fusion.google.com/add?source=atgs&feedurl=http%3A//dym.me">feed</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>freealbert's blog </title>
+  <meta charset="utf-8">
+<!-- Using MathJax, with the delimiters $ -->
+<!-- Conflict with pygments for the .mo and .mi -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true},
+    "HTML-CSS": { availableFonts: ["TeX"], linebreaks: {automatic: true}},
+    TeX: {equationNumbers: {autoNumber: ["AMS"], useLabelIds: true}},
+    <!-- "HTML-CSS": {linebreaks: {automatic: true}}, -->
+    SVG: {linebreaks: {automatic: true}}
+});
+</script>
+
+<script type="text/javascript" src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<!-- <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script> 
+-->
+
+
+  <link rel="stylesheet" href="./theme/css/style.css">
+<!-- <link rel="stylesheet" href="./theme/css/styles/default.css"> -->
+<!-- <script src="./theme/css/highlight.pack.js"></script> -->
+<!-- <script>hljs.initHighlightingOnLoad();</script> -->
+<!-- <link rel="stylesheet" href="./theme/css/pygments.css"> -->
+<!-- <link rel="stylesheet" href="./theme/css/pygments_emacs.css"> -->
+<link rel="stylesheet" href="./theme/css/pygments_friendly.css">
+
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+
+  <!-- google analysis  -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34015459-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+ <link href="./" type="application/atom+xml" rel="alternate" title="freealbert's blog ATOM Feed" />
+
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <a href="./index.html">freealbert's blog</a>
+      <!-- <span>--Virya</span> -->
+    </div>
+    <div class="navigation">
+      <ul>
+	      <li><a href="./index.html">Home</a></li>
+	        
+	          <!-- <li><a href="./pages/pages/about.html">About</a></li> -->
+            <li><a href="./pages/about.html">About</a></li>
+	        
+        <!-- <li><a href="./about.html">About</a></li>   -->
+	      <li><a href="./tags.html">Tags</a></li>
+	      <!-- <li><a href="./archives.html">Archives</a></li> -->
+      </ul>
+    </div>
+    <div class="body">
+      
+<h1 class="title">图像锐化</h1>
+<p class="date">written on 13 Aug 2012</p>
+<div><h2>实验目的</h2>
+<p>通过上机实验的手段巩固课堂上所学的关于图像锐化的相关知识，自己编写Sobel,Laplacian,Roberts算子对图像进行锐化的函数，感受不同的图像处理方法对最终图像效果的影响。</p>
+<h2>方法技术介绍</h2>
+<p>锐化处理的主要目的是突出图像中的细节或者增强被模糊了的细节，这种模糊不是由错误操作造成的，就是特殊图像获取方法的固有影响。从前面几个实验中可以知道，在空域用像素邻域平均法可以使图像变模糊，因为均值处理与积分类似，从逻辑角度可以断定，锐化处理可以用空间微分来完成。下文将分别讨论Sobel算子、Laplacian算子和Roberts算子这三个微分锐化算子。</p>
+<h3>Sobel算子</h3>
+<p>在图像处理中，一阶微分是通过梯度法实现的。对于函数$f(x,y)$在其坐标$(x,y)$上的梯度是通过如下二维列向量定义的：
+\begin{equation}
+    \nabla f =
+    \left[
+        \begin{array}{c}
+            G_x\\
+            G_y
+        \end{array}
+    \right]
+    =
+    \left[
+        \begin{array}{c}
+            \frac{\partial f}{\partial x}\\
+            \frac{\partial f}{\partial y}
+        \end{array}
+    \right]
+    \label{1}
+\end{equation}
+这个向量的模值由下式给出:</p>
+<p>\begin{align}
+\nabla f &amp; = mag(\nabla \bf f)  \\
+{} &amp; = [G_x^2+G_y^2]^{\frac{1}{2}}  \\
+{} &amp; = [(\frac{\partial f}{\partial x})^2+(\frac{\partial f}{\partial y})^2]^{\frac{1}{2}} 
+\end{align}</p>
+<p>Sobel算子属于一阶微分处理，对于一元函数$f(x)$，表达一阶微分的定义是一个差值:
+\begin{equation}
+    \frac{\partial f}{\partial x}=f(x+1)-f(x)
+\end{equation}
+对于水平和垂直两个方向，相应就有水平Sobel和垂直Sobel两个模板。
+\[
+    d_x=\left[
+        \begin{array}{lcr}
+            -1 &amp; -2 &amp; -1 \\
+             0 &amp; 0 &amp; 0 \\
+             1 &amp; 2 &amp; 1
+        \end{array}
+    \right]
+    (水平Sobel)
+\]
+\[
+    d_y=\left[
+        \begin{array}{lcr}
+            -1 &amp; 0 &amp; 1 \\
+            -2 &amp; 0 &amp; 2 \\
+            -1 &amp; 0 &amp; 1
+        \end{array}
+    \right]
+    (垂直Sobel)
+\]
+综合考虑水平和垂直两个方向，则采用$\sqrt{d_x^2+d_y^2}$来生成图像，也就是$(4)$式。</p>
+<h3>Laplacian算子</h3>
+<p>下式用差分定义$x$方向上的二阶微分:
+\begin{equation}
+    \frac{\partial^2f}{\partial x^2}=f(x+1,y)+f(x-1,y)-2f(x,y)
+\end{equation}
+相应的，$y$方向上的二阶微分则为：
+\begin{equation}
+    \frac{\partial^2f}{\partial y^2}=f(x,y+1)+f(x,y-1)-2f(x,y)
+\end{equation}
+二维拉普拉斯数字实现可由这两个分量相加得到:
+\begin{equation}
+    \nabla^2f=[f(x+1,y)+f(x-1,y)+f(x,y+1)+f(x,y-1)]-4f(x,y)
+\end{equation}
+于是，Laplacian的算子形式便为:
+\[
+    \left[
+        \begin{array}{lcr}
+            0 &amp; -1 &amp; 0 \\
+        -1 &amp; 4 &amp; -1 \\
+            0 &amp; -1 &amp; 0 
+        \end{array}
+    \right]
+\]
+带对角线的Laplacian算子为:
+\[
+    \left[
+        \begin{array}{lcr}
+            -1 &amp; -1 &amp; -1 \\
+            -1 &amp;  8 &amp; -1 \\
+            -1 &amp; -1 &amp; -1
+        \end{array}
+    \right]
+\]
+假设有一个灰度值均匀变化的斜坡，其上的一阶微分值都不是零，但是二阶微分只有在斜坡的起始处和终点处才不为零。在图像中，边缘类似于这种过渡，进而可以得出一阶微分产生较粗的边缘，而二阶微分则细的多。可见二阶微分对细节的处理好于一阶微分。但考虑到孤立噪声点的情况，在该噪声点及其周围，二阶微分比一阶反应要强的多，也就是说二阶微分对噪声敏感。</p>
+<h3>Roberts算子</h3>
+<p>当对整幅图像进行$(4)$式的计算时，计算量很大，因此在实际操作中常用绝对值代替平方与开放运算近似求梯度的模值：
+\begin{equation}
+    \nabla f\approx |G_x|+|G_y|\\
+\end{equation}
+Roberts于1965年提出两种定义使用了交叉差分的算法：
+\begin{eqnarray}
+    G_x=f(x+1,y+1)-f(x,y)\\
+    G_y=f(x+1,y)-f(x,y+1)
+\end{eqnarray} 从而可以得到梯度的近似算法： 
+\begin{equation} 
+    \nabla f\approx |f(x+1,y+1)-f(x,y)|+|f(x+1,y)-f(x,y+1)| 
+\end{equation}</p>
+<h2>实验步骤</h2>
+<h3>步骤1</h3>
+<p>编写好Sobel,Laplacian,Roberts算子的相关函数，加入你自己编写的已经斐然成章的模块。</p>
+<h3>步骤2</h3>
+<p>读入cameraman.jpg图像文件，分别采用垂直方向的Sobel算子，Laplacian算子和$\sqrt{d_x^2+d_y^2}$的Sobel算子对原图进行锐化处理。将原图和处理后的图像绘在同一个窗口并保存。</p>
+<p><img alt="" src="https://github.com/freealbert/freealbert_photo_1/blob/master/Tech/cameraman.png?raw=true" /></p>
+<h3>步骤3</h3>
+<div class="codehilite"><pre>1<span class="p">.</span>读入<span class="n">skeleton</span><span class="p">.</span><span class="n">jpg</span>文件，用带对角线的<span class="n">Laplacian</span>算子对其处理。
+2<span class="p">.</span>将1<span class="p">)</span>的结果叠加到原始图像上。可看出噪声增强了（<span class="n">Laplacian</span>算子对噪声敏感），应设法降低。
+3<span class="p">.</span>获取<span class="n">Sobel</span>图像并进行5<span class="o">*</span>5邻域平均，以减少噪声。
+4<span class="p">.</span>获取2<span class="p">)</span>和3<span class="p">)</span>相乘图像，噪声得以减少。
+5<span class="p">.</span>将4<span class="p">)</span>结果叠加到原始图像上。
+6<span class="p">.</span>最后对5<span class="p">)</span>的图像做幂指数为0<span class="p">.</span>2的幂次变换
+</pre></div>
+
+
+<p><img alt="" src="https://github.com/freealbert/freealbert_photo_1/blob/master/Tech/skeleton.jpg?raw=true" /></p>
+<p>将原图和处理后的图像绘在同一个窗口并保存。</p>
+<h3>步骤4</h3>
+<p>编写Roberts梯度锐化函数，对cell.jpg进行图像锐化，锐化图像的形成以下式为准：
+\begin{equation}
+    g(x,y)=
+    \left\{
+        \begin{array}{lr}
+            L_G, &amp; G[f(x,y)]\geq T\\
+            L_B, &amp; otherwise
+        \end{array}
+    \right.
+\end{equation}
+$L_G=255,L_B=0$,适当选择门限T。</p>
+<p><img alt="" src="https://github.com/freealbert/freealbert_photo_1/blob/master/Tech/cell.jpg?raw=true" /></p>
+<p>将原图和处理后的图像绘在同一个窗口并保存。</p>
+<h3>实验报告要求</h3>
+<p><strong>要是发现错误请在下面评论处指明噢！</strong></p></div>
+
+  <p class="tags">
+  This entry was taged 
+  
+    <a href="./tag/dip.html">dip,</a>
+  
+    <a href="./tag/pyee.html">pyee,</a>
+  
+
+</p>  
+
+<div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'freealbertsblog'; // required: replace example with your forum shortname
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+         	
+
+    </div>
+
+ 
+
+
+    <div class="footer">
+      <p>&copy Copyright 2012 by freealbert</p>
+      <p>Content licensed under the Creative Commons attribution-noncommercial-sharealike License. </p>
+      <p>Contact me via
+	<a href="http://github.com/freealbert">github</a>,
+	<a href="mailto:jim2429212@gmail.com">mail</a>,
+	<a href="http://weibo.com/u/1844630250">weibo</a>.
+	<a href="http://fusion.google.com/add?source=atgs&feedurl=http%3A//dym.me">feed</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

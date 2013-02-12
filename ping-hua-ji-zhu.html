@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>freealbert's blog </title>
+  <meta charset="utf-8">
+<!-- Using MathJax, with the delimiters $ -->
+<!-- Conflict with pygments for the .mo and .mi -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true},
+    "HTML-CSS": { availableFonts: ["TeX"], linebreaks: {automatic: true}},
+    TeX: {equationNumbers: {autoNumber: ["AMS"], useLabelIds: true}},
+    <!-- "HTML-CSS": {linebreaks: {automatic: true}}, -->
+    SVG: {linebreaks: {automatic: true}}
+});
+</script>
+
+<script type="text/javascript" src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<!-- <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script> 
+-->
+
+
+  <link rel="stylesheet" href="./theme/css/style.css">
+<!-- <link rel="stylesheet" href="./theme/css/styles/default.css"> -->
+<!-- <script src="./theme/css/highlight.pack.js"></script> -->
+<!-- <script>hljs.initHighlightingOnLoad();</script> -->
+<!-- <link rel="stylesheet" href="./theme/css/pygments.css"> -->
+<!-- <link rel="stylesheet" href="./theme/css/pygments_emacs.css"> -->
+<link rel="stylesheet" href="./theme/css/pygments_friendly.css">
+
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+
+  <!-- google analysis  -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34015459-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+ <link href="./" type="application/atom+xml" rel="alternate" title="freealbert's blog ATOM Feed" />
+
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <a href="./index.html">freealbert's blog</a>
+      <!-- <span>--Virya</span> -->
+    </div>
+    <div class="navigation">
+      <ul>
+	      <li><a href="./index.html">Home</a></li>
+	        
+	          <!-- <li><a href="./pages/pages/about.html">About</a></li> -->
+            <li><a href="./pages/about.html">About</a></li>
+	        
+        <!-- <li><a href="./about.html">About</a></li>   -->
+	      <li><a href="./tags.html">Tags</a></li>
+	      <!-- <li><a href="./archives.html">Archives</a></li> -->
+      </ul>
+    </div>
+    <div class="body">
+      
+<h1 class="title">平滑技术</h1>
+<p class="date">written on 12 Aug 2012</p>
+<div><h2>实验目的</h2>
+<p>了解各种平滑处理技术的特点和用图，掌握平滑技术的仿真与实现方法，感受不同平滑处理方法对最终图像效果的影响。</p>
+<h2>实验内容</h2>
+<p>滤波的概念来源于在频域对信号进行处理的傅立叶变换，但在本实验中，是直接对图像像素处理的操作，所以使用空间滤波这一词汇区别更为传统的频域滤波处理。</p>
+<h3>均值滤波</h3>
+<p>均值滤波器用于模糊处理和减小噪声，模糊处理经常用于预处理，例如在提取大的目标之前去除图像中的一些琐碎细节、桥接直接和曲线的缝隙，同时也可以减小噪声。
+本实验采用的$5\times5$的模板，计算公式为：
+$$R=\frac{1}{9}\sum_{i=1}^{i=25}z_i$$
+需要注意的是，当模板取得大了以后，图像会变得模糊，这是因为邻域平均相当于积分运算。</p>
+<h2>中值滤波</h2>
+<p>中值滤波器是将模板内的值做统计排序后，取中间值代替中心像素的值。中值滤波器的使用非常普遍，这是因为对于一定类型的随机噪声，它提供了一种优秀的去噪能力，比小尺寸的线性平滑滤波器的模糊程度明显要低。中值滤波器对处理脉冲噪声（也称为椒盐噪声）非常有效，因为这种噪声就是以黑白点叠加在图像上的。</p>
+<h3>邻域标准差图像</h3>
+<p>令$(x,y)$为某一图像中像素的坐标，令$S_{xy}$表示一确定大小的邻域（子图像），其中心在$(x,y)$。可得在$S_{xy}$ 像素的平均值$m_{S_{xy}}$如下式计算：</p>
+<p>\begin{equation}
+    m_{S_{xy}}=\sum_{(s,t)\in{S_xy}}r_{s,t}p(r_{s,t})
+\end{equation}
+此处$r_{s,t}$是在邻域中坐标$(s,t)$处的灰度，且$p(r_{s,t})$是与灰度值对应的邻域归一化直方图分量。类似地，区域$S_{xy}$中像素的灰度级方差如下式：</p>
+<p>\begin{equation}    \sigma^2_{S_{xy}}=\sum_{(s,t)\in{S_{xy}}}[r_{s,t}-m_{S_{xy}}]^2p(r_{s,t})
+\end{equation}</p>
+<h2>实验步骤</h2>
+<h3>步骤1</h3>
+<blockquote>
+<p>Pyer:大家好，要是能坚持到这真了不起。其实吧，我觉得不管他有没有现成函数，自己写一遍总是有好处的。那个要不您再写下邻域平均、中值滤波和生成邻域标准差图像的函数，并将他们加入上次实验开始积累的模块？</p>
+<p>Mer:别得意，我知道你手里撰着nlfilter,median,imnoise,fspecial,filter2,medfilt2这么一大把函数打算用。爽吧，Matlab那么贵不是白收钱的。</p>
+</blockquote>
+<h3>步骤2</h3>
+<p>读入test3_1.jpg,进行$5\times 5$邻域平均，并计算邻域标准差，显示邻域平均的图像和邻域标准差图像。将原图和处理后的图像绘在同一个窗口并保存。</p>
+<blockquote>
+<p>Mer: 记得要用nlfilter函数。</p>
+</blockquote>
+<p><img alt="" src="https://github.com/freealbert/freealbert_photo_1/blob/master/Tech/test3_1.jpg?raw=true" /></p>
+<h3>步骤3</h3>
+<p>在test3_1.jpg中添加均值为0，方差为0.02的高斯白噪声，对噪声污染后的图像进行$5\times5$的邻域平均。将原图和处理后的图像绘在同一个窗口并保存。</p>
+<blockquote>
+<p>Mer：还是用nlfilter哦。</p>
+<p>Pyer：啊呀啊呀，高斯白噪声，好像没有一个现成函数叫awgn吧。这可怎么办？别担心，勇敢的Pyer，虽然我们不能像Mer们用现成的awgn，但是我们可以编写我们自己的awgn呀。numpy的random模块有正太分布函数叫normal的。回忆下随机信号分析的知识，一下就搞定了。</p>
+</blockquote>
+<h3>步骤4</h3>
+<p>Mer们，请Matlab，用fspecial函数生成一$5\times 5$邻域平均窗函数，再用filter2函数求邻域平均，试比较与用nlfilter 函数求邻域平均的速度。最后请将原图和处理后的图像绘在同一个窗口并保存。</p>
+<p>Pyer们，这轮好像是轮空欸。。。其实你也可以读入test3_2.jpg图像文件，比较自己写的邻域平均函数的运行时间和matlab中fspecial函数和nlfilter函数的运行时间。将原图和处理后的图像绘在同一个窗口并保存。</p>
+<p><img alt="" src="https://github.com/freealbert/freealbert_photo_1/blob/master/Tech/test3_2.jpg?raw=true" /></p>
+<h3>步骤5</h3>
+<p>Pyer们，对test3_2.jpg图像用numpy自带的medfilt2d函数进行中值滤波。将原图和处理后的图像绘在同一个窗口并保存。</p>
+<p>Mer们，用medfilt2函数对test3_2.jpg图像进行中值滤波。显示处理结果。</p>
+<h3>步骤6</h3>
+<p>这轮大家都一样，对test3_2.jpg图像用自己编写的中值滤波函数进行中值滤波。将原图和处理后的图像绘在同一个窗口并保存。</p>
+<h2>实验报告要求</h2>
+<p><strong> 发现错误要告诉我，求轻拍。</strong></p></div>
+
+  <p class="tags">
+  This entry was taged 
+  
+    <a href="./tag/dip.html">dip,</a>
+  
+    <a href="./tag/pyee.html">pyee,</a>
+  
+
+</p>  
+
+<div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'freealbertsblog'; // required: replace example with your forum shortname
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+         	
+
+    </div>
+
+ 
+
+
+    <div class="footer">
+      <p>&copy Copyright 2012 by freealbert</p>
+      <p>Content licensed under the Creative Commons attribution-noncommercial-sharealike License. </p>
+      <p>Contact me via
+	<a href="http://github.com/freealbert">github</a>,
+	<a href="mailto:jim2429212@gmail.com">mail</a>,
+	<a href="http://weibo.com/u/1844630250">weibo</a>.
+	<a href="http://fusion.google.com/add?source=atgs&feedurl=http%3A//dym.me">feed</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

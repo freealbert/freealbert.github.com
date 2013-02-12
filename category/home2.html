@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>freealbert's blog </title>
+  <meta charset="utf-8">
+<!-- Using MathJax, with the delimiters $ -->
+<!-- Conflict with pygments for the .mo and .mi -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true},
+    "HTML-CSS": { availableFonts: ["TeX"], linebreaks: {automatic: true}},
+    TeX: {equationNumbers: {autoNumber: ["AMS"], useLabelIds: true}},
+    <!-- "HTML-CSS": {linebreaks: {automatic: true}}, -->
+    SVG: {linebreaks: {automatic: true}}
+});
+</script>
+
+<script type="text/javascript" src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<!-- <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script> 
+-->
+
+
+  <link rel="stylesheet" href=".././theme/css/style.css">
+<!-- <link rel="stylesheet" href=".././theme/css/styles/default.css"> -->
+<!-- <script src=".././theme/css/highlight.pack.js"></script> -->
+<!-- <script>hljs.initHighlightingOnLoad();</script> -->
+<!-- <link rel="stylesheet" href=".././theme/css/pygments.css"> -->
+<!-- <link rel="stylesheet" href=".././theme/css/pygments_emacs.css"> -->
+<link rel="stylesheet" href=".././theme/css/pygments_friendly.css">
+
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+
+  <!-- google analysis  -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34015459-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+ <link href=".././" type="application/atom+xml" rel="alternate" title="freealbert's blog ATOM Feed" />
+
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <a href=".././index.html">freealbert's blog</a>
+      <!-- <span>--Virya</span> -->
+    </div>
+    <div class="navigation">
+      <ul>
+	      <li><a href=".././index.html">Home</a></li>
+	        
+	          <!-- <li><a href=".././pages/pages/about.html">About</a></li> -->
+            <li><a href=".././pages/about.html">About</a></li>
+	        
+        <!-- <li><a href=".././about.html">About</a></li>   -->
+	      <li><a href=".././tags.html">Tags</a></li>
+	      <!-- <li><a href=".././archives.html">Archives</a></li> -->
+      </ul>
+    </div>
+    <div class="body">
+      
+
+
+  
+  <div class="entry-overview">
+    <div class="date">
+      12 Aug 2012
+    </div>
+    <div class="detail">
+      <h1><a href=".././ping-hua-ji-zhu.html">平滑技术</a> </h1>
+      <!-- <div class="summary">
+	<p><h2>实验目的</h2>
+<p>了解各种平滑处理技术的特点和用图，掌握平滑技术的仿真与实现方法，感受不同平滑处理方法对最终图像效果的影响。</p>
+<h2>实验内容</h2>
+<p>滤波的概念来源于在频域对信号进行处理的傅立叶变换，但在本实验中，是直接对图像像素处理的操作，所以使用空间滤波这一词汇区别更为传统的频域滤波处理。</p>
+<h3>均值滤波</h3>
+<p>均值滤波器用于模糊处理和减小噪声，模糊处理经常用于预处理，例如在提取大的目标之前去除图像中的一些琐碎细节、桥接直接和曲线的缝隙，同时也可以减小噪声。
+本实验采用的$5\times5$的模板，计算公式为：
+$$R=\frac{1}{9}\sum_{i=1}^{i=25}z_i$$
+需要注意的是，当模板取得大了以后，图像会变得模糊，这是因为邻域平均相当于积分运算。</p>
+<h2>中值滤波</h2>
+<p>中值滤波器是将模板内的值做统计排序后，取中间值代替中心像素的值。中值滤波器的使用非常普遍，这是因为对于一定类型的随机噪声，它提供了一种优秀的去噪能力，比小尺寸的线性平滑滤波器的模糊程度明显要低。中值滤波器对处理脉冲噪声（也称为椒盐噪声）非常有效，因为这种噪声就是以黑白点叠加在图像上的。</p>
+<h3>邻域标准差图像</h3>
+<p>令$(x,y)$为某一图像中像素的坐标，令$S_{xy}$表示一确定大小的邻域（子图像），其中心在$(x,y)$。可得在$S_{xy}$ 像素的平均值$m_{S_{xy}}$如下式计算：</p>
+<p>\begin{equation}
+    m_{S_{xy}}=\sum_{(s,t)\in{S_xy}}r_{s,t}p(r_{s,t})
+\end{equation}
+此处$r_{s,t}$是在邻域中坐标$(s,t)$处的灰度，且$p(r_{s,t})$是与灰度值对应的邻域归一化直方图分量。类似地，区域$S_{xy}$中像素的灰度级方差如下式：</p>
+<p>\begin{equation}    \sigma^2_{S_{xy}}=\sum_{(s,t)\in{S_{xy}}}[r_{s,t}-m_{S_{xy}}]^2p(r_{s,t})
+\end{equation}</p>
+<h2>实验步骤</h2>
+<h3>步骤1</h3>
+<blockquote>
+<p>Pyer:大家好，要是能坚持到这真了不起。其实吧，我觉得不管他有没有现成函数，自己写一遍总是有好处的。那个要不您再写下邻域平均、中值滤波和生成邻域标准差图像的函数，并将他们加入上次实验开始积累的模块？</p>
+<p>Mer:别得意，我知道你手里撰着nlfilter,median,imnoise,fspecial,filter2,medfilt2这么一大把函数打算用。爽吧，Matlab那么贵不是白收钱的。</p>
+</blockquote>
+<h3>步骤2</h3>
+<p>读入test3_1.jpg,进行$5\times 5$邻域平均，并计算邻域标准差，显示邻域平均的图像和邻域标准差图像。将原图和处理后的图像绘在同一个窗口并保存。</p>
+<blockquote>
+<p>Mer: 记得要用nlfilter函数。</p>
+</blockquote>
+<p><img alt="" src="https://github.com/freealbert/freealbert_photo_1/blob/master/Tech/test3_1.jpg?raw=true" /></p>
+<h3>步骤3</h3>
+<p>在test3_1.jpg中添加均值为0，方差为0.02的高斯白噪声，对噪声污染后的图像进行$5\times5$的邻域平均。将原图和处理后的图像绘在同一个窗口并保存。</p>
+<blockquote>
+<p>Mer：还是用nlfilter哦。</p>
+<p>Pyer：啊呀啊呀，高斯白噪声，好像没有一个现成函数叫awgn吧。这可怎么办？别担心，勇敢的Pyer，虽然我们不能像Mer们用现成的awgn，但是我们可以编写我们自己的awgn呀。numpy的random模块有正太分布函数叫normal的。回忆下随机信号分析的知识，一下就搞定了。</p>
+</blockquote>
+<h3>步骤4</h3>
+<p>Mer们，请Matlab，用fspecial函数生成一$5\times 5$邻域平均窗函数，再用filter2函数求邻域平均，试比较与用nlfilter 函数求邻域平均的速度。最后请将原图和处理后的图像绘在同一个窗口并保存。</p>
+<p>Pyer们，这轮好像是轮空欸。。。其实你也可以读入test3_2.jpg图像文件，比较自己写的邻域平均函数的运行时间和matlab中fspecial函数和nlfilter函数的运行时间。将原图和处理后的图像绘在同一个窗口并保存。</p>
+<p><img alt="" src="https://github.com/freealbert/freealbert_photo_1/blob/master/Tech/test3_2.jpg?raw=true" /></p>
+<h3>步骤5</h3>
+<p>Pyer们，对test3_2.jpg图像用numpy自带的medfilt2d函数进行中值滤波。将原图和处理后的图像绘在同一个窗口并保存。</p>
+<p>Mer们，用medfilt2函数对test3_2.jpg图像进行中值滤波。显示处理结果。</p>
+<h3>步骤6</h3>
+<p>这轮大家都一样，对test3_2.jpg图像用自己编写的中值滤波函数进行中值滤波。将原图和处理后的图像绘在同一个窗口并保存。</p>
+<h2>实验报告要求</h2>
+<p><strong> 发现错误要告诉我，求轻拍。</strong></p></p>
+      </div> -->
+    </div>
+  </div>
+  
+  <div class="entry-overview">
+    <div class="date">
+      12 Aug 2012
+    </div>
+    <div class="detail">
+      <h1><a href=".././zhi-fang-tu-chu-li.html">直方图处理</a> </h1>
+      <!-- <div class="summary">
+	<p><h2>实验目的</h2>
+<p>通过上机实验的手段巩固课堂上所学的关于直方图均衡化和直方图匹配等图像增强技术的认识和了解，学会自行编写上述函数，感受不同的直方图增强技术对最终图像效果的影响。</p>
+<h2>方法技术介绍</h2>
+<p>直方图处理能有有效的用于图像增强，而直方图更是多种空间域处理技术的基础。</p>
+<p>灰度级为[0,L-1]范围的数字图像的直方图是离散函数$h(r_k)=n_k$，其中$r_k$是第$k$级灰度，$n_k$是图像中灰度级为$r_k$的像素个数。经常以图像中的总数（用$n$表示）来除它的每个值，以得到归一化的直方图。因此，一个归一化的直方图由$P(r_k)=\frac{n_k}{n}$给出，其中$k=0,1,\cdots,L-1$。简单地说，$P(r_k)$给出了灰度级为$r_k$发生的概率估计值，显然一个归一化的直方图的所有部分之和应该等于$1$。</p>
+<h3>直方图均衡</h3>
+<p>直方图均衡的思想就是使处理后的图像灰度分布均衡，这样图像的信息熵最大，图像也就得到了相应的增强。
+故而，对于上文中的非均匀的密度函数$P_r(r)$经某个变换函数$s=T(r)$变换为均匀概率分布$P_s(s)$，$s$为变换后的图像灰度值。</p>
+<p>由雅克比变换易得：
+$$  P_s(s)ds=P_r(r)dr$$
+当直方图均衡化并归一化后，
+$$  p_s(s)=1$$
+即：
+$$  ds=P_r(r)dr$$
+其中$s$,$r$归一化的含义就是$r\in[0,1],s\in[0,1]$，对应matlab中的就是图像的double类型。
+两边取积分：
+$$  s=T_r=\int\limits_{0}^{r}P_r(\omega)d\omega $$
+变换后图像的灰度$s$就是原图像灰度级的概率密度函数的积分。</p>
+<h3>直方图匹配</h3>
+<p>直方图均衡能自动地确定变换函数，该函数寻求产生均匀直方图的输出图像。对于某些应用来说，采用均匀直方图的基本增强并不是最好的办法，尤其是有时可以指定希望处理的图像所具有的直方图形状，这种用于产生处理后特有直方图的图像的方法，称为直方图匹配，也叫直方图规定化。</p>
+<p>方法推导
+$r,z$为连续灰度级（看成是连续随机变量$P_r(r),P_z(z)$为它们对应的连续概率密度。
+$r$为输入图像的灰度级，$z$为输出图像的灰度级，输入图像的概率密度函数为$P_r(r)$，$P_z(z)$为希望输出图像具有的规定概率密度函数。
+令$s$为一随机变量，且有
+$$s=T(r)=\int\limits_{0}^{r}P_r(\omega)d\omega$$
+同时对希望输出的图像做直方图均衡化，有
+$$s=G(z)=\int\limits_{0}^{z}P_z(t)dt$$
+$$\because s=G(z)$$
+$$\therefore z=G^{-1}(s)$$
+$$\because s=T(r)$$
+$$\therefore z=G^{-1}(s)=G^{-1}[T(r)]$$
+故而直方图规定化的步骤为：
+<em> 由(5)式求$T(r)$
+</em> 由(6)式求$G(z)$
+<em> 求反变换$G^{-1}$
+</em> 对输入图像的所有像素应用(7)式得到输出图像</p>
+<h2>实验步骤</h2>
+<h3>步骤1</h3>
+<blockquote>
+<p>Pyer：这个。。。我没找到直方图均衡和直方图规定化的函数。那个。。。我们只好自己写了，从这里开始正好可以开始积累由自己编写的图像处理模块。</p>
+<p>Mer：看Pyer们，多痛苦，就算有函数，光找也要他们半条命。这就是Matlab的好处啦。Mer们，虽然我们已经有了现成的函数，但你能忍受的了旁边Pyer们可以杀人的愤怒眼神吗？要不也自己写一下吧，顺便当成一次理解这两个概念的机会了。</p>
+</blockquote>
+<h3>步骤2</h3>
+<p>将mountain.jpg图像读入，对其做直方图均衡化，作出处理前后的灰度直方图，将其保存在同一窗口。</p>
+<p><img alt="" src="https://github.com/freealbert/freealbert_photo_1/blob/master/Tech/mountain.jpg?raw=true" /></p>
+<h3>步骤3</h3>
+<p>将mountain.jpg图像读入，按如下灰度变换函数对其做直方图匹配，作出处理前后的灰度直方图，将其保存在同一窗口。
+\[
+n=
+\left\{
+\begin{array}{lr}
+1400r,    &amp; r\leq r\\
+7000-310r &amp; 5&lt;r\leq 20\\
+900-5r    &amp; 20&lt;r\leq 180\\
+-1440+8r  &amp; 180&lt;r\leq 225\\
+3060-12r  &amp; 225&lt;\leq 255
+\end{array}
+\right.
+\]</p>
+<h2>实验报告要求</h2>
+<p>嗯，我还是一如既往的没有要求。唯一的要求：</p>
+<p><strong>要是发现错误请在下面评论处指明噢！</strong></p></p>
+      </div> -->
+    </div>
+  </div>
+  
+  <div class="entry-overview">
+    <div class="date">
+      08 Aug 2012
+    </div>
+    <div class="detail">
+      <h1><a href=".././ji-ben-hui-du-bian-huan.html">基本灰度变换</a> </h1>
+      <!-- <div class="summary">
+	<p><blockquote>
+<p>在以后的日子里，你可能需要根据概念定义编写直方图均衡、直方图规定化，
+Sobel锐化，Laplacian锐化，Roberts锐化等函数，对此，你准备好了吗?上课一定要认真听讲哦!</p>
+</blockquote>
+<p>带上冈萨雷斯的第三版一块出发吧!</p>
+<h2>实验目的</h2>
+<p>通过上机实验的手段巩固课堂上所学的关于图像反转、幂次变换和分段线性变换有关的知识，感受
+不同的灰度变换方法对最终图像效果的影响。</p>
+<h2>方法技术介绍</h2>
+<p>灰度变换函数是图像增强技术中最简单的一类，处理前后的像素值分别用r和s定义，于是我们可以用如下表达式来表示原像素值r映射到值s的变换:
+$$  s = T(r)$$</p>
+<ul>
+<li>
+<h3>图像反转</h3>
+<p>灰度级范围为[0，L-1]的图像反转表达式为:
+$$  s = L-1-r$$
+采用上式可以产生图像反转的对等图像，这种处理尤其适合用于增强嵌入于图像暗色区域的白色或
+灰色细节，特别是当黑色面积占主导地位时。</p>
+</li>
+<li>
+<h3>幂次变换</h3>
+<p>幂次变换的基本形式为:
+$$ s = cr^{\gamma}$$
+其中c和γ为正常数。从下图可以看出，当γ &lt; 1，幂次变换能够将窄带暗值映射成宽带输出值，γ &gt;
+1，则正好相反。应注意的是，当c = γ = 1时，幂次变换将简化为正比运算。</p>
+</li>
+</ul>
+<p><img alt="" src="https://github.com/freealbert/freealbert-slide-1/blob/master/gray-2012-8-8/power_trans.jpg?raw=true" /></p>
+<ul>
+<li>
+<h3>分段线性变换</h3>
+与前面两个函数相比，分段线性变换的主要优势在于形式可以任意合成，其中分段线性变换还可以
+细分为对比拉伸、灰度切割、位图切割等方法。<ul>
+<li>
+<h4>对比拉伸</h4>
+<p>对比拉伸的思想是提高低对比度图像处理是灰度级的动态范围。低对比度的成因有照明不足、成像传感器动态范围太小，甚至在图像获取过程中透镜光圈设置错误引起。</p>
+</li>
+<li>
+<h4>灰度切割</h4>
+<p>在图像处理中提高特定灰度范围的亮度通常是很有必要的，这样的灰度切割可以让感兴趣的图像内容
+更加明显。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2>实验步骤</h2>
+<h3>步骤1</h3>
+<p>将实验用图:rice.png读入内存，以便后续处理。</p>
+<blockquote>
+<p>Mer：使用imread函数将图像读入Matlab。</p>
+<p>Pyer：忘了可以<a href="../shu-zi-tu-xiang-chu-li-shi-yan.html#part2.4">回去看下</a>哦。</p>
+</blockquote>
+<p><img alt="" src="https://github.com/freealbert/freealbert-slide-1/blob/master/gray-2012-8-8/rice.png?raw=true" /></p>
+<h3>步骤2</h3>
+<p>用如下的灰度变换函数对rice.png图像进行处理，在同一个窗口中画出处理前后的图像，并保存。
+\[ 
+    s = \left\{
+        \begin{array}{lr}
+            0.3r， &amp; r &lt; 0.35 \\
+            0.105 + 2.6333(r-0.35)， &amp; 0.35\leq r \leq 0.65\\
+            1 + 0.3(r-1)， &amp; r &gt; 0.65.
+            \end{array}
+        \right.
+\]</p>
+<h3>步骤3</h3>
+<p>用如下灰度变换函数对rice.png进行处理，在同一个窗口中画出处理前后的图像，并保存。</p>
+<p>\[ s = \left\{
+        \begin{array}{lr}
+            15.9744r^5， &amp; r {\leq} 0.5 \\
+    (r-0.5)^{0.2}+0.12， &amp; r &gt; 0.5 
+        \end{array}\right.
+\]</p>
+<h3>步骤4</h3>
+<p>分别用$s = r^{0.6}， s = r^{0.4}， s = r^{0.3}$ 对kids.tif图像进行处理，在同一个窗口中画出处理前后的图像，并
+保存。</p>
+<p><img alt="" src="https://github.com/freealbert/freealbert-slide-1/blob/master/gray-2012-8-8/kids.png?raw=true" /></p>
+<h3>步骤5</h3>
+<p>对circuit.jpg图像实施反变换，在同一个窗口中画出处理前后的图像，并保存。</p>
+<p><img alt="" src="https://github.com/freealbert/freealbert-slide-1/blob/master/gray-2012-8-8/circuit.png?raw=true" /></p>
+<h3>步骤6</h3>
+<p>对rice.jpg图像实施灰度切片。具体要求为:当0.2 ≤ r ≤ 0.4时，将r置为0.6，当r位于其他区间时，
+保持其灰度值不变。在同一个窗口中画出处理前后的图像，并保存。</p>
+<h3>步骤7</h3>
+<p>利用灰度变换对Picture.jpg做增强处理，突出图中人物，改善整个图像过于灰暗的背景。给出图像
+处理前后的直方图，写出所采用的拉伸表达式。在同一个窗口中画出处理前后的图像，并保存。</p>
+<p><img alt="" src="https://github.com/freealbert/freealbert-slide-1/blob/master/gray-2012-8-8/Picture.jpg?raw=true" /></p>
+<h2>实验报告要求</h2>
+<p>其实我没啥要求，反正我也不是老师，扯要求干嘛。你能看我写的东西就是上帝了，嗯，访客是上帝。</p>
+<p><strong>上帝们，要是发现错误请在下面评论处指明噢！</strong></p>
+<p>不过我猜老师肯定让你们提交原图像和各种变换函数的曲线，以及按照各种变换函数处理后的图像。</p></p>
+      </div> -->
+    </div>
+  </div>
+  
+  <div class="entry-overview">
+    <div class="date">
+      30 Jul 2012
+    </div>
+    <div class="detail">
+      <h1><a href=".././gao-wei-zhen-li.html">高维真理</a> </h1>
+      <!-- <div class="summary">
+	<p><p>最近发现PDF对于<a href="https://github.com/freealbert/PyEE">PyEE</a>并不是一种非常好的载体，我就寻思着将整个项目搬到web上去，希望借助于超链接和日新月异的技术能够让PyEE的表现力更强，也更为美观。接触Web开发，不可避免的便要学习HTML,CSS,Javasript这三座大山。
+起初，我并不知道有CSS这种东西，直到现在我还每每将其读成CCS。但当我了解了CSS究竟是用来做什么的时候，一种熟悉感油然而生。先来看一下维基百科上说为何要采用CSS</p>
+<blockquote>
+<p>CSS最主要的目的是将文件的结构（用HTML或其他相关的语言写的）与文件的显示（CSS）分隔开来。这个分隔有许多好处：</p>
+<ul>
+<li>文件的可读性被加强</li>
+<li>文件的结构更加灵活</li>
+<li>作者和读者可以自己决定文件的显示</li>
+<li>文件的结构简化了。</li>
+</ul>
+</blockquote>
+<p>笼统的概括一下CSS背后的目的，分工尽量精细，让每一样事物尽量专注自己的领域。这种想法，并不惟CSS独有，LaTeX也有自己事先定义好各种模板，目的也是为了让使用者更加专注与内容本身，而不是外观。再推远一点，面向对象编程出现的背后，同样是这种思想在推动。不止是编程领域，这种思想存在于这个世界的角角落落，因为把这种思想再精简一点，便是流水线。人类社会的发展一直便是分工尽量精细的过程，得益于工业化，全世界的流水线大大加速，小到一个CSS文件，大到一个人乃至一个国家实体，都是这亘古运转的流水线上的一环。</p>
+<p>在这里，我不想讨论社会的流水线化是否会一直持续，精细分工究竟是好是坏。我更加关心的是，为何，这个世界上风马牛不相及的领域内会有相同的现象，抑或法则，抑或真理。
+这个疑问，从我高一学习化学的时候便开始困扰我。</p>
+<p>在有机化学中，当氢原子要脱落时，首先会从氢原子本来就少的碳原子上脱落；反之，当氢原子要增加时，首先增加的却是氢原子本来就多的碳原子上。这种现象与经济学上贫者愈贫，富者愈富，赢家通吃的经济学中收入分配不公的现象同样被称为马太效应。还有许许多多的其他领域同样存在着马太效应。</p>
+<p>这么多不同领域却有着相同原理的现象背后，我并不认为这是一种巧合，也许，这个世界的确存在一个同一的真理。
+再举一个我们熟悉的例子，大统一场理论（也称为万物之理），它是物理学家一直试图用同一组方程式描述全部粒子和力(强相互作用、弱相互作用、万有引力、电磁相互作用四种人类目前所知的所有的力)的物理性质的理论或模型。</p>
+<p>我觉得，这个世界或许远不止弦论描述的是10维或是超弦理论描述的11维，很可能存在更高的维数，100维，抑或无穷维也有可能。在那里只存在着一条真理，但由于我们只能感知到空间的三维和时间的一维，于是我们对真理的认识也是非常片面的。每学科的研究都如盲人摸象一般，只能研究到高维真理的一小块碎片而已。这也可以解释为何在不同的学科之间存在相同的原理，因为他们本来就属于统一高维真理，只不过由于我们的视界只有四维，真理被碎片化了，但总有一点还是相同的。而不同的学科研究，便是沿着不同的山路攀爬同一座山峰。到了山顶，所有风景都是相似的。</p>
+<p>我还可以提供一个有趣的例子，以供思考。</p>
+<p>天线的辐射方向图其实是电流分布在天线上的傅立叶变换。下式是远区场的情形：
+$$E_{\theta}=\int_{-l/2}^{+l/2}dE_{\theta}=j\eta\frac{ke^{-jkr}}{4\pi r}\sin{\theta}[\int_{-l/2}^{+l/2}I_{e}(x',y',z')e^{jkz'\cos{\theta}}dz']$$</p>
+<p>公式右边的中括号内，便是不折不扣的傅立叶变换。这么样，为何无线小偶极子不会有旁瓣也就很容易解释了，因为冲击函数的傅立叶变换是1，每个方向都是均匀的，也就不会有旁瓣。</p>
+<p>下图是一张矩形缝隙天线的辐射方向图，来自维基百科，从图中可以看出，正好是一个Sinc函数。众所周知，门函数的傅立叶变换便是Sinc函数。
+<img alt="alt text" src="https://github.com/freealbert/freealbert_photo_1/blob/master/Tech/sinc.jpg?raw=true" title="sinc" /></p>
+<p>关于旁瓣和傅立叶变换的关系，更多的资料可以<a href="http://en.wikipedia.org/wiki/Side_lobe">点此</a>。</p>
+<p>最后，附上我天线大作业的<a href="http://dymslide-freealbert.dotcloud.com/antenna-2012-6-28/antenna.html">幻灯片</a>，主要内容为无限小偶极子天线的辐射方向图以及旁瓣和傅立叶变换的关系，我将它改成了HTML5的形式，可以在线浏览。</p></p>
+      </div> -->
+    </div>
+  </div>
+  
+  <div class="entry-overview">
+    <div class="date">
+      18 Apr 2012
+    </div>
+    <div class="detail">
+      <h1><a href=".././jie-jue-matplotlibde-imshowxian-shi-shi-zhen.html">解决matplotlib的imshow显示失真</a> </h1>
+      <!-- <div class="summary">
+	<p><p>我用python写了数字图像处理的上机实验，做到最后一小题处理cell的时候，发现用imshow显示读入的图片发现明显跟直接打开图片看不同。回去看之前的题目，都跟原图有出入。
+原图如下</p>
+<p><img alt="" src="http://i.imgur.com/Bs0YH.jpg" /></p>
+<p>打开后的失真图像如下</p>
+<p><img alt="" src="http://i.imgur.com/Znksp.jpg" /></p>
+<p>这是我的代码片段：</p>
+<div class="codehilite"><pre><span class="n">im_0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s">&#39;cell.jpg&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="s">&#39;L&#39;</span><span class="p">))</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">ax_0</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">121</span><span class="p">)</span>
+<span class="n">ax_0</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">im_0</span><span class="p">,</span><span class="n">cmap</span><span class="o">=</span><span class="n">cm</span><span class="o">.</span><span class="n">gray</span><span class="p">)</span>
+</pre></div>
+
+
+<p>由于imshow默认是显示伪彩色，所以colormap用了gray。仔细看对比两张图片可以发现，失真的图片很像是对原图做了灰度拉伸操作，故而变得比原图像清晰了。苦于找不到原因，我在水木的Python版上发了帖子求教，经过xgr和DaNei两位热心兄台的提点，我最终找到了原因和解决的途径。</p>
+<p>原来，matplotlib的imshow函数显示灰度图像时，会对图像矩阵进行归一化，就是把矩阵中最小的灰度值(vmin)作为0，最大的灰度值(vmax)作为1，然后重新给colormap赋值 。用getextrema函数可以查看图像灰度值的最大值和最小值，cell的最大灰度值为138，最小灰度值为90。也就是说90～138会被线性拉伸成0~255。如果显示图片时，可以设置norm的值显式地令vmax=255，vmin=0，则可以显示这个问题，相应的，0～1的浮点数矩阵，vmax=1，vmin=0。</p>
+<div class="codehilite"><pre><span class="n">ax4</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">C</span><span class="p">[:,:,</span><span class="mi">1</span><span class="p">],</span><span class="n">cmap</span><span class="o">=</span><span class="n">cm</span><span class="o">.</span><span class="n">gray</span><span class="p">,</span><span class="n">norm</span><span class="o">=</span><span class="n">pl</span><span class="o">.</span><span class="n">Normalize</span><span class="p">(</span><span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">vmax</span><span class="o">=</span><span class="mi">255</span><span class="p">))</span>
+</pre></div>
+
+
+<p>下图是设置后的图片，跟原图一模一样。</p>
+<p><img alt="" src="http://i.imgur.com/4Ru2t.jpg" /></p></p>
+      </div> -->
+    </div>
+  </div>
+  
+
+ 
+<!-- <div class="pagination"> -->
+<!--    -->
+<!--      -->
+<!--     <a href=".././category/Home.html">&larr;Previous</a> -->
+<!--    -->
+
+<!--    -->
+<!--     <a href=".././category/Home3.html">Next<b>&rarr;</b></a> -->
+<!--    -->
+<!-- </div> -->
+<div class="pagination">
+<!-- <ul> -->
+
+
+    <a href=".././category/Home.html">&laquo; Previous</a>
+
+
+
+    <a href=".././category/Home.html">1</a>
+
+    <a href=".././category/Home2.html">2</a>
+
+    <a href=".././category/Home3.html">3</a>
+
+
+
+    <a href=".././category/Home3.html">Next &raquo;</a>
+
+
+<!-- </ul> -->
+</div>
+
+    </div>
+
+ 
+
+
+    <div class="footer">
+      <p>&copy Copyright 2012 by freealbert</p>
+      <p>Content licensed under the Creative Commons attribution-noncommercial-sharealike License. </p>
+      <p>Contact me via
+	<a href="http://github.com/freealbert">github</a>,
+	<a href="mailto:jim2429212@gmail.com">mail</a>,
+	<a href="http://weibo.com/u/1844630250">weibo</a>.
+	<a href="http://fusion.google.com/add?source=atgs&feedurl=http%3A//dym.me">feed</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

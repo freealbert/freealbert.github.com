@@ -1,0 +1,6 @@
+Title: matplotlib的imshow函数显示灰度图像失真问题的解决
+Author: freealbert
+Date: 2012-4-18
+Tags: python,matplotlib
+
+我用python写了数字图像处理的上机实验，做到最后一小题处理cell的时候，发现用imshow显示读入的图片发现明显跟直接打开图片看不同。回去看之前的题目，都跟原图有出入。

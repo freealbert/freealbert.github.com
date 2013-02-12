@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>freealbert's blog </title>
+  <meta charset="utf-8">
+<!-- Using MathJax, with the delimiters $ -->
+<!-- Conflict with pygments for the .mo and .mi -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true},
+    "HTML-CSS": { availableFonts: ["TeX"], linebreaks: {automatic: true}},
+    TeX: {equationNumbers: {autoNumber: ["AMS"], useLabelIds: true}},
+    <!-- "HTML-CSS": {linebreaks: {automatic: true}}, -->
+    SVG: {linebreaks: {automatic: true}}
+});
+</script>
+
+<script type="text/javascript" src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<!-- <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script> 
+-->
+
+
+  <link rel="stylesheet" href="./theme/css/style.css">
+<!-- <link rel="stylesheet" href="./theme/css/styles/default.css"> -->
+<!-- <script src="./theme/css/highlight.pack.js"></script> -->
+<!-- <script>hljs.initHighlightingOnLoad();</script> -->
+<!-- <link rel="stylesheet" href="./theme/css/pygments.css"> -->
+<!-- <link rel="stylesheet" href="./theme/css/pygments_emacs.css"> -->
+<link rel="stylesheet" href="./theme/css/pygments_friendly.css">
+
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+
+  <!-- google analysis  -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34015459-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+ <link href="./" type="application/atom+xml" rel="alternate" title="freealbert's blog ATOM Feed" />
+
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <a href="./index.html">freealbert's blog</a>
+      <!-- <span>--Virya</span> -->
+    </div>
+    <div class="navigation">
+      <ul>
+	      <li><a href="./index.html">Home</a></li>
+	        
+	          <!-- <li><a href="./pages/pages/about.html">About</a></li> -->
+            <li><a href="./pages/about.html">About</a></li>
+	        
+        <!-- <li><a href="./about.html">About</a></li>   -->
+	      <li><a href="./tags.html">Tags</a></li>
+	      <!-- <li><a href="./archives.html">Archives</a></li> -->
+      </ul>
+    </div>
+    <div class="body">
+      
+<h1 class="title">基本灰度变换</h1>
+<p class="date">written on 08 Aug 2012</p>
+<div><blockquote>
+<p>在以后的日子里，你可能需要根据概念定义编写直方图均衡、直方图规定化，
+Sobel锐化，Laplacian锐化，Roberts锐化等函数，对此，你准备好了吗?上课一定要认真听讲哦!</p>
+</blockquote>
+<p>带上冈萨雷斯的第三版一块出发吧!</p>
+<h2>实验目的</h2>
+<p>通过上机实验的手段巩固课堂上所学的关于图像反转、幂次变换和分段线性变换有关的知识，感受
+不同的灰度变换方法对最终图像效果的影响。</p>
+<h2>方法技术介绍</h2>
+<p>灰度变换函数是图像增强技术中最简单的一类，处理前后的像素值分别用r和s定义，于是我们可以用如下表达式来表示原像素值r映射到值s的变换:
+$$  s = T(r)$$</p>
+<ul>
+<li>
+<h3>图像反转</h3>
+<p>灰度级范围为[0，L-1]的图像反转表达式为:
+$$  s = L-1-r$$
+采用上式可以产生图像反转的对等图像，这种处理尤其适合用于增强嵌入于图像暗色区域的白色或
+灰色细节，特别是当黑色面积占主导地位时。</p>
+</li>
+<li>
+<h3>幂次变换</h3>
+<p>幂次变换的基本形式为:
+$$ s = cr^{\gamma}$$
+其中c和γ为正常数。从下图可以看出，当γ &lt; 1，幂次变换能够将窄带暗值映射成宽带输出值，γ &gt;
+1，则正好相反。应注意的是，当c = γ = 1时，幂次变换将简化为正比运算。</p>
+</li>
+</ul>
+<p><img alt="" src="https://github.com/freealbert/freealbert-slide-1/blob/master/gray-2012-8-8/power_trans.jpg?raw=true" /></p>
+<ul>
+<li>
+<h3>分段线性变换</h3>
+与前面两个函数相比，分段线性变换的主要优势在于形式可以任意合成，其中分段线性变换还可以
+细分为对比拉伸、灰度切割、位图切割等方法。<ul>
+<li>
+<h4>对比拉伸</h4>
+<p>对比拉伸的思想是提高低对比度图像处理是灰度级的动态范围。低对比度的成因有照明不足、成像传感器动态范围太小，甚至在图像获取过程中透镜光圈设置错误引起。</p>
+</li>
+<li>
+<h4>灰度切割</h4>
+<p>在图像处理中提高特定灰度范围的亮度通常是很有必要的，这样的灰度切割可以让感兴趣的图像内容
+更加明显。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2>实验步骤</h2>
+<h3>步骤1</h3>
+<p>将实验用图:rice.png读入内存，以便后续处理。</p>
+<blockquote>
+<p>Mer：使用imread函数将图像读入Matlab。</p>
+<p>Pyer：忘了可以<a href="shu-zi-tu-xiang-chu-li-shi-yan.html#part2.4">回去看下</a>哦。</p>
+</blockquote>
+<p><img alt="" src="https://github.com/freealbert/freealbert-slide-1/blob/master/gray-2012-8-8/rice.png?raw=true" /></p>
+<h3>步骤2</h3>
+<p>用如下的灰度变换函数对rice.png图像进行处理，在同一个窗口中画出处理前后的图像，并保存。
+\[ 
+    s = \left\{
+        \begin{array}{lr}
+            0.3r， &amp; r &lt; 0.35 \\
+            0.105 + 2.6333(r-0.35)， &amp; 0.35\leq r \leq 0.65\\
+            1 + 0.3(r-1)， &amp; r &gt; 0.65.
+            \end{array}
+        \right.
+\]</p>
+<h3>步骤3</h3>
+<p>用如下灰度变换函数对rice.png进行处理，在同一个窗口中画出处理前后的图像，并保存。</p>
+<p>\[ s = \left\{
+        \begin{array}{lr}
+            15.9744r^5， &amp; r {\leq} 0.5 \\
+    (r-0.5)^{0.2}+0.12， &amp; r &gt; 0.5 
+        \end{array}\right.
+\]</p>
+<h3>步骤4</h3>
+<p>分别用$s = r^{0.6}， s = r^{0.4}， s = r^{0.3}$ 对kids.tif图像进行处理，在同一个窗口中画出处理前后的图像，并
+保存。</p>
+<p><img alt="" src="https://github.com/freealbert/freealbert-slide-1/blob/master/gray-2012-8-8/kids.png?raw=true" /></p>
+<h3>步骤5</h3>
+<p>对circuit.jpg图像实施反变换，在同一个窗口中画出处理前后的图像，并保存。</p>
+<p><img alt="" src="https://github.com/freealbert/freealbert-slide-1/blob/master/gray-2012-8-8/circuit.png?raw=true" /></p>
+<h3>步骤6</h3>
+<p>对rice.jpg图像实施灰度切片。具体要求为:当0.2 ≤ r ≤ 0.4时，将r置为0.6，当r位于其他区间时，
+保持其灰度值不变。在同一个窗口中画出处理前后的图像，并保存。</p>
+<h3>步骤7</h3>
+<p>利用灰度变换对Picture.jpg做增强处理，突出图中人物，改善整个图像过于灰暗的背景。给出图像
+处理前后的直方图，写出所采用的拉伸表达式。在同一个窗口中画出处理前后的图像，并保存。</p>
+<p><img alt="" src="https://github.com/freealbert/freealbert-slide-1/blob/master/gray-2012-8-8/Picture.jpg?raw=true" /></p>
+<h2>实验报告要求</h2>
+<p>其实我没啥要求，反正我也不是老师，扯要求干嘛。你能看我写的东西就是上帝了，嗯，访客是上帝。</p>
+<p><strong>上帝们，要是发现错误请在下面评论处指明噢！</strong></p>
+<p>不过我猜老师肯定让你们提交原图像和各种变换函数的曲线，以及按照各种变换函数处理后的图像。</p></div>
+
+  <p class="tags">
+  This entry was taged 
+  
+    <a href="./tag/dip.html">dip,</a>
+  
+    <a href="./tag/pyee.html">pyee,</a>
+  
+
+</p>  
+
+<div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'freealbertsblog'; // required: replace example with your forum shortname
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+         	
+
+    </div>
+
+ 
+
+
+    <div class="footer">
+      <p>&copy Copyright 2012 by freealbert</p>
+      <p>Content licensed under the Creative Commons attribution-noncommercial-sharealike License. </p>
+      <p>Contact me via
+	<a href="http://github.com/freealbert">github</a>,
+	<a href="mailto:jim2429212@gmail.com">mail</a>,
+	<a href="http://weibo.com/u/1844630250">weibo</a>.
+	<a href="http://fusion.google.com/add?source=atgs&feedurl=http%3A//dym.me">feed</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

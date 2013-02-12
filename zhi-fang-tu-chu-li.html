@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>freealbert's blog </title>
+  <meta charset="utf-8">
+<!-- Using MathJax, with the delimiters $ -->
+<!-- Conflict with pygments for the .mo and .mi -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true},
+    "HTML-CSS": { availableFonts: ["TeX"], linebreaks: {automatic: true}},
+    TeX: {equationNumbers: {autoNumber: ["AMS"], useLabelIds: true}},
+    <!-- "HTML-CSS": {linebreaks: {automatic: true}}, -->
+    SVG: {linebreaks: {automatic: true}}
+});
+</script>
+
+<script type="text/javascript" src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<!-- <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script> 
+-->
+
+
+  <link rel="stylesheet" href="./theme/css/style.css">
+<!-- <link rel="stylesheet" href="./theme/css/styles/default.css"> -->
+<!-- <script src="./theme/css/highlight.pack.js"></script> -->
+<!-- <script>hljs.initHighlightingOnLoad();</script> -->
+<!-- <link rel="stylesheet" href="./theme/css/pygments.css"> -->
+<!-- <link rel="stylesheet" href="./theme/css/pygments_emacs.css"> -->
+<link rel="stylesheet" href="./theme/css/pygments_friendly.css">
+
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+
+  <!-- google analysis  -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34015459-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+ <link href="./" type="application/atom+xml" rel="alternate" title="freealbert's blog ATOM Feed" />
+
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <a href="./index.html">freealbert's blog</a>
+      <!-- <span>--Virya</span> -->
+    </div>
+    <div class="navigation">
+      <ul>
+	      <li><a href="./index.html">Home</a></li>
+	        
+	          <!-- <li><a href="./pages/pages/about.html">About</a></li> -->
+            <li><a href="./pages/about.html">About</a></li>
+	        
+        <!-- <li><a href="./about.html">About</a></li>   -->
+	      <li><a href="./tags.html">Tags</a></li>
+	      <!-- <li><a href="./archives.html">Archives</a></li> -->
+      </ul>
+    </div>
+    <div class="body">
+      
+<h1 class="title">直方图处理</h1>
+<p class="date">written on 12 Aug 2012</p>
+<div><h2>实验目的</h2>
+<p>通过上机实验的手段巩固课堂上所学的关于直方图均衡化和直方图匹配等图像增强技术的认识和了解，学会自行编写上述函数，感受不同的直方图增强技术对最终图像效果的影响。</p>
+<h2>方法技术介绍</h2>
+<p>直方图处理能有有效的用于图像增强，而直方图更是多种空间域处理技术的基础。</p>
+<p>灰度级为[0,L-1]范围的数字图像的直方图是离散函数$h(r_k)=n_k$，其中$r_k$是第$k$级灰度，$n_k$是图像中灰度级为$r_k$的像素个数。经常以图像中的总数（用$n$表示）来除它的每个值，以得到归一化的直方图。因此，一个归一化的直方图由$P(r_k)=\frac{n_k}{n}$给出，其中$k=0,1,\cdots,L-1$。简单地说，$P(r_k)$给出了灰度级为$r_k$发生的概率估计值，显然一个归一化的直方图的所有部分之和应该等于$1$。</p>
+<h3>直方图均衡</h3>
+<p>直方图均衡的思想就是使处理后的图像灰度分布均衡，这样图像的信息熵最大，图像也就得到了相应的增强。
+故而，对于上文中的非均匀的密度函数$P_r(r)$经某个变换函数$s=T(r)$变换为均匀概率分布$P_s(s)$，$s$为变换后的图像灰度值。</p>
+<p>由雅克比变换易得：
+$$  P_s(s)ds=P_r(r)dr$$
+当直方图均衡化并归一化后，
+$$  p_s(s)=1$$
+即：
+$$  ds=P_r(r)dr$$
+其中$s$,$r$归一化的含义就是$r\in[0,1],s\in[0,1]$，对应matlab中的就是图像的double类型。
+两边取积分：
+$$  s=T_r=\int\limits_{0}^{r}P_r(\omega)d\omega $$
+变换后图像的灰度$s$就是原图像灰度级的概率密度函数的积分。</p>
+<h3>直方图匹配</h3>
+<p>直方图均衡能自动地确定变换函数，该函数寻求产生均匀直方图的输出图像。对于某些应用来说，采用均匀直方图的基本增强并不是最好的办法，尤其是有时可以指定希望处理的图像所具有的直方图形状，这种用于产生处理后特有直方图的图像的方法，称为直方图匹配，也叫直方图规定化。</p>
+<p>方法推导
+$r,z$为连续灰度级（看成是连续随机变量$P_r(r),P_z(z)$为它们对应的连续概率密度。
+$r$为输入图像的灰度级，$z$为输出图像的灰度级，输入图像的概率密度函数为$P_r(r)$，$P_z(z)$为希望输出图像具有的规定概率密度函数。
+令$s$为一随机变量，且有
+$$s=T(r)=\int\limits_{0}^{r}P_r(\omega)d\omega$$
+同时对希望输出的图像做直方图均衡化，有
+$$s=G(z)=\int\limits_{0}^{z}P_z(t)dt$$
+$$\because s=G(z)$$
+$$\therefore z=G^{-1}(s)$$
+$$\because s=T(r)$$
+$$\therefore z=G^{-1}(s)=G^{-1}[T(r)]$$
+故而直方图规定化的步骤为：
+<em> 由(5)式求$T(r)$
+</em> 由(6)式求$G(z)$
+<em> 求反变换$G^{-1}$
+</em> 对输入图像的所有像素应用(7)式得到输出图像</p>
+<h2>实验步骤</h2>
+<h3>步骤1</h3>
+<blockquote>
+<p>Pyer：这个。。。我没找到直方图均衡和直方图规定化的函数。那个。。。我们只好自己写了，从这里开始正好可以开始积累由自己编写的图像处理模块。</p>
+<p>Mer：看Pyer们，多痛苦，就算有函数，光找也要他们半条命。这就是Matlab的好处啦。Mer们，虽然我们已经有了现成的函数，但你能忍受的了旁边Pyer们可以杀人的愤怒眼神吗？要不也自己写一下吧，顺便当成一次理解这两个概念的机会了。</p>
+</blockquote>
+<h3>步骤2</h3>
+<p>将mountain.jpg图像读入，对其做直方图均衡化，作出处理前后的灰度直方图，将其保存在同一窗口。</p>
+<p><img alt="" src="https://github.com/freealbert/freealbert_photo_1/blob/master/Tech/mountain.jpg?raw=true" /></p>
+<h3>步骤3</h3>
+<p>将mountain.jpg图像读入，按如下灰度变换函数对其做直方图匹配，作出处理前后的灰度直方图，将其保存在同一窗口。
+\[
+n=
+\left\{
+\begin{array}{lr}
+1400r,    &amp; r\leq r\\
+7000-310r &amp; 5&lt;r\leq 20\\
+900-5r    &amp; 20&lt;r\leq 180\\
+-1440+8r  &amp; 180&lt;r\leq 225\\
+3060-12r  &amp; 225&lt;\leq 255
+\end{array}
+\right.
+\]</p>
+<h2>实验报告要求</h2>
+<p>嗯，我还是一如既往的没有要求。唯一的要求：</p>
+<p><strong>要是发现错误请在下面评论处指明噢！</strong></p></div>
+
+  <p class="tags">
+  This entry was taged 
+  
+    <a href="./tag/dip.html">dip,</a>
+  
+    <a href="./tag/pyee.html">pyee,</a>
+  
+
+</p>  
+
+<div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'freealbertsblog'; // required: replace example with your forum shortname
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+         	
+
+    </div>
+
+ 
+
+
+    <div class="footer">
+      <p>&copy Copyright 2012 by freealbert</p>
+      <p>Content licensed under the Creative Commons attribution-noncommercial-sharealike License. </p>
+      <p>Contact me via
+	<a href="http://github.com/freealbert">github</a>,
+	<a href="mailto:jim2429212@gmail.com">mail</a>,
+	<a href="http://weibo.com/u/1844630250">weibo</a>.
+	<a href="http://fusion.google.com/add?source=atgs&feedurl=http%3A//dym.me">feed</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

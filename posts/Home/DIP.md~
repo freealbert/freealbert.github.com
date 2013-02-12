@@ -1,0 +1,51 @@
+Title: 数字图像处理实验
+Author: freealbert
+Date: 2012-8-13
+Tags: dip, pyee, python, matlab
+
+* [写在最前面的废话]
+* [如何开始之Python篇]
+* [如何开始之Matlab篇]
+* [EXP1 基本灰度变换](http://dym.me/ji-ben-hui-du-bian-huan.html) 
+* [EXP2 直方图处理技术](http://dym.me/zhi-fang-tu-chu-li.html) 
+* [EXP3 图像平滑技术](http://dym.me/ping-hua-ji-zhu.html) 
+* [EXP4 图像锐化技术](http://dym.me/tu-xiang-rui-hua.html)       
+
+      
+## 写在最前面的废话
+
+你现在正在访问的网站是由Python写成的，国内外很多著名网站比如[豆瓣](http://www.douban.com/)，[知乎](http://www.zhihu.com/)，[DropBox](http://dropbox.com/)都是由Python写的。
+当然本文并不是要讨论其在Web端的应用以及如何建一个网站，而是在另一个领域——科学计算，更精确点也就是如何用Python完成我们的数字图像处理实验。考虑到大部分人可能对新语言不感冒，我也安排了Matlab的部分。
+
+本文一共六个部分，分别交代了为啥要用Python来完成实验，对于初学者如何用Python和Matlab来完成本实验，和四个完整的实验，包括了实验原理，内容步骤等。其中我会用Python给出代码骨架。由于我行文实在罗嗦，因此我强烈建议你当感觉不耐烦时，按下Home键，返回页首，然后根据目录直奔目标。
+
+## 如何开始
+
+### Python简介
+
+### 模块介绍
+
+* Scipy
+Scipy是一个用于数学，科学和工程领域仿真的类库，提供了大量现成的函数。本实验中我们会使用其中的signal模块,约定模块导入的形式如下：
+<pre><code class="python">
+import scipy.signal as signal
+</code></pre>
+
+* Numpy
+Numpy模块是Scipy的基础，提供了对矩阵和多维数组的支持以及许多数值计算的函数。约定其导入形式如下:
+<pre><code class="python">
+import numpy as np
+</code></pre>
+
+* matplotlib
+matplotlib是一个二维图像绘制的类库，我们会用到其中的pylab模块和cm模块。
+	+ pylab模块集成了一些常用的绘图函数，应付我们这次实验绰绰有余。
+	+ cm是colormap的缩写，指明的是表示颜色的数值和具体颜色之间以何种方式映射。拍照时的一些效果，如老照片（红铜色）就是由这个决定的。
+我们约定模块导入形式如下：
+<pre><code class="python">
+import matplotlib.cm as cm
+import matplotlib.pylab as pl
+</code></pre>
+
+* PIL
+PIL是Python I

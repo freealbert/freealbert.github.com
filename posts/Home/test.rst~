@@ -1,0 +1,9 @@
+Title: test
+
+```.css
+.codehilite .hll { background-color: #ffffcc }
+.codehilite .c { color: #60a0b0; font-style: italic } /* Comment */
+.codehilite .err { border: 1px solid #FF0000 } /* Error */
+.codehilite .k { color: #007020; font-weight: bold } /* Keyword */
+.codehilite .o { color: #666666 } /* Operator */
+```

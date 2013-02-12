@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>freealbert's blog </title>
+  <meta charset="utf-8">
+<!-- Using MathJax, with the delimiters $ -->
+<!-- Conflict with pygments for the .mo and .mi -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true},
+    "HTML-CSS": { availableFonts: ["TeX"], linebreaks: {automatic: true}},
+    TeX: {equationNumbers: {autoNumber: ["AMS"], useLabelIds: true}},
+    <!-- "HTML-CSS": {linebreaks: {automatic: true}}, -->
+    SVG: {linebreaks: {automatic: true}}
+});
+</script>
+
+<script type="text/javascript" src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<!-- <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script> 
+-->
+
+
+  <link rel="stylesheet" href=".././theme/css/style.css">
+<!-- <link rel="stylesheet" href=".././theme/css/styles/default.css"> -->
+<!-- <script src=".././theme/css/highlight.pack.js"></script> -->
+<!-- <script>hljs.initHighlightingOnLoad();</script> -->
+<!-- <link rel="stylesheet" href=".././theme/css/pygments.css"> -->
+<!-- <link rel="stylesheet" href=".././theme/css/pygments_emacs.css"> -->
+<link rel="stylesheet" href=".././theme/css/pygments_friendly.css">
+
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+
+  <!-- google analysis  -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34015459-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+ <link href=".././" type="application/atom+xml" rel="alternate" title="freealbert's blog ATOM Feed" />
+
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <a href=".././index.html">freealbert's blog</a>
+      <!-- <span>--Virya</span> -->
+    </div>
+    <div class="navigation">
+      <ul>
+	      <li><a href=".././index.html">Home</a></li>
+	        
+	          <!-- <li><a href=".././pages/pages/about.html">About</a></li> -->
+            <li><a href=".././pages/about.html">About</a></li>
+	        
+        <!-- <li><a href=".././about.html">About</a></li>   -->
+	      <li><a href=".././tags.html">Tags</a></li>
+	      <!-- <li><a href=".././archives.html">Archives</a></li> -->
+      </ul>
+    </div>
+    <div class="body">
+      
+
+
+  
+  <div class="entry-overview">
+    <div class="date">
+      21 Mar 2012
+    </div>
+    <div class="detail">
+      <h1><a href=".././nao-ren-de-pythonchu-fa.html">恼人的Python除法</a> </h1>
+      <!-- <div class="summary">
+	<p><p>没搞清楚Python的除法已经变成最多的语义错误来源咯，所以今天好好看了下Learning Python。</p>
+<p>在Python里一共有三种除法，分别是：</p>
+<ul>
+<li>
+<p>传统除法：对于操作数均为整数时结果会省去小数部分，对于操作数中有浮点数时，就会保留小数部分，也就是说，传统除法的结果是依赖于操作数类型的。Python2.x用 / 表示</p>
+</li>
+<li>
+<p>真除法：无论操作数是任何类型，结果均为保留小数的浮点数。Python3.x中用 / 表示。</p>
+</li>
+<li>
+<p>Floor除法：不考虑操作数类型，结果总会省略掉小数部分。Python2.x和Python3.x中均用 // 表示。</p>
+</li>
+</ul>
+<table width="600" border="1" align="center">
+<tr>
+<td></td>
+<td>Python2.x</td>
+<td>Python3.x</td>
+</tr>
+<tr>
+<td>传统除法</td>   <td>X/Y</td><td>无</td>
+</tr>
+<tr>
+<td>真除法</td><td>无</td><td>X/Y</td>
+</tr>
+<tr>
+<td>Floor除法</td><td>X//Y</td><td>X//Y</td>
+</tr>
+</table>
+
+<p>有一点需要提醒，虽然Floor除法总是省略小数，但并不是说其结果总是整形数。结果还是根据操作数的类型来的，比如：</p>
+<div class="codehilite"><pre><span class="o">&gt;&gt;&gt;</span><span class="mi">1</span><span class="o">//</span><span class="mi">3</span>
+<span class="o">&gt;&gt;&gt;</span><span class="mi">0</span>
+<span class="o">&gt;&gt;&gt;</span><span class="mf">1.0</span><span class="o">//</span><span class="mi">3</span>
+<span class="o">&gt;&gt;&gt;</span><span class="mf">0.0</span>
+</pre></div></p>
+      </div> -->
+    </div>
+  </div>
+  
+
+ 
+<!-- <div class="pagination"> -->
+<!--    -->
+<!--      -->
+<!--     <a href=".././category/Home2.html">&larr;Previous</a> -->
+<!--    -->
+
+<!--    -->
+<!--     <a href="#">Next&rarr; </a> -->
+<!--    -->
+<!-- </div> -->
+<div class="pagination">
+<!-- <ul> -->
+
+
+    <a href=".././category/Home2.html">&laquo; Previous</a>
+
+
+
+    <a href=".././category/Home.html">1</a>
+
+    <a href=".././category/Home2.html">2</a>
+
+    <a href=".././category/Home3.html">3</a>
+
+
+
+    <a href="#">Next &raquo;</a>
+
+
+<!-- </ul> -->
+</div>
+
+    </div>
+
+ 
+
+
+    <div class="footer">
+      <p>&copy Copyright 2012 by freealbert</p>
+      <p>Content licensed under the Creative Commons attribution-noncommercial-sharealike License. </p>
+      <p>Contact me via
+	<a href="http://github.com/freealbert">github</a>,
+	<a href="mailto:jim2429212@gmail.com">mail</a>,
+	<a href="http://weibo.com/u/1844630250">weibo</a>.
+	<a href="http://fusion.google.com/add?source=atgs&feedurl=http%3A//dym.me">feed</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>
