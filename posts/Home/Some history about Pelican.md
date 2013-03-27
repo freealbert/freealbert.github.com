@@ -12,7 +12,8 @@ Pelican 是一个简单的静态博客生成器。它分析由Markdown或是reSt
 
 ## Pelican的方案
 早先，我是WordPress用户，WordPress是用PHP语言开发的博客平台，支持在PHP和MySQL的服务器上架设并管理自己的博客。大多数时候，我更喜欢用诸如Markdown、reStructuredText这样的标记语言来写文章，还有，我都是用vim来写的！（译者注:Alexis是vim党）我觉得让人们有选择他们自己喜欢的文本编辑器来写文章的自由是非常重要的！在我看来，一个博客管理器只要能把无论什么格式的输入文件转化成一个博客这件事做好就可以了。这就是Pelican的用途，可以让你选择你钟爱的任何编辑器，使用你想用的标记语言，来生成一个静态的HTML博客站点。
-![alt text](https://github.com/freealbert/freealbert_photo_1/blob/master/Tech/overall.png?raw=true  "overall")
+
+![overall picture](http://docs.getpelican.com/en/3.1.1/_images/overall.png  "overall")
 
 出于足够灵活的考虑，Pelican提供模板支持，只要你想要，便能轻松地写出你自己的模板。
 
@@ -33,7 +34,8 @@ Pelican 来自我个人的需求，起初，它只是只有一个文件的程序
 
 ## 更多细节
 这是一张Pelican所有类的关系图.
-![alt text](https://github.com/freealbert/freealbert_photo_1/blob/master/Tech/uml.jpg?raw=true "uml")
+
+![uml picture](http://docs.getpelican.com/en/3.1.1/_images/uml.jpg "uml")
 
 
 由于我用了鸭子类型，而不是接口，所以上图中的接口(interface)并不存在，之所以画出来，只是为了让整幅图像更加清晰而已。
